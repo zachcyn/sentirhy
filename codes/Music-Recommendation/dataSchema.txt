@@ -1,0 +1,62 @@
+Tracks:{
+    trackID,
+    title,
+    artistID,
+    albumID,
+    genre,
+    duration,
+    releaseDate,
+    language,
+    spotifyURL,
+    youtubeURL
+}
+
+Artists:{
+    artistID,
+    name,
+    country
+}
+
+Albums:{
+    albumID,
+    title,
+    artistID,
+    releaseDate,
+    coverArtURL
+}
+
+AudioFeats:{
+    trackID,
+    tempo,
+    key,
+    mode,
+    valence,
+    energy
+}
+
+UserPref:{
+    userID,
+    prefLanguage,
+    prefGenres,
+    country
+}
+
+UserHist:{
+    historyID,
+    userID,
+    trackID,
+    listenDate,
+    userMood
+}
+
+playlistTab:{
+    playlistID,
+    name,
+    description,
+    creationDate
+}
+
+playlistTracks:{
+    playlistID,
+    trackID
+}

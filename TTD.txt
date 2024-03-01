@@ -1,0 +1,7 @@
+normalize the images
+weighted loss function needed 
+batching data
+
+before trainig the model
+
+testing data havent preprocess.
