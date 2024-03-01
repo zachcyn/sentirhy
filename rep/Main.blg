@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Main.aux
+The style file: abbrvnat.bst
+Database file #1: References.bib
+Warning--empty year in _14
+Warning--empty year in berwick_an
+Warning--empty publisher in _2019_country
+Warning--empty publisher in frith_2018_rock
+Warning--empty publisher in hiller_2019_electronic
+Warning--empty year in ibm_what
+Warning--empty year in ibm_what_knn
+Warning--empty publisher in tate_2019_hiphop
+You've used 51 entries,
+            2773 wiz_defined-function locations,
+            868 strings with 13977 characters,
+and the built_in function-call counts, 18442 in all, are:
+= -- 1614
+> -- 844
+< -- 44
++ -- 308
+- -- 255
+* -- 1283
+:= -- 2846
+add.period$ -- 175
+call.type$ -- 51
+change.case$ -- 234
+chr.to.int$ -- 49
+cite$ -- 110
+duplicate$ -- 869
+empty$ -- 1722
+format.name$ -- 318
+if$ -- 3890
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 23
+newline$ -- 285
+num.names$ -- 204
+pop$ -- 590
+preamble$ -- 1
+purify$ -- 187
+quote$ -- 0
+skip$ -- 712
+stack$ -- 0
+substring$ -- 349
+swap$ -- 97
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 536
+warning$ -- 8
+while$ -- 164
+width$ -- 0
+write$ -- 669
+(There were 8 warnings)

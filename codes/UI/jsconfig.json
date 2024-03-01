@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/build": true,
+  }
+}
