@@ -30,7 +30,7 @@ export default function EmotionView() {
   const [emotion, setEmotion] = useState();
   const [showSelectors, setShowSelectors] = useState(false);
   const theme = useTheme();
-  const { playingTrack, playTrack } = useSpotifyPlayback();
+  const { playingTrack, playTrack, playPlaylist } = useSpotifyPlayback();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const handleEmotionChange = async (e) => {
@@ -41,6 +41,11 @@ export default function EmotionView() {
   const handlePlay = (uri) => {
     playTrack(uri);
   }
+
+  const handlePlayAll = () => {
+    const uris = tracks.map(track => track.spotifyurl);
+    playPlaylist(uris);
+  };
 
   useEffect(() => {
     fetchRecommendation(emotion);
@@ -119,7 +124,7 @@ export default function EmotionView() {
 
 
         <Grid item xs={12} md={6} lg={5}>
-          <Button>Play All</Button>
+          <Button onClick={handlePlayAll}>Play All</Button>
             <List sx={{ display: 'flex', 
             flexDirection: 'column', 
             width: '100%', 
