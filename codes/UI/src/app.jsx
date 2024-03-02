@@ -17,8 +17,7 @@ import { bgGradient } from 'src/theme/css';
 
 import Iconify from 'src/components/iconify';
 import { useAuth } from './sections/login/authContext';
-import SpotifySDK from './components/spotify/spotify-sdk';
-import SpotifyPlayer from './components/spotify/spotify-player';
+import SpotifyPlayer from './components/spotify/spotify-sdk';
 import { SpotifyPlaybackProvider } from './components/spotify/spotify-context'
 import { refreshSpotifyToken, validateSpotifyToken } from './components/spotify/spotify-api';
 
@@ -91,10 +90,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-        <SpotifyPlaybackProvider token={spotifyToken}>
+        <SpotifyPlaybackProvider>
           <Router />
-          <SpotifySDK />
-          <SpotifyPlayer /> 
+          {authState.isAuthenticated && spotifyToken && <SpotifyPlayer token={spotifyToken} />}
           {showModal &&
            <Modal open={showModal}
               onClose={() => setShowModal(false)}
