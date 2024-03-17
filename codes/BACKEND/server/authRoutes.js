@@ -4,7 +4,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 const { sendEmail } = require('./emailService');
-const emailTemplate  = require('./emailTemplate');
+const resetPwd  = require('./resetPwd');
 const activateTemplate = require('./activationTemplate');
 const pool = require('./database');
 
@@ -78,7 +78,7 @@ router.post('/login', async(req, res) => {
 
         const expiresIn = rememberMe ? '7d' : '1h'
         const token = jwt.sign({ userId: user.rows[0].userid }, process.env.JWT_SECRET, { expiresIn });
-        res.json({ message: 'Login successful', user: user.rows[0].username, token: token });
+        res.json({ message: 'Login successful', user: user.rows[0].username, token: token, fname: user.rows[0].fname, lname: user.rows[0].lname, email: user.rows[0].email });
     } catch (err) {
         console.error("Error in /login route: ", err);
         res.status(500).send("Error logging in user");
@@ -101,7 +101,7 @@ router.post('/request-password-reset', async(req, res) => {
             await pool.query(updateQuery, [resetToken, new Date(Date.now() + 3600000).toISOString(), email]);
 
             const resetLink = `http://localhost:3030/reset-password?token=${resetToken}`;
-            await sendEmail(user.email, "Password Reset", emailTemplate(user.username, user.email, resetLink))
+            await sendEmail(user.email, "Password Reset", resetPwd(user.username, user.email, resetLink))
                 .then(info => {
                     console.log('Email sent successfully');
                 })

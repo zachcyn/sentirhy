@@ -53,7 +53,7 @@ export default function LoginView() {
       if (response.ok){
         console.log("Login successful", data);
         localStorage.setItem('authToken', data.token);
-        login({ isAuthenticated: true, user: data.user, token: data.token }, rememberMe);
+        login({ isAuthenticated: true, user: data.user, token: data.token, fname: data.fname, lname: data.lname, email: data.email }, rememberMe);
         router.push('/dashboard');
       } else {
         setErrorMessage(data.message);

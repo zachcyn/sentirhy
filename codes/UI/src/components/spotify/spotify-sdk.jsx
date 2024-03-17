@@ -160,7 +160,7 @@ const SpotifyPlayer = ({ token }) => {
       playerInstance.addListener('ready', ({ device_id }) => {
       console.log('Ready with Device ID', device_id);
       fetchCurrentPlaybackState();
-      transferPlaybackHere(device_id);
+      // transferPlaybackHere(device_id);
       });
 
       playerInstance.addListener('not_ready', ({ device_id }) => {

@@ -126,7 +126,7 @@ export default function RegisterView() {
   }
 
   const getColor = (color) => {
-    if (color === 0) return '#000';
+    if (color === 0) return theme.palette.text.primary;
     if (color <= 1) return '#d32f2f'; 
     if (color <= 3) return '#fbc02d'; 
     return '#388e3c'; 
@@ -308,9 +308,16 @@ export default function RegisterView() {
         size="large"
         type="submit"
         variant="contained"
-        color="inherit"
         loading={loading}
         disabled={checkedTerms || !passwordMatch}
+        sx={{ 
+          backgroundColor: theme.palette.text.primary, 
+          color: theme.palette.background.paper,
+          '&:hover': { 
+              backgroundColor: theme.palette.text.secondary,
+              color: theme.palette.background.paper
+          },
+        }}
       >
         {t("Register")}
       </LoadingButton>

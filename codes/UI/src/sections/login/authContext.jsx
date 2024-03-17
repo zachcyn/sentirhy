@@ -52,7 +52,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem('authToken') || sessionStorage.getItem('authToken');
     if (token) {
       validateToken(token);
     } else {
@@ -63,19 +63,23 @@ export const AuthProvider = ({ children }) => {
   const login = useCallback((data, rememberMe = false) => {
     const storage = rememberMe ? localStorage : sessionStorage;
     storage.setItem('authToken', data.token);
+    storage.setItem('userData', JSON.stringify({ user: data.user, fname: data.fname, lname: data.lname, email: data.email }));
     setAuthState({
       isAuthenticated: true,
       user: data.user,
+      name: data.fname + data.lname,
       token: data.token,
       loading: false
     });
   }, []);
 
   const logout = useCallback(() => {
-    localStorage.removeItem('authToken');
+    localStorage.clear();
+    sessionStorage.clear();
     setAuthState({
       isAuthenticated: false,
       user: null,
+      name: null,
       token: null,
       loading: false
     });
