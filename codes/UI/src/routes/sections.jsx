@@ -17,6 +17,7 @@ export const ResetPwdPage = lazy(() => import('src/pages/reset-pwd'));
 export const ActivationPage = lazy(() => import('src/pages/activate'));
 export const EmotionPage = lazy(() => import('src/pages/emotion'));
 export const SpotifyCallback = lazy(() =>import('src/components/spotify/spotify-callback'))
+export const SettingsPage = lazy(() => import('src/pages/settings'));
 
 // ----------------------------------------------------------------------
 
@@ -37,7 +38,8 @@ export default function Router() {
         { path: 'products', element: <PrivateRoute component={ProductsPage} />},
         { path: 'blog', element: <PrivateRoute component={BlogPage} />},
         { path: 'emotion', element: <PrivateRoute component={EmotionPage} />},
-        { path: 'spotify-callback', element: <PrivateRoute component={SpotifyCallback} />}
+        { path: 'spotify-callback', element: <PrivateRoute component={SpotifyCallback} />},
+        { path: 'profile-settings', element: <PrivateRoute component={SettingsPage} />},
       ],
     },
     {
