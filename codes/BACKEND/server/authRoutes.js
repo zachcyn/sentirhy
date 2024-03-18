@@ -22,8 +22,8 @@ router.post('/register', async(req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
         const activationToken = crypto.randomBytes(20).toString('hex');
         const activationTokenExpires = new Date(Date.now() + 3600000).toISOString();
-        const insertUserQuery = 'INSERT INTO sentirhy.user (fname, lname, dob, username, email, password, country, activationToken, activationTokenExpires) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)';
-        await pool.query(insertUserQuery, [fname, lname, dob, username, email, hashedPassword, country, activationToken, activationTokenExpires]);
+        const insertUserQuery = 'INSERT INTO sentirhy.user (fname, lname, dob, username, email, password, activationToken, activationTokenExpires) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)';
+        await pool.query(insertUserQuery, [fname, lname, dob, username, email, hashedPassword  , activationToken, activationTokenExpires]);
 
         const activationLink = `http://localhost:3030/activate?token=${activationToken}`;
         await sendEmail(email, "Account Activation", activateTemplate(username, fname, email, activationLink))
@@ -78,7 +78,15 @@ router.post('/login', async(req, res) => {
 
         const expiresIn = rememberMe ? '7d' : '1h'
         const token = jwt.sign({ userId: user.rows[0].userid }, process.env.JWT_SECRET, { expiresIn });
-        res.json({ message: 'Login successful', user: user.rows[0].username, token: token, fname: user.rows[0].fname, lname: user.rows[0].lname, email: user.rows[0].email });
+        res.json({ message: 'Login successful', 
+                    user: user.rows[0].username, 
+                    token: token, 
+                    fname: user.rows[0].fname, 
+                    lname: user.rows[0].lname, 
+                    email: user.rows[0].email, 
+                    imgurl: user.rows[0].imgurl,
+                    dob: user.rows[0].dob,
+                });
     } catch (err) {
         console.error("Error in /login route: ", err);
         res.status(500).send("Error logging in user");
@@ -190,6 +198,69 @@ router.post('/validate-token', async(req, res) => {
     } catch (err) {
         console.error('Error in /validate-token:', err);
         res.status(400).json({ valid: false, message: 'Invalid token', error: err.message });
+    }
+});
+
+const verifyToken = (req, res, next) => {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader || !authHeader.startsWith('Bearer ')) {
+        return res.status(401).json({ message: 'No token provided' });
+    }
+
+    const token = authHeader.split(' ')[1];
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.userId = decoded.userId; // Add user id to request
+        next();
+    } catch (err) {
+        console.error('Token verification error:', err);
+        res.status(400).json({ message: 'Invalid token', error: err.message });
+    }
+};
+
+router.post('/update-detail', verifyToken, async(req, res) => {
+    const { userId } = req;
+    const { fname, lname, email, dob, password } = req.body;
+
+    try {
+        const userQuery = 'SELECT * FROM sentirhy.user WHERE userid = $1';
+        const userResult = await pool.query(userQuery, [userId]);
+
+        if (userResult.rows.length === 0) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        const user = userResult.rows[0];
+        const validPassword = await bcrypt.compare(password, user.password);
+
+        if (!validPassword) {
+            return res.status(400).json({ message: "Incorrect password" });
+        }
+
+        let hashedPassword = user.password;
+
+        if (password && password.trim() !== '') {
+            hashedPassword = await bcrypt.hash(password, 10);
+        }
+
+        const updateQuery = `
+            UPDATE sentirhy.user
+            SET fname = $1, lname = $2, email = $3, dob = $4
+            WHERE userid = $5;
+        `;
+
+        const updateResult = await pool.query(updateQuery, [fname, lname, email, dob, userId]);
+
+        if (updateResult.rowCount === 0) {
+            return res.status(404).json({ message: 'User not found or data was not changed' });
+        }
+
+        res.json({ message: 'User details updated successfully'});
+
+    } catch (err) {
+        console.error("Error updating user details:", err);
+        res.status(500).json({ message: 'Error updating user details' });
     }
 });
 

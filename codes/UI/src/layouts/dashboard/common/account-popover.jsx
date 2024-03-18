@@ -33,13 +33,12 @@ export default function AccountPopover() {
   const router = useRouter();
   const [open, setOpen] = useState(null);
   const [avatar, setAvatar] = useState(false);
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
 
   const getUserData = () => {
-    const userDataString = localStorage.getItem('userData') || sessionStorage.getItem('userData');
-    if (userDataString) {
+    if (user) {
       try {
-        return JSON.parse(userDataString);
+        return user;
       } catch (e) {
         console.error("Error parsing user data:", e);
         return null;
@@ -51,7 +50,7 @@ export default function AccountPopover() {
   const userData = getUserData();
 
   useEffect(() => {
-      if (userData.img !== 'undefined'){
+      if (userData?.img !== 'undefined'){
           setAvatar(true)
       }
   }, [userData])
@@ -85,8 +84,8 @@ export default function AccountPopover() {
         }}
       >
         <Avatar
-          src={avatar ? userData.img : "/broken-image.jpg"}
-          alt={userData.user}
+          src={avatar ? `${import.meta.env.VITE_API_URL}/file/user-profile/${userData?.imgurl}` : "None"}
+          alt={userData?.user}
           sx={{
             width: 36,
             height: 36,
@@ -111,10 +110,10 @@ export default function AccountPopover() {
       >
         <Box sx={{ my: 1.5, px: 2 }}>
           <Typography variant="subtitle2" noWrap>
-            {`${userData.fname} ${userData.lname}`}
+            {`${userData?.fname} ${userData?.lname}`}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {userData.email}
+            {userData?.email}
           </Typography>
         </Box>
 
@@ -129,7 +128,7 @@ export default function AccountPopover() {
             {option.label}
           </MenuItem>
         ))}
-
+        <ThemeToggleButton/>
         <Divider sx={{ borderStyle: 'dashed', m: 0 }} />
 
         <MenuItem
@@ -140,9 +139,6 @@ export default function AccountPopover() {
         >
           Logout
         </MenuItem>
-        <MenuItem>
-         <ThemeToggleButton/>
-         </MenuItem>
       </Popover>
     </>
   );

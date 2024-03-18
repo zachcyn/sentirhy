@@ -1,24 +1,22 @@
-import { useCallback, useState } from 'react';
+import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import {
-  Box,
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  Divider,
-  TextField,
-  Unstable_Grid2 as Grid,
-  Typography
-} from '@mui/material';
+
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 import Modal from '@mui/material/Modal';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import CardHeader from '@mui/material/CardHeader';
 import IconButton from '@mui/material/IconButton';
 import LoadingButton from '@mui/lab/LoadingButton';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import { alpha, useTheme } from '@mui/material/styles';
+import { Unstable_Grid2 as Grid } from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
 import InputAdornment from '@mui/material/InputAdornment';
-
-import { alpha, useTheme } from '@mui/material/styles';
 
 import { bgGradient } from 'src/theme/css';
 
@@ -45,6 +43,7 @@ function evaluatePasswordStrength(password) {
 
 export const AccountProfileDetails = () => {
     const { t } =  useTranslation();
+    const [emailError, setEmailError] = useState(false);
     const [pwd, setPwd] = useState("");
     const [currentPwd, setCurrentPwd] = useState("");
     const [password, setPassword] = useState("");
@@ -56,7 +55,7 @@ export const AccountProfileDetails = () => {
     const [passwordMatch, setPasswordMatch] = useState(false);
     const [popup, setPopup] = useState(false);
     const [loading, setLoading] = useState(false);
-    const [pwdEntered, setPwdEntered] = useState(false);
+    const [pwdEntered, setPwdEntered] = useState(pwd.length > 0);
     const currentDate = new Date();
     const currentYear = currentDate.getFullYear();
     const minimumYear = currentYear - 120;
@@ -65,7 +64,7 @@ export const AccountProfileDetails = () => {
     const theme = useTheme();
 
     const getUserData = () => {
-        const userDataString = localStorage.getItem('userData') || sessionStorage.getItem('userData');
+        const userDataString = localStorage.getItem('userData') || sessionStorage.getItem('userData')
         if (userDataString) {
             try {
             return JSON.parse(userDataString);
@@ -78,6 +77,18 @@ export const AccountProfileDetails = () => {
         };
     
     const userData = getUserData();
+    const dateInputFormat = userData?.dob && !Number.isNaN(new Date(userData.dob).getTime()) 
+        ? new Date(userData.dob).toISOString().split("T")[0]
+        : '1970-01-01';
+
+    const [values, setValues] = useState({
+        user: userData?.user,
+        firstName: userData?.fname,
+        lastName: userData?.lname,
+        email: userData?.email,
+        country: userData?.country,
+        dob: dateInputFormat,
+    });
 
     const handleOpenPopup = () => setPopup(true);
 
@@ -97,15 +108,19 @@ export const AccountProfileDetails = () => {
         return 'Strong';
     };
     
-
-    const [values, setValues] = useState({
-        user: userData.user,
-        firstName: userData.fname,
-        lastName: userData.lname,
-        email: userData.email,
-        country: userData.country,
-        dob: userData.dob,
-    });
+    const validateEmail = (val) => {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(val).toLowerCase());
+      };
+    
+    const handleEmailChange = (event) => {
+        const newEmail = event.target.value.trim();
+        setValues(prevValues => ({
+            ...prevValues,
+            email: newEmail,
+          }));
+        setEmailError(!validateEmail(newEmail));
+    };
 
     const handlePasswordChange = (event) => {
         const newPassword = event.target.value;
@@ -127,6 +142,7 @@ export const AccountProfileDetails = () => {
     const handlePwdEntered = (event) => {
         const newPassword = event.target.value;
         setPwd(newPassword)
+        setPwdEntered(newPassword.length > 0);
     }
 
     const handleChange = useCallback(
@@ -139,20 +155,52 @@ export const AccountProfileDetails = () => {
         []
     );
 
-    const handleSubmit = useCallback(
-        (event) => {
-        event.preventDefault();
-        },
-        []
-    );
+    const handleSubmit = async(event) => {
+        setLoading(true);
+        event.preventDefault(); 
+
+        const token = localStorage.getItem('authToken');
+        if (!token) {
+            console.error('No token found');
+            return;
+        }
+        const enteredData = {
+            fname: values.firstName,
+            lname: values.lastName,
+            email: values.email,
+            dob: values.dob,
+            password: pwd
+        };
+
+        try {
+            const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/update-detail`, {
+                method: 'POST',
+                headers:{
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                },
+                body: JSON.stringify(enteredData),
+            });
+
+            if (!res.ok) {
+                const errorText = await res.text();
+                throw new Error(errorText || 'Failed to update user details');
+            }
+
+            const data = await res.json();
+            console.log('User details updated successfully:', data.user);
+            setPwd("")
+            setLoading(false);
+            setPwdEntered(pwd.length > 0)
+
+        } catch (err) {
+            console.error('Error updating user details', err);
+        }
+    };
 
     return (
         <>
-            <form
-                autoComplete="off"
-                noValidate
-                onSubmit={handleSubmit}
-            >
+            <form autoComplete="off">
                 <Card sx={{padding: "2%"}}>
                     <CardHeader
                     title="Profile Details"
@@ -191,14 +239,16 @@ export const AccountProfileDetails = () => {
                                         fullWidth
                                         label="Email Address"
                                         name="email"
-                                        onChange={handleChange}
+                                        onChange={handleEmailChange}
+                                        error={emailError}
+                                        helperText={emailError && "Please enter a valid email address."}
                                         required
                                         value={values.email}
                                         />
                                 </Grid>
                                 <Grid xs={12}>
                                     <TextField 
-                                        name='date'
+                                        name='dob'
                                         fullWidth
                                         label={t("Date of Birth")}
                                         type="date"
@@ -218,12 +268,22 @@ export const AccountProfileDetails = () => {
                                 </Grid>
                                 <Grid xs={12}>
                                     <TextField
-                                        fullWidth
-                                        label="Password"
                                         name="password"
+                                        label={t("Password")}
+                                        value={pwd}
                                         onChange={handlePwdEntered}
+                                        type={showPassword3 ? 'text' : 'password'}
+                                        InputProps={{
+                                            endAdornment: (
+                                            <InputAdornment position="end">
+                                                <IconButton onClick={() => setShowPassword3(!showPassword3)} edge="end">
+                                                <Iconify icon={showPassword3 ? 'eva:eye-fill' : 'eva:eye-off-fill'} />
+                                                </IconButton>
+                                            </InputAdornment>
+                                            ),
+                                        }}
                                         required
-                                        value={null}
+                                        fullWidth
                                     />
                                 </Grid>
                             </Grid>
@@ -249,8 +309,9 @@ export const AccountProfileDetails = () => {
                             Reset Password
                         </Button>
                         <Box sx={{ flexGrow: 1 }} />
-                        <Button 
+                        <LoadingButton 
                             variant="contained"
+                            onClick={handleSubmit}
                             sx={{ 
                             py: 1,
                             backgroundColor: theme.palette.text.primary, 
@@ -263,9 +324,10 @@ export const AccountProfileDetails = () => {
                             mb: 2
                             }}    
                             disabled={!pwdEntered}
+                            loading={loading}
                         >
                             Save Details
-                        </Button>
+                        </LoadingButton>
                     </CardActions>
                 </Card>
             </form>

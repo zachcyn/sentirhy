@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
-// import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -18,6 +17,8 @@ import { useResponsive } from 'src/hooks/use-responsive';
 import Logo from 'src/components/logo';
 import Scrollbar from 'src/components/scrollbar';
 
+import { useAuth } from 'src/sections/login/authContext';
+
 import { NAV } from './config-layout';
 import navConfig from './config-navigation';
 
@@ -25,12 +26,12 @@ import navConfig from './config-navigation';
 
 export default function Nav({ openNav, onCloseNav }) {
   const [avatar, setAvatar] = useState(false);
+  const { user } = useAuth()
 
   const getUserData = () => {
-    const userDataString = localStorage.getItem('userData') || sessionStorage.getItem('userData');
-    if (userDataString) {
+    if (user) {
       try {
-        return JSON.parse(userDataString);
+        return user;
       } catch (e) {
         console.error("Error parsing user data:", e);
         return null;
@@ -42,7 +43,7 @@ export default function Nav({ openNav, onCloseNav }) {
   const userData = getUserData();
 
   useEffect(() => {
-      if (userData.img !== 'undefined'){
+      if (userData?.img !== 'undefined'){
           setAvatar(true)
       }
   }, [userData])
@@ -71,10 +72,10 @@ export default function Nav({ openNav, onCloseNav }) {
         bgcolor: (theme) => alpha(theme.palette.grey[500], 0.12),
       }}
     >
-      <Avatar src={avatar ? userData.img : "/broken-image.jpg"} alt={userData.user} />
+      <Avatar src={avatar ? `${import.meta.env.VITE_API_URL}/file/user-profile/${userData?.imgurl}` : "None"} alt={userData?.user} />
 
       <Box sx={{ ml: 2 }}>
-        <Typography variant="subtitle2">{userData ? `${userData.fname} ${userData.lname}` : 'Unknown'}</Typography>
+        <Typography variant="subtitle2">{userData ? `${userData?.fname} ${userData?.lname}` : 'Unknown'}</Typography>
       </Box>
     </Box>
   );

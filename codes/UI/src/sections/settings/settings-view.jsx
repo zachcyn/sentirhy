@@ -1,5 +1,9 @@
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
+
 import { AccountProfile } from "src/components/profile/profileCard";
-import { Container, Typography, Grid, Stack } from "@mui/material";
 import { AccountProfileDetails } from 'src/components/profile/profileDetails';
 
 function SettingsView() {

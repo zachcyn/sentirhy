@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage });
 
 router.post('/profile-img', upload.single('profilePic'), async (req, res) => {
-    const filePath = req.file.path;
+    const filePath = req.file.filename;
     const username = req.body.username;
     const email = req.body.email;
 
@@ -37,12 +37,14 @@ router.post('/profile-img', upload.single('profilePic'), async (req, res) => {
         if (result.rowCount === 0) {
             res.status(404).send('User not found');
         } else {
-            res.send(`Profile picture updated successfully: ${filePath}`)
+            res.send(filePath)
         }
     } catch (err) {
         console.error("Error updating user profile picture in database:", err);
         res.status(500).send("Error updating profile picture");
     }
 });
+
+router.use('/user-profile', express.static(path.join(__dirname, 'users_profile')));
 
 module.exports = router;
