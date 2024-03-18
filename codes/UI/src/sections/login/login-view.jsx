@@ -53,7 +53,7 @@ export default function LoginView() {
       if (response.ok){
         console.log("Login successful", data);
         localStorage.setItem('authToken', data.token);
-        login({ isAuthenticated: true, user: data.user, token: data.token, fname: data.fname, lname: data.lname, email: data.email }, rememberMe);
+        login({ isAuthenticated: true, user: data.user, token: data.token, fname: data.fname, lname: data.lname, email: data.email, imgurl: data.imgurl, dob: data.dob }, rememberMe);
         router.push('/dashboard');
       } else {
         setErrorMessage(data.message);
@@ -130,7 +130,14 @@ export default function LoginView() {
         size="large"
         type="submit"
         variant="contained"
-        color="inherit"
+        sx={{ 
+            backgroundColor: theme.palette.text.primary, 
+            color: theme.palette.background.paper,
+            '&:hover': { 
+                backgroundColor: theme.palette.text.secondary,
+                color: theme.palette.background.paper
+            },
+        }}
         loading={loading}
       >
         {t('Login')}
@@ -160,9 +167,6 @@ export default function LoginView() {
         justifyContent: 'center',
       }}
     >
-
-
-
       <Logo
         sx={{
           position: 'fixed',

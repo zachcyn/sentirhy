@@ -1,6 +1,6 @@
 /* eslint-disable perfectionist/sort-imports */
 import 'src/global.css';
-import { useMemo, useState, useEffect,useContext } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
 
@@ -48,7 +48,7 @@ export default function App() {
     }
     const musicService = localStorage.getItem('musicService');
     const spotifyConnected = localStorage.getItem('spotifyConnected');
-    const youtubeConnected = localStorage.getItem('youtubeConnected');
+    // const youtubeConnected = localStorage.getItem('youtubeConnected');
     const token = localStorage.getItem('spotifyAccessToken');
 
     if (musicService === 'spotify' && spotifyConnected === 'true') {
@@ -73,7 +73,7 @@ export default function App() {
     } else {
       setShowModal(true);
     }
-  }, [authState.isAuthenticated, theme]);
+  }, [authState.isAuthenticated]);
 
   const handleConnect = (service) => {
     localStorage.setItem('musicService', service);
@@ -118,7 +118,6 @@ export default function App() {
                   height: '40%'
                 },
                 bgcolor: alpha(theme.palette.background.paper, 0.9),
-                boxShadow: 24,
                 height: '30%',
                 borderRadius: '16px',
                 p: 4,
@@ -132,7 +131,18 @@ export default function App() {
                 </Typography>
                 <Button 
                   variant='contained' 
-                  sx={{ bgcolor:'#1DB954', mb: 2, width: '75%', display: 'flex', justifyContent: 'center' }}
+                  sx={{ 
+                    backgroundColor: '#1DB954', 
+                    color: theme.palette.background.paper,
+                    '&:hover': { 
+                        backgroundColor: "#137837",
+                        color: theme.palette.background.paper
+                    },
+                    mb: 2, 
+                    width: '75%', 
+                    display: 'flex', 
+                    justifyContent: 'center' 
+                  }}
                   onClick={() => handleConnect('spotify')}
                   startIcon={<Iconify icon="mdi:spotify" />}
                 >
@@ -140,9 +150,21 @@ export default function App() {
                 </Button>
                 <Button 
                   variant='contained' 
-                  sx={{ bgcolor:'#FF0000', width: '75%', display: 'flex', justifyContent: 'center' }}
+                  sx={{ 
+                    backgroundColor: '#FF0000', 
+                    color: theme.palette.background.paper,
+                    '&:hover': { 
+                        backgroundColor: "#A30202",
+                        color: theme.palette.background.paper
+                    },
+                    mb: 2, 
+                    width: '75%', 
+                    display: 'flex', 
+                    justifyContent: 'center' 
+                  }}
                   onClick={() => handleConnect('youtube')}
                   startIcon={<Iconify icon="mdi:youtube" />}
+                  disabled
                 >
                   Connect to YouTube
                 </Button>

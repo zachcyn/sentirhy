@@ -18,6 +18,7 @@ export const ActivationPage = lazy(() => import('src/pages/activate'));
 export const EmotionPage = lazy(() => import('src/pages/emotion'));
 export const SpotifyCallback = lazy(() =>import('src/components/spotify/spotify-callback'))
 export const SettingsPage = lazy(() => import('src/pages/settings'));
+export const TermsAndConditions = lazy(() => import('src/pages/t-and-c'));
 
 // ----------------------------------------------------------------------
 
@@ -69,6 +70,10 @@ export default function Router() {
     {
       path: 'activate',
       element: <ActivationPage />,
+    },
+    {
+      path: 'terms-and-conditions',
+      element: <TermsAndConditions />
     }
   ]);
 

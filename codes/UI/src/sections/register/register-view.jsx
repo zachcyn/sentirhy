@@ -11,8 +11,6 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import LoadingButton from '@mui/lab/LoadingButton';
-import FormControl from '@mui/material/FormControl';
-import Autocomplete from '@mui/material/Autocomplete';
 import { alpha, useTheme } from '@mui/material/styles';
 import LinearProgress from '@mui/material/LinearProgress'
 import InputAdornment from '@mui/material/InputAdornment';
@@ -50,7 +48,6 @@ export default function RegisterView() {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [dob, setDOB] = useState("");
-  const [country, setCountry] = useState("");
   const [checkedTerms, setCheckedTerms] = useState(true);
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
@@ -74,7 +71,7 @@ export default function RegisterView() {
         headers:{
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ fname, lname, dob, username, email, password, country }),
+        body: JSON.stringify({ fname, lname, dob, username, email, password }),
       });
 
       const data = await response.json();
@@ -101,7 +98,6 @@ export default function RegisterView() {
     setEmail('');
     setPassword('');
     setConfirmPwd('');
-    setCountry('');
   }, [showSuccessMessage, errorMessage]);
 
   const router = useRouter();
@@ -150,15 +146,6 @@ export default function RegisterView() {
     setEmailError(!validateEmail(newEmail));
   };
 
-  const countries = [
-    'United States',
-    'United Kingdom',
-    'Japan',
-    'Malaysia',
-    'Korea',
-    'Hong Kong',
-  ]
-
   const renderForm = (
     <form onSubmit={handleSubmit}>
       <Stack spacing={3}>
@@ -196,19 +183,6 @@ export default function RegisterView() {
         }}
         required
         />
-
-        <FormControl fullWidth>
-          <Autocomplete
-            freeSolo
-            options={countries}
-            renderInput={(params) => (
-              <TextField {...params} label='Country' required />
-            )}
-            onChange={(event, newValue) => {
-              setCountry(newValue);
-            }}
-            />
-        </FormControl>
 
         <TextField name="username" 
         label={t("Username" )}
@@ -297,7 +271,7 @@ export default function RegisterView() {
       <Stack direction="row" alignItems="center" justifyContent="flex-end" sx={{ my: 3 }}>
         <FormControlLabel required  control={<Checkbox size='small'onClick={() => setCheckedTerms(!checkedTerms)} />} label={
           <Typography variant="body2" style={{ fontSize: '0.85rem' }}>
-            {t("I agree to the ")}<Link>{t("terms and conditions")}</Link>
+            {t("I agree to the ")}<Link href="/terms-and-conditions" target="_blank" rel="noopener noreferrer" style={{ cursor: 'pointer' }}>terms and conditions</Link>
           </Typography>
           }
         />
