@@ -34,6 +34,7 @@
     "i18next": "^23.7.18",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.4.2",
+    "ldrs": "^1.0.1",
     "lodash": "^4.17.21",
     "numeral": "^2.0.6",
     "prop-types": "^15.8.1",

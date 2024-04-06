@@ -43,7 +43,6 @@ const SpotifyPlayer = ({ token }) => {
     const [prevVolume, setPrevVolume] =  useState(null);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
     const playerRef = useRef(null);
     const { currentTrackUri, setPlayingTrack, playlistUris, currentTrackIndex, setCurrentTrackIndex } = useContext(SpotifyPlaybackContext);
     const [trackProgress, setTrackProgress] = useState(0);
@@ -118,12 +117,10 @@ const SpotifyPlayer = ({ token }) => {
 
         const text = await response.text();
         if (!text) {
-          console.log('No content in response');
           return;
         }
         
         const data = JSON.parse(text);
-        // console.log('Data', data);
 
         if (data && data.item) {
           const newTrackDetails = {
@@ -138,7 +135,6 @@ const SpotifyPlayer = ({ token }) => {
         }
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching playback state:', error);
         setLoading(false); 
       }
     }, [token, setPlayingTrack]);
@@ -181,9 +177,9 @@ const SpotifyPlayer = ({ token }) => {
     };
 
     if (!window.Spotify) {
-      loadSpotifySDK(onSDKReady); // Ensure SDK is loaded before initializing player
+      loadSpotifySDK(onSDKReady); 
     } else {
-      onSDKReady(); // SDK already loaded, directly initialize player
+      onSDKReady(); 
     }
 
     return () => {
@@ -192,14 +188,13 @@ const SpotifyPlayer = ({ token }) => {
         playerRef.current.removeListener('not_ready');
         playerRef.current.removeListener('player_state_changed');
         playerRef.current.disconnect();
-        playerRef.current = null; // Clear the player reference
+        playerRef.current = null; 
       }
     };
 
   }, [token, fetchCurrentPlaybackState, transferPlaybackHere, currentTrackIndex, setCurrentTrackIndex, play, playlistUris]);
 
   useEffect(() => {
-    console.log(`Current Track URI: ${currentTrackUri}`);
     if (currentTrackUri) {
       play(currentTrackUri);
     }
@@ -208,7 +203,6 @@ const SpotifyPlayer = ({ token }) => {
   useEffect(() => {
     if (playlistUris.length > 0 && currentTrackIndex !== null) {
       const trackUri = playlistUris[currentTrackIndex];
-      console.log(`Playing track from playlist: ${trackUri}`);
       play(trackUri); 
     }
   }, [playlistUris, currentTrackIndex, play]);
@@ -224,7 +218,6 @@ const SpotifyPlayer = ({ token }) => {
   const handleProgressChange = (event, newValue) => {
     const newPositionMs = (newValue / 100) * duration; // Assuming newValue is a percentage
     playerRef.current.seek(newPositionMs).then(() => {
-      console.log(`Seeked to ${newPositionMs} ms`);
       setTrackProgress(newPositionMs);
     });
   }
@@ -299,11 +292,36 @@ const SpotifyPlayer = ({ token }) => {
               left: 0,
               right: 0,
               zIndex: 2,
-              top: {
-                xs: '2.5vh', // Applies to extra-small screens regardless of isTablet
-                md: isTablet ? '2.5vh' : '3.5vh', // Overrides for medium screens if isTablet is true
-                lg: theme.breakpoints.down('lg') ? '2.5vh' : '3.5vh', // Overrides for large screens if isTablet is true
+              '@media (max-width:1920px)': {
+                top: '3vh'
               },
+              '@media (min-width:1920px)': {
+                top: '2.5vh'
+              },
+              '@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait)':{
+                top: '2.5vh'
+              },
+              '@media (min-width: 600px) and (max-width: 1200px) and (max-height: 1200px) and (orientation: landscape)':{
+                top: '3.5vh'
+              },
+              '@media (min-width: 300px) and (max-width: 900px) and (orientation: landscape)': {
+                top: '8vh'
+              },
+              '@media (min-width: 400px) and (max-width: 1000px) and (orientation: landscape)':{
+                top: '7vh'
+              },
+              '@media (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape)':{
+                top: '3.5vh'
+              },
+              '@media (max-width: 1366px) and (min-height: 1024px) and (orientation: landscape)':{
+                top: '3vh'
+              },
+              '@media (min-width: 1000px) and (max-width: 1366px) and (orientation: portrait)':{
+                top: '2.5vh'
+              },
+              '@media (min-width: 900px) and (max-width: 1000px) and (orientation: portrait)':{
+                top: '2.5vh'
+              }
             }}
           >
             <Slider
@@ -337,14 +355,41 @@ const SpotifyPlayer = ({ token }) => {
               left: 0,
               right: 0,
               backgroundColor: theme.palette.background.paper,
-              padding: '20px',
+              '@media (min-width:1920px)': {
+                padding: '20px',
+              },
+              [theme.breakpoints.up('lg')]: {
+                padding: '20px',
+              },
+              '@media (min-width: 600px) and (max-width: 900px) and (orientation: portrait)':{
+                padding: '20px',
+              },
+              '@media (min-width: 600px) and (max-width: 1200px) and (orientation: landscape)':{
+                padding: '20px',
+              },
+              '@media (min-width: 400px) and (max-width: 1000px) and (orientation: landscape)':{
+                padding: '0px',
+              },
+              '@media (min-width: 200px) and (max-width: 600px) and (orientation: portrait)':{
+                padding: '20px',
+              },
+              '@media (min-width: 1024px) and (max-width: 1180px) and (orientation: landscape)':{
+                padding: '20px',
+              },
+              '@media (max-width: 1366px) and (min-height: 1024px) and (orientation: landscape)':{
+                padding: '20px',
+              },
+              '@media (min-width: 1000px) and (max-width: 1366px) and (orientation: portrait)':{
+                padding: '20px',
+              },
               display: 'flex',
               flexDirection: isMobile ? 'column' : 'row',
               alignItems: 'center',
+              justifyContent: 'center',
               zIndex: 1,
             }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center', flex: 1, justifyContent: 'flex-start', width: isMobile ? '100%' : '30.36%'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center', flex: 1, justifyContent: 'flex-start', maxWidth: isMobile ? '100%' : '33%'}}>
             {currentTrack && (
               <img
                 src={currentTrack.albumImageUrl}
@@ -352,11 +397,9 @@ const SpotifyPlayer = ({ token }) => {
                 style={{ height: 60, width: 60, marginRight: '16px'}}
               />
             )}
-            <Box sx={{ display: 'flex', flexDirection: 'column', flexGrow: 1, overflow: 'hidden' }}>
-              {/* <ScrollableText text={currentTrack?.name || ''} />
-              <ScrollableText text={currentTrack?.artist || ''} /> */}
-              <Typography variant="body1" noWrap>{currentTrack?.name}</Typography>
-              <Typography variant="subtitle1" noWrap>{currentTrack?.artist}</Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'column', maxWidth: 'calc(100% - 76px)'}}>
+              <ScrollableText text={currentTrack?.name || ''} variant='subtitle1' />
+              <ScrollableText text={currentTrack?.artist || ''} variant='body2' /> 
             </Box>
           </Box>
           <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', width: isMobile ? '100%' : '36%', flex: isMobile ? 1 : 'none', flexGrow: 1}}>
@@ -376,7 +419,11 @@ const SpotifyPlayer = ({ token }) => {
               </IconButton>
             </Box>
               {isMobile && (
-                <Box sx={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', width:"100%"}}>
+                <Box sx={{
+                  display: 'flex', 
+                  flexDirection: 'row', 
+                  justifyContent: 'space-between', 
+                  width:"100%"}}>
                   <Typography variant='caption' sx={{ flex: 1, mr: 1, alignSelf:'center' }}>{formatTime(trackProgress)}</Typography>
                   <Slider
                     value={trackProgress / duration * 100}
