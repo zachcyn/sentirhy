@@ -48,5 +48,6 @@
                 "%DOCFILE%"
             ]
         },
-    ]
+    ],
+    "workbench.colorTheme": "Monokai Pro"
 }
