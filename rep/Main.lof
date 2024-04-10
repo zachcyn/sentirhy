@@ -1,8 +1,35 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Linear Regression}}{17}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Gradient Descent}}{17}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Support Vector Machine}}{18}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Random Forest}}{19}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces K-Nearest Neighbors}}{20}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Multi-Layer Perceptron}}{21}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Convolutional Neural Networks}}{22}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Facial Landmarks}}{23}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Linear Regression Classification Accuracies Table}}{26}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Random Forest Classification Accuracy}}{27}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Support Vector Machine Accuracy}}{27}{figure.caption.21}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Waterfall Methodology \citep {communitcationteam_2022_waterfall}}}{36}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Spiral Methodology \citep {kumarpal_2018_software}}}{36}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Agile Methodology \citep {laoyan_2022_what}}}{37}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Kanban from Notion}}{39}{figure.caption.26}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram}}{41}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Use Case Diagram}}{42}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Login Sequence Diagram}}{42}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Emotion Recognition Sequence Diagram}}{43}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Playlist Generation Sequence Diagram}}{43}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Flowchart}}{43}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Login Page}}{45}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Sign Up Page}}{45}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Dashboard Page}}{46}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Emotion Music Page}}{46}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Emotion Recognition Page}}{46}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces User Settings Page}}{47}{figure.caption.40}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -36,6 +36,7 @@
 % Formatting Table of Contents/Lists titles
 \renewcommand{\contentsname}{\bfseries\LARGE{CONTENTS}}
 \renewcommand{\listfigurename}{\bfseries\LARGE{LIST OF FIGURES}}
+\renewcommand{\listtablename}{\bfseries\LARGE{LIST OF TABLES}}
 
 % Signature Line for the declaration
 \newbox\namebox
@@ -186,7 +187,10 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \addcontentsline{toc}{chapter}{List of Figures} % Add List of figures into contents without any numeration 
 
 
-
+% -------------------  LIST OF TABLES --------------------
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
 
 
 % -------------------  INTRODUCTION  ---------------------
