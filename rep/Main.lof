@@ -18,19 +18,21 @@
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Agile Methodology \citep {laoyan_2022_what}}}{37}{figure.caption.24}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Kanban from Notion}}{39}{figure.caption.26}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram}}{41}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Use Case Diagram}}{42}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Login Sequence Diagram}}{42}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Emotion Recognition Sequence Diagram}}{43}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Playlist Generation Sequence Diagram}}{43}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Flowchart}}{43}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Login Page}}{45}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Sign Up Page}}{45}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Dashboard Page}}{46}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Emotion Music Page}}{46}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Emotion Recognition Page}}{46}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces User Settings Page}}{47}{figure.caption.40}%
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram}}{42}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Use Case Diagram}}{43}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Login Sequence Diagram}}{44}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Emotion Recognition Sequence Diagram}}{45}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Playlist Generation Sequence Diagram}}{45}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Flowchart For Emotion Recognition and Playlist Generation}}{46}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Entity-relationship Diagram}}{47}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Light Theme Logo}}{48}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Dark Theme Logo}}{48}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Login Page}}{48}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Sign Up Page}}{49}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Dashboard Page}}{49}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Emotion Music Page}}{49}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Emotion Recognition Page}}{50}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces User Settings Page}}{50}{figure.caption.41}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 
