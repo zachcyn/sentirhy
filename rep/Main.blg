@@ -7,45 +7,45 @@ Warning--empty publisher in _2019_country
 Warning--empty publisher in frith_2018_rock
 Warning--empty publisher in hiller_2019_electronic
 Warning--empty publisher in tate_2019_hiphop
-You've used 56 entries,
+You've used 60 entries,
             2909 wiz_defined-function locations,
-            927 strings with 14811 characters,
-and the built_in function-call counts, 154987 in all, are:
-= -- 24534
-> -- 2125
+            946 strings with 15302 characters,
+and the built_in function-call counts, 161567 in all, are:
+= -- 25514
+> -- 2221
 < -- 0
-+ -- 11292
-- -- 637
-* -- 12632
-:= -- 32666
-add.period$ -- 57
-call.type$ -- 56
-change.case$ -- 780
-chr.to.int$ -- 54
-cite$ -- 60
-duplicate$ -- 721
-empty$ -- 1592
-format.name$ -- 785
-if$ -- 27537
++ -- 11704
+- -- 665
+* -- 13108
+:= -- 34178
+add.period$ -- 61
+call.type$ -- 60
+change.case$ -- 836
+chr.to.int$ -- 58
+cite$ -- 64
+duplicate$ -- 765
+empty$ -- 1696
+format.name$ -- 821
+if$ -- 28681
 int.to.chr$ -- 7
 int.to.str$ -- 0
 missing$ -- 25
-newline$ -- 172
-num.names$ -- 568
-pop$ -- 376
+newline$ -- 188
+num.names$ -- 608
+pop$ -- 411
 preamble$ -- 1
-purify$ -- 840
+purify$ -- 900
 quote$ -- 0
-skip$ -- 659
+skip$ -- 700
 stack$ -- 0
-substring$ -- 33835
-swap$ -- 95
-text.length$ -- 784
+substring$ -- 35111
+swap$ -- 99
+text.length$ -- 840
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
+type$ -- 230
 warning$ -- 4
-while$ -- 1190
+while$ -- 1274
 width$ -- 0
-write$ -- 689
+write$ -- 737
 (There were 4 warnings)

@@ -21,6 +21,10 @@ BBC  \harvardyearleft 2023\harvardyearright , `History of the blues', \url{https
 \harvarditem{Beek}{2021}{beek_2021_what}
 Beek, M.  \harvardyearleft 2021\harvardyearright , `What is jazz music?', \url{https://www.classical-music.com/articles/jazz-music-what-it-is-and-how-it-evolved}.
 
+\harvarditem{Bell}{2004}{bell_2004_explore}
+Bell, D.  \harvardyearleft 2004\harvardyearright , `Explore the uml sequence diagram'.
+\newline\harvardurl{https://developer.ibm.com/articles/the-sequence-diagram/}
+
 \harvarditem{Berwick}{n.d.}{berwick_an}
 Berwick, R.  \harvardyearleft n.d.\harvardyearright , `An idiot's guide to support vector machines (svms) r. berwick, village idiot svms: A new generation of learning algorithms', \url{https://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf}.
 
@@ -51,6 +55,10 @@ Farley, P., Urban, E. \harvardand\ Mehrotra, N.  \harvardyearleft 2023\harvardye
 \harvarditem{Finkel \harvardand\ Taylor}{2021}{a2021_how}
 Finkel, I. \harvardand\ Taylor, J.  \harvardyearleft 2021\harvardyearright , `How to write cuneiform', \url{https://www.britishmuseum.org/blog/how-write-cuneiform}.
 
+\harvarditem{Freeman}{n.d.}{freeman_block}
+Freeman, J.  \harvardyearleft n.d.\harvardyearright , `Block diagram | complete guide with examples'.
+\newline\harvardurl{https://www.edrawsoft.com/block-diagram.html}
+
 \harvarditem{Frith}{2018}{frith_2018_rock}
 Frith, S.  \harvardyearleft 2018\harvardyearright , {\em Rock | music}.
 
@@ -74,6 +82,10 @@ Haykin, S., York, N., San, B., London, F., Sydney, T., Singapore, T., Mexico, M.
 
 \harvarditem{Hiller}{2019}{hiller_2019_electronic}
 Hiller, L.  \harvardyearleft 2019\harvardyearright , {\em electronic music | Definition, History, \& Facts}.
+
+\harvarditem{IBM}{2021}{ibm_2021_usecase}
+IBM  \harvardyearleft 2021\harvardyearright , `Use-case diagrams'.
+\newline\harvardurl{https://www.ibm.com/docs/en/rational-soft-arch/9.6.1?topic=diagrams-use-case}
 
 \harvarditem{IBM}{2022}{ibm_2022_about}
 IBM  \harvardyearleft 2022\harvardyearright , `About linear regression | ibm', \url{https://www.ibm.com/topics/linear-regression#:~:text=Resources-}.
@@ -105,6 +117,10 @@ Kwiatkowski, R.  \harvardyearleft 2021\harvardyearright , `Gradient descent algo
 \harvarditem{Laoyan}{2022}{laoyan_2022_what}
 Laoyan, S.  \harvardyearleft 2022\harvardyearright , `What is agile methodology? (a beginner's guide)', \url{https://asana.com/resources/agile-methodology}.
 \newblock Accessed: 2023-04-09.
+
+\harvarditem{Lucidchart}{2019}{lucidchart_2019_what}
+Lucidchart  \harvardyearleft 2019\harvardyearright , `What is a flowchart'.
+\newline\harvardurl{https://www.lucidchart.com/pages/what-is-a-flowchart-tutorial}
 
 \harvarditem{Mali}{2021}{mali_2021_linear}
 Mali, K.  \harvardyearleft 2021\harvardyearright , `Linear regression | everything you need to know about linear regression', \url{https://www.analyticsvidhya.com/blog/2021/10/everything-you-need-to-know-about-linear-regression/}.

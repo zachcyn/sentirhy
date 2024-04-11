@@ -37,24 +37,20 @@
 \contentsline {section}{\numberline {4.4}Justification for Choosing Agile}{39}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Design}{41}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Introduction}{41}{section.5.1}%
-\contentsline {section}{\numberline {5.2}UML Diagrams}{41}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Block Diagram}{41}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Use Case Diagram}{44}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.2}UML Diagrams}{42}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Block Diagram}{42}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Use Case Diagram}{43}{subsection.5.2.2}%
 \contentsline {subsection}{\numberline {5.2.3}Sequence Diagrams}{44}{subsection.5.2.3}%
-\contentsline {subsection}{\numberline {5.2.4}Class Diagram}{44}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Flowchart}{44}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Entity-relationship Diagram}{44}{subsection.5.2.6}%
-\contentsline {section}{\numberline {5.3}Logo Design}{44}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Interface Design}{44}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Artificial Intelligence and Machine Learning}{44}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Model Architecture}{44}{subsection.5.5.1}%
-\contentsline {chapter}{\numberline {6}Implementation}{48}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Project Evaluation}{49}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusion and Future Outlook}{50}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Conclusion}{50}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Future Outlook}{50}{section.8.2}%
-\contentsline {chapter}{References}{55}{chapter*.41}%
-\contentsline {chapter}{Appendix}{56}{chapter*.42}%
-\contentsline {section}{Appendix A}{56}{chapter*.42}%
-\contentsline {section}{Appendix B}{57}{chapter*.42}%
+\contentsline {subsection}{\numberline {5.2.4}Flowchart}{46}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Entity-relationship Diagram}{46}{subsection.5.2.5}%
+\contentsline {section}{\numberline {5.3}Logo Design}{47}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Interface Design}{48}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Artificial Intelligence and Machine Learning}{50}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Model Architecture}{50}{subsection.5.5.1}%
+\contentsline {chapter}{\numberline {6}Implementation}{53}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Project Evaluation}{54}{chapter.7}%
+\contentsline {chapter}{References}{60}{chapter*.44}%
+\contentsline {chapter}{Appendix}{61}{chapter*.45}%
+\contentsline {section}{Appendix A}{61}{chapter*.45}%
+\contentsline {section}{Appendix B}{62}{chapter*.45}%
 \contentsfinish 
