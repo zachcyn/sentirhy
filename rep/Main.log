@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.8)  12 APR 2024 00:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.8)  14 APR 2024 12:36
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
 **c:/Users/User/Desktop/Document/UWE/FYP/sentirhy/sentirhy/rep/Main
@@ -675,7 +675,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \g__lipsum_par_int=\count364
 \l__lipsum_a_int=\count365
 \l__lipsum_b_int=\count366
- (d:/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))) (d:/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty
+ (d:/texlive/2023/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (d:/texlive/2023/texmf-dist/tex/latex/mdframed/mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
  (d:/texlive/2023/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-10-10 L3 Experimental document command parser
@@ -782,52 +782,151 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \c@mdf@env@ii=\count372
 \c@mdf@zref@counter=\count373
 Package zref Info: New property: mdf@pagevalue on input line 895.
+) (d:/texlive/2023/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+ (d:/texlive/2023/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvrb
+ (d:/texlive/2023/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2023/11/06 4.5b verbatim text (tvz,hv)
+\FV@CodeLineNo=\count374
+\FV@InFile=\read2
+\FV@TabBox=\box73
+\c@FancyVerbLine=\count375
+\FV@StepNumber=\count376
+\FV@OutFile=\write3
+) (d:/texlive/2023/texmf-dist/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
+) (d:/texlive/2023/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count377
+\output=\toks47
+\linenoprevgraf=\count378
+\linenumbersep=\dimen271
+\linenumberwidth=\dimen272
+\c@linenumber=\count379
+\c@pagewiselinenumber=\count380
+\c@LN@truepage=\count381
+\c@internallinenumber=\count382
+\c@internallinenumbers=\count383
+\quotelinenumbersep=\dimen273
+\bframerule=\dimen274
+\bframesep=\dimen275
+\bframebox=\box74
+\linenoamsmath@ams@eqpen=\count384
+LaTeX Info: Redefining \\ on input line 3180.
 )
-\namebox=\box73
-\signboxdim=\dimen271
-\glswrite=\write3
-\glo@main@file=\write4
-\openout4 = `Main.glo'.
+\c@FancyVerbWriteLine=\count385
+\c@FancyVerbBufferIndex=\count386
+\c@FancyVerbBufferLength=\count387
+\c@FancyVerbBufferLine=\count388
+\c@FV@oldbufferlength=\count389
+\c@FV@TrueTabGroupLevel=\count390
+\c@FV@TrueTabCounter=\count391
+\FV@TabBox@Group=\box75
+\FV@TmpLength=\skip190
+\c@FV@HighlightLinesStart=\count392
+\c@FV@HighlightLinesStop=\count393
+\FV@LoopCount=\count394
+\FV@NCharsBox=\box76
+\FV@BreakIndent=\dimen276
+\FV@BreakIndentNChars=\count395
+\FV@BreakSymbolSepLeft=\dimen277
+\FV@BreakSymbolSepLeftNChars=\count396
+\FV@BreakSymbolSepRight=\dimen278
+\FV@BreakSymbolSepRightNChars=\count397
+\FV@BreakSymbolIndentLeft=\dimen279
+\FV@BreakSymbolIndentLeftNChars=\count398
+\FV@BreakSymbolIndentRight=\dimen280
+\FV@BreakSymbolIndentRightNChars=\count399
+\c@FancyVerbLineBreakLast=\count400
+\FV@LineBox=\box77
+\FV@LineIndentBox=\box78
+\c@FV@BreakBufferDepth=\count401
+\FV@LineWidth=\dimen281
+) (d:/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+) (d:/texlive/2023/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+ (d:/texlive/2023/texmf-dist/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)) (d:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.sty (d:/texlive/2023/texmf-dist/tex/generic/xstring/xstring.tex
+\xs_counta=\count402
+\xs_countb=\count403
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+) (d:/texlive/2023/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip191
+\fb@frw=\dimen282
+\fb@frh=\dimen283
+\FrameRule=\dimen284
+\FrameSep=\dimen285
+)
+\minted@appexistsfile=\read3
+\minted@bgbox=\box79
+\minted@code=\write4
+\c@minted@FancyVerbLineTemp=\count404
+\c@minted@pygmentizecounter=\count405
+\@float@every@listing=\toks48
+\c@listing=\count406
+)
+runsystem(if not exist _minted-Main mkdir _minted-Main)...executed.
+
+)
+\namebox=\box80
+\signboxdim=\dimen286
+\glswrite=\write5
+\glo@main@file=\write6
+\openout6 = `Main.glo'.
 
 Package glossaries Info: Writing glossary file Main.glo on input line 89.
-\glo@acronym@file=\write5
-\openout5 = `Main.acn'.
+\glo@acronym@file=\write7
+\openout7 = `Main.acn'.
 
 Package glossaries Info: Writing glossary file Main.acn on input line 89.
- (./Main.aux)
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > Main.aex <nul: /p x=^%~$PATH:i>> Main.aex)...executed.
+
+runsystem(del Main.aex)...executed.
+
+ (./Main.aux
+
+LaTeX Warning: Label `fig:fer2013' multiply defined.
+
+)
 \openout1 = `Main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 115.
+LaTeX Font Info:    ... okay on input line 115.
  (d:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count374
-\scratchdimen=\dimen272
-\scratchbox=\box74
-\nofMPsegments=\count375
-\nofMParguments=\count376
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count377
-\MPscratchDim=\dimen273
-\MPnumerator=\count378
-\makeMPintoPDFobject=\count379
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count407
+\scratchdimen=\dimen287
+\scratchbox=\box81
+\nofMPsegments=\count408
+\nofMParguments=\count409
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count410
+\MPscratchDim=\dimen288
+\MPnumerator=\count411
+\makeMPintoPDFobject=\count412
+\everyMPtoPDFconversion=\toks50
 ) (d:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -874,21 +973,21 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@mv@tabular=\count380
-\c@mv@boldtabular=\count381
-LaTeX Info: Redefining \microtypecontext on input line 114.
-Package microtype Info: Applying patch `item' on input line 114.
-Package microtype Info: Applying patch `toc' on input line 114.
-Package microtype Info: Applying patch `eqnum' on input line 114.
-Package microtype Info: Applying patch `footnote' on input line 114.
-Package microtype Info: Applying patch `verbatim' on input line 114.
+\c@mv@tabular=\count413
+\c@mv@boldtabular=\count414
+LaTeX Info: Redefining \microtypecontext on input line 115.
+Package microtype Info: Applying patch `item' on input line 115.
+Package microtype Info: Applying patch `toc' on input line 115.
+Package microtype Info: Applying patch `eqnum' on input line 115.
+Package microtype Info: Applying patch `footnote' on input line 115.
+Package microtype Info: Applying patch `verbatim' on input line 115.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 114.
+LaTeX Info: Redefining \showhyphens on input line 115.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -896,41 +995,41 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Arimo-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring ON on input line 114.
+Package hyperref Info: Link coloring ON on input line 115.
 \symgns@font=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/Arimo-TLF/m/n --> TS1/Arimo-TLF/b/n on input line 114.
-Package gensymb Info: Math companion symbols declared on input line 114.
-LaTeX Info: Redefining \degree on input line 114.
-LaTeX Info: Redefining \celsius on input line 114.
-Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 114.
-LaTeX Info: Redefining \ohm on input line 114.
-Package gensymb Info: Using \textohm for \ohm on input line 114.
-Package gensymb Info: Using \textmu for \micro on input line 114.
-\c@lstlisting=\count382
+(Font)                  TS1/Arimo-TLF/m/n --> TS1/Arimo-TLF/b/n on input line 115.
+Package gensymb Info: Math companion symbols declared on input line 115.
+LaTeX Info: Redefining \degree on input line 115.
+LaTeX Info: Redefining \celsius on input line 115.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 115.
+LaTeX Info: Redefining \ohm on input line 115.
+Package gensymb Info: Using \textohm for \ohm on input line 115.
+Package gensymb Info: Using \textmu for \micro on input line 115.
+\c@lstlisting=\count415
 <Images/uwe-logo.jpg, id=4, 569.12625pt x 284.06125pt>
 File: Images/uwe-logo.jpg Graphic file (type jpg)
 <use Images/uwe-logo.jpg>
-Package pdftex.def Info: Images/uwe-logo.jpg  used on input line 121.
+Package pdftex.def Info: Images/uwe-logo.jpg  used on input line 122.
 (pdftex.def)             Requested size: 142.26378pt x 71.00645pt.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 126.
+(Font)              scaled to size 14.4pt on input line 127.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 129.
+(Font)              scaled to size 14.4pt on input line 130.
 [1
 
-\openout3 = `Main.ist'.
+\openout5 = `Main.ist'.
 
 {d:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/texlive/2023/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc} <./Images/uwe-logo.jpg>]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 156.
+(Font)              scaled to size 12.0pt on input line 157.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 20.74pt on input line 156.
+(Font)              scaled to size 20.74pt on input line 157.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.162 \newpage
+l.163 \newpage
                [1
 
 ] (./Abstract.tex) [2
@@ -942,9 +1041,9 @@ l.162 \newpage
 
 ]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 24.88pt on input line 182.
+(Font)              scaled to size 24.88pt on input line 183.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 24.88pt on input line 182.
+(Font)              scaled to size 24.88pt on input line 183.
  (./Main.toc (d:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
@@ -963,16 +1062,16 @@ LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
 LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 1.
  [5] [6])
-\tf@toc=\write6
-\openout6 = `Main.toc'.
+\tf@toc=\write8
+\openout8 = `Main.toc'.
 
  [7] (./Main.lof [8])
-\tf@lof=\write7
-\openout7 = `Main.lof'.
+\tf@lof=\write9
+\openout9 = `Main.lof'.
 
  [9] (./Main.lot)
-\tf@lot=\write8
-\openout8 = `Main.lot'.
+\tf@lot=\write10
+\openout10 = `Main.lot'.
 
  [10]
 Chapter 1.
@@ -981,7 +1080,7 @@ Chapter 1.
 ]
 Chapter 2.
 (./Literature Review.tex
-<Images/cuneiform.jpg, id=258, 931.48pt x 842.14626pt>
+<Images/cuneiform.jpg, id=291, 931.48pt x 842.14626pt>
 File: Images/cuneiform.jpg Graphic file (type jpg)
 <use Images/cuneiform.jpg>
 Package pdftex.def Info: Images/cuneiform.jpg  used on input line 63.
@@ -992,7 +1091,7 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 63.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 63.
-<Images/first_song.jpg, id=263, 634.37pt x 440.64626pt>
+<Images/first_song.jpg, id=296, 634.37pt x 440.64626pt>
 File: Images/first_song.jpg Graphic file (type jpg)
 <use Images/first_song.jpg>
 Package pdftex.def Info: Images/first_song.jpg  used on input line 65.
@@ -1000,7 +1099,7 @@ Package pdftex.def Info: Images/first_song.jpg  used on input line 65.
  [12
 
 ] [13{d:/texlive/2023/texmf-dist/fonts/enc/dvips/arimo/arm_c3z4r2.enc} <./Images/cuneiform.jpg> <./Images/first_song.jpg>] [14] [15]
-<Images/lr.png, id=343, 1541.76pt x 965.85844pt>
+<Images/lr.png, id=376, 1541.76pt x 965.85844pt>
 File: Images/lr.png Graphic file (type png)
 <use Images/lr.png>
 Package pdftex.def Info: Images/lr.png  used on input line 139.
@@ -1010,12 +1109,12 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
  [16]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 147.
-<Images/gd.png, id=361, 1541.76pt x 895.84688pt>
+<Images/gd.png, id=394, 1541.76pt x 895.84688pt>
 File: Images/gd.png Graphic file (type png)
 <use Images/gd.png>
 Package pdftex.def Info: Images/gd.png  used on input line 155.
 (pdftex.def)             Requested size: 284.52756pt x 165.31898pt.
-<Images/svm.png, id=366, 1541.76pt x 902.6222pt>
+<Images/svm.png, id=399, 1541.76pt x 902.6222pt>
 File: Images/svm.png Graphic file (type png)
 <use Images/svm.png>
 Package pdftex.def Info: Images/svm.png  used on input line 169.
@@ -1023,75 +1122,75 @@ Package pdftex.def Info: Images/svm.png  used on input line 169.
  [17 <./Images/lr.png> <./Images/gd.png>] [18 <./Images/svm.png>]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 220.
-<Images/rf.png, id=400, 1121.28pt x 1121.28pt>
+<Images/rf.png, id=433, 1121.28pt x 1121.28pt>
 File: Images/rf.png Graphic file (type png)
 <use Images/rf.png>
 Package pdftex.def Info: Images/rf.png  used on input line 224.
 (pdftex.def)             Requested size: 284.52756pt x 284.5282pt.
  [19 <./Images/rf.png>]
-<Images/knn.png, id=419, 1215.03937pt x 848.4197pt>
+<Images/knn.png, id=452, 1215.03937pt x 848.4197pt>
 File: Images/knn.png Graphic file (type png)
 <use Images/knn.png>
 Package pdftex.def Info: Images/knn.png  used on input line 244.
 (pdftex.def)             Requested size: 284.52756pt x 198.66663pt.
  [20 <./Images/knn.png>]
-<Images/mlp.png, id=431, 1297.84875pt x 649.67719pt>
+<Images/mlp.png, id=465, 1297.84875pt x 649.67719pt>
 File: Images/mlp.png Graphic file (type png)
 <use Images/mlp.png>
 Package pdftex.def Info: Images/mlp.png  used on input line 267.
 (pdftex.def)             Requested size: 284.52756pt x 142.42384pt.
-<Images/cnns.png, id=440, 1643.3897pt x 691.08188pt>
+<Images/cnns.png, id=474, 1643.3897pt x 691.08188pt>
 File: Images/cnns.png Graphic file (type png)
 <use Images/cnns.png>
 Package pdftex.def Info: Images/cnns.png  used on input line 286.
 (pdftex.def)             Requested size: 455.24408pt x 191.43477pt.
  [21 <./Images/mlp.png>]
-<Images/landmarks.jpg, id=454, 373.395pt x 247.67531pt>
+<Images/landmarks.jpg, id=487, 373.395pt x 247.67531pt>
 File: Images/landmarks.jpg Graphic file (type jpg)
 <use Images/landmarks.jpg>
 Package pdftex.def Info: Images/landmarks.jpg  used on input line 313.
 (pdftex.def)             Requested size: 284.52756pt x 188.73782pt.
-<Images/fer1stknn.png, id=461, 611.28375pt x 276.28218pt>
+<Images/fer1stknn.png, id=494, 611.28375pt x 276.28218pt>
 File: Images/fer1stknn.png Graphic file (type png)
 <use Images/fer1stknn.png>
 Package pdftex.def Info: Images/fer1stknn.png  used on input line 326.
 (pdftex.def)             Requested size: 199.16928pt x 90.01828pt.
-<Images/fer1stmlp.png, id=462, 586.44093pt x 271.0125pt>
+<Images/fer1stmlp.png, id=495, 586.44093pt x 271.0125pt>
 File: Images/fer1stmlp.png Graphic file (type png)
 <use Images/fer1stmlp.png>
 Package pdftex.def Info: Images/fer1stmlp.png  used on input line 328.
 (pdftex.def)             Requested size: 190.63338pt x 88.09454pt.
-<Images/new_cnn_model1.png, id=476, 459.21562pt x 398.99063pt>
+<Images/new_cnn_model1.png, id=509, 459.21562pt x 398.99063pt>
 File: Images/new_cnn_model1.png Graphic file (type png)
 <use Images/new_cnn_model1.png>
 Package pdftex.def Info: Images/new_cnn_model1.png  used on input line 355.
 (pdftex.def)             Requested size: 193.47882pt x 168.10458pt.
-<Images/new_cnn_model2.png, id=477, 467.49657pt x 386.94562pt>
+<Images/new_cnn_model2.png, id=510, 467.49657pt x 386.94562pt>
 File: Images/new_cnn_model2.png Graphic file (type png)
 <use Images/new_cnn_model2.png>
 Package pdftex.def Info: Images/new_cnn_model2.png  used on input line 357.
 (pdftex.def)             Requested size: 199.16928pt x 164.85416pt.
-<Images/new_cnn_cm_1.png, id=483, 461.47406pt x 420.82219pt>
+<Images/new_cnn_cm_1.png, id=516, 461.47406pt x 420.82219pt>
 File: Images/new_cnn_cm_1.png Graphic file (type png)
 <use Images/new_cnn_cm_1.png>
 Package pdftex.def Info: Images/new_cnn_cm_1.png  used on input line 370.
 (pdftex.def)             Requested size: 199.16928pt x 181.62424pt.
-<Images/new_cnn_cm_2.png, id=484, 461.47406pt x 410.2828pt>
+<Images/new_cnn_cm_2.png, id=517, 461.47406pt x 410.2828pt>
 File: Images/new_cnn_cm_2.png Graphic file (type png)
 <use Images/new_cnn_cm_2.png>
 Package pdftex.def Info: Images/new_cnn_cm_2.png  used on input line 372.
 (pdftex.def)             Requested size: 199.16928pt x 177.0755pt.
-<Images/lr_result.png, id=491, 206.27063pt x 99.37125pt>
+<Images/lr_result.png, id=524, 206.27063pt x 99.37125pt>
 File: Images/lr_result.png Graphic file (type png)
 <use Images/lr_result.png>
 Package pdftex.def Info: Images/lr_result.png  used on input line 383.
 (pdftex.def)             Requested size: 170.71652pt x 82.2446pt.
-<Images/rf_result.png, id=498, 461.47406pt x 175.40532pt>
+<Images/rf_result.png, id=531, 461.47406pt x 175.40532pt>
 File: Images/rf_result.png Graphic file (type png)
 <use Images/rf_result.png>
 Package pdftex.def Info: Images/rf_result.png  used on input line 396.
 (pdftex.def)             Requested size: 284.52756pt x 108.14795pt.
-<Images/svm_result.png, id=506, 432.86719pt x 156.585pt>
+<Images/svm_result.png, id=539, 432.86719pt x 156.585pt>
 File: Images/svm_result.png Graphic file (type png)
 <use Images/svm_result.png>
 Package pdftex.def Info: Images/svm_result.png  used on input line 408.
@@ -1107,7 +1206,7 @@ Overfull \vbox (21.75002pt too high) detected at line 27
 ] [30] [31] [32] [33]) [34]
 Chapter 4.
 (./Methodology.tex
-<Images/watefall.png, id=598, 1606.0pt x 903.375pt>
+<Images/watefall.png, id=631, 1606.0pt x 903.375pt>
 File: Images/watefall.png Graphic file (type png)
 <use Images/watefall.png>
 Package pdftex.def Info: Images/watefall.png  used on input line 13.
@@ -1115,19 +1214,19 @@ Package pdftex.def Info: Images/watefall.png  used on input line 13.
  [35
 
 ]
-<Images/spiral.png, id=610, 662.475pt x 611.28375pt>
+<Images/spiral.png, id=643, 662.475pt x 611.28375pt>
 File: Images/spiral.png Graphic file (type png)
 <use Images/spiral.png>
 Package pdftex.def Info: Images/spiral.png  used on input line 25.
 (pdftex.def)             Requested size: 199.16928pt x 183.77829pt.
  [36 <./Images/watefall.png> <./Images/spiral.png>]
-<Images/agile.png, id=623, 1686.3pt x 1303.87125pt>
+<Images/agile.png, id=656, 1686.3pt x 1303.87125pt>
 File: Images/agile.png Graphic file (type png)
 <use Images/agile.png>
 Package pdftex.def Info: Images/agile.png  used on input line 39.
 (pdftex.def)             Requested size: 199.16928pt x 153.99075pt.
  [37 <./Images/agile.png>] [38]
-<Images/kanban.png, id=637, 654.94687pt x 576.65437pt>
+<Images/kanban.png, id=670, 654.94687pt x 576.65437pt>
 File: Images/kanban.png Graphic file (type png)
 <use Images/kanban.png>
 Package pdftex.def Info: Images/kanban.png  used on input line 107.
@@ -1135,110 +1234,103 @@ Package pdftex.def Info: Images/kanban.png  used on input line 107.
  [39 <./Images/kanban.png>]) [40]
 Chapter 5.
 (./Design.tex
-<Images/block.png, id=652, 1087.4226pt x 549.7338pt>
+<Images/block.png, id=685, 1087.4226pt x 549.7338pt>
 File: Images/block.png Graphic file (type png)
 <use Images/block.png>
-Package pdftex.def Info: Images/block.png  used on input line 23.
+Package pdftex.def Info: Images/block.png  used on input line 24.
 (pdftex.def)             Requested size: 341.43306pt x 172.60504pt.
  [41
 
 ] [42 <./Images/block.png>]
-<Images/usecase.png, id=673, 3538.21875pt x 2409.0pt>
+<Images/usecase.png, id=707, 3538.21875pt x 2409.0pt>
 File: Images/usecase.png Graphic file (type png)
 <use Images/usecase.png>
-Package pdftex.def Info: Images/usecase.png  used on input line 55.
+Package pdftex.def Info: Images/usecase.png  used on input line 56.
 (pdftex.def)             Requested size: 398.33858pt x 271.20297pt.
  [43 <./Images/usecase.png>]
-<Images/login-sequence.png, id=684, 4065.1875pt x 2559.5625pt>
+<Images/login-sequence.png, id=717, 4065.1875pt x 2559.5625pt>
 File: Images/login-sequence.png Graphic file (type png)
 <use Images/login-sequence.png>
-Package pdftex.def Info: Images/login-sequence.png  used on input line 75.
+Package pdftex.def Info: Images/login-sequence.png  used on input line 76.
 (pdftex.def)             Requested size: 398.33858pt x 250.77682pt.
-<Images/fer-sequence.png, id=685, 3312.375pt x 2559.5625pt>
+<Images/fer-sequence.png, id=718, 3312.375pt x 2559.5625pt>
 File: Images/fer-sequence.png Graphic file (type png)
 <use Images/fer-sequence.png>
-Package pdftex.def Info: Images/fer-sequence.png  used on input line 81.
+Package pdftex.def Info: Images/fer-sequence.png  used on input line 82.
 (pdftex.def)             Requested size: 398.33858pt x 307.7982pt.
-<Images/playlist-sequence.png, id=686, 4516.875pt x 1908.12875pt>
+<Images/playlist-sequence.png, id=719, 4516.875pt x 1908.12875pt>
 File: Images/playlist-sequence.png Graphic file (type png)
 <use Images/playlist-sequence.png>
-Package pdftex.def Info: Images/playlist-sequence.png  used on input line 87.
+Package pdftex.def Info: Images/playlist-sequence.png  used on input line 88.
 (pdftex.def)             Requested size: 398.33858pt x 168.25941pt.
- [44 <./Images/login-sequence.png>] [45 <./Images/fer-sequence.png> <./Images/playlist-sequence.png>]
-<Images/flowchart.png, id=704, 3049.3925pt x 851.18pt>
+<Images/flowchart.png, id=725, 3049.3925pt x 851.18pt>
 File: Images/flowchart.png Graphic file (type png)
 <use Images/flowchart.png>
-Package pdftex.def Info: Images/flowchart.png  used on input line 104.
+Package pdftex.def Info: Images/flowchart.png  used on input line 105.
 (pdftex.def)             Requested size: 398.33858pt x 111.17679pt.
-<Images/erd.png, id=708, 2447.1425pt x 1609.01125pt>
+ [44] [45 <./Images/login-sequence.png> <./Images/fer-sequence.png>]
+<Images/erd.png, id=740, 2447.1425pt x 1609.01125pt>
 File: Images/erd.png Graphic file (type png)
 <use Images/erd.png>
-Package pdftex.def Info: Images/erd.png  used on input line 117.
+Package pdftex.def Info: Images/erd.png  used on input line 118.
 (pdftex.def)             Requested size: 398.33858pt x 261.89088pt.
- [46 <./Images/flowchart.png>]
-<Images/dark.png, id=722, 1084.05pt x 1084.05pt>
+ [46 <./Images/playlist-sequence.png> <./Images/flowchart.png>]
+<Images/dark.png, id=755, 1084.05pt x 1084.05pt>
 File: Images/dark.png Graphic file (type png)
 <use Images/dark.png>
-Package pdftex.def Info: Images/dark.png  used on input line 134.
+Package pdftex.def Info: Images/dark.png  used on input line 135.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<Images/dark-banner.png, id=723, 952.30782pt x 289.83281pt>
+<Images/dark-banner.png, id=756, 952.30782pt x 289.83281pt>
 File: Images/dark-banner.png Graphic file (type png)
 <use Images/dark-banner.png>
-Package pdftex.def Info: Images/dark-banner.png  used on input line 136.
+Package pdftex.def Info: Images/dark-banner.png  used on input line 137.
 (pdftex.def)             Requested size: 199.16928pt x 60.6146pt.
-<Images/light.png, id=724, 1084.05pt x 1084.05pt>
+<Images/light.png, id=757, 1084.05pt x 1084.05pt>
 File: Images/light.png Graphic file (type png)
 <use Images/light.png>
-Package pdftex.def Info: Images/light.png  used on input line 152.
+Package pdftex.def Info: Images/light.png  used on input line 153.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<Images/light-banner.png, id=725, 1269.74374pt x 386.44376pt>
+<Images/light-banner.png, id=758, 1269.74374pt x 386.44376pt>
 File: Images/light-banner.png Graphic file (type png)
 <use Images/light-banner.png>
-Package pdftex.def Info: Images/light-banner.png  used on input line 152.
+Package pdftex.def Info: Images/light-banner.png  used on input line 153.
 (pdftex.def)             Requested size: 199.16928pt x 60.61165pt.
 Package mdframed Info: mdframed inside float 
- mdframed uses option nobreak mdframed on input line 152.
+ mdframed uses option nobreak mdframed on input line 153.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 152.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[47 <./Images/erd.png>]
-<Images/login.png, id=735, 607.51968pt x 395.22656pt>
+ mdframed uses option nobreak mdframed on input line 153.
+ [47 <./Images/erd.png>]
+<Images/login.png, id=768, 607.51968pt x 395.22656pt>
 File: Images/login.png Graphic file (type png)
 <use Images/login.png>
-Package pdftex.def Info: Images/login.png  used on input line 164.
+Package pdftex.def Info: Images/login.png  used on input line 165.
 (pdftex.def)             Requested size: 341.43306pt x 222.12744pt.
-<Images/signup.png, id=736, 607.51968pt x 395.22656pt>
+<Images/signup.png, id=769, 607.51968pt x 395.22656pt>
 File: Images/signup.png Graphic file (type png)
 <use Images/signup.png>
-Package pdftex.def Info: Images/signup.png  used on input line 170.
+Package pdftex.def Info: Images/signup.png  used on input line 171.
 (pdftex.def)             Requested size: 341.43306pt x 222.12744pt.
-<Images/overview.png, id=737, 1026.08344pt x 540.51938pt>
+<Images/overview.png, id=770, 1026.08344pt x 540.51938pt>
 File: Images/overview.png Graphic file (type png)
 <use Images/overview.png>
-Package pdftex.def Info: Images/overview.png  used on input line 176.
+Package pdftex.def Info: Images/overview.png  used on input line 177.
 (pdftex.def)             Requested size: 341.43306pt x 179.85652pt.
-<Images/emotion.png, id=738, 491.58656pt x 252.945pt>
+<Images/emotion.png, id=771, 491.58656pt x 252.945pt>
 File: Images/emotion.png Graphic file (type png)
 <use Images/emotion.png>
-Package pdftex.def Info: Images/emotion.png  used on input line 182.
+Package pdftex.def Info: Images/emotion.png  used on input line 183.
 (pdftex.def)             Requested size: 341.43306pt x 175.69012pt.
-<Images/detection.png, id=739, 515.67656pt x 262.73157pt>
+<Images/detection.png, id=772, 515.67656pt x 262.73157pt>
 File: Images/detection.png Graphic file (type png)
 <use Images/detection.png>
-Package pdftex.def Info: Images/detection.png  used on input line 188.
+Package pdftex.def Info: Images/detection.png  used on input line 189.
 (pdftex.def)             Requested size: 341.43306pt x 173.9606pt.
-<Images/user-settings.png, id=740, 523.20468pt x 222.07968pt>
+<Images/user-settings.png, id=773, 523.20468pt x 222.07968pt>
 File: Images/user-settings.png Graphic file (type png)
 <use Images/user-settings.png>
-Package pdftex.def Info: Images/user-settings.png  used on input line 194.
+Package pdftex.def Info: Images/user-settings.png  used on input line 195.
 (pdftex.def)             Requested size: 341.43306pt x 144.92615pt.
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 204.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 209.
  (d:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -1247,62 +1339,87 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 204.
- [48 <./Images/dark.png> <./Images/dark-banner.png> <./Images/light.png> <./Images/light-banner.png> <./Images/login.png>]
-
-LaTeX Warning: Text page 49 contains only floats.
-
-[49 <./Images/signup.png> <./Images/overview.png> <./Images/emotion.png>]) [50 <./Images/detection.png> <./Images/user-settings.png>] [51{d:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [52]
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 209.
+ [48 <./Images/dark.png> <./Images/dark-banner.png> <./Images/light.png> <./Images/light-banner.png>] [49 <./Images/login.png> <./Images/signup.png>] [50 <./Images/overview.png> <./Images/emotion.png> <./Images/detection.png>]) [51{d:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Images/user-settings.png>] [52] [53]
 Chapter 6.
-(./Implementation.tex) [53
+(./Implementation.tex [54
 
 ]
+<Images/fer2013.png, id=850, 930.1149pt x 545.6385pt>
+File: Images/fer2013.png Graphic file (type png)
+<use Images/fer2013.png>
+Package pdftex.def Info: Images/fer2013.png  used on input line 25.
+(pdftex.def)             Requested size: 284.52756pt x 166.91487pt.
+<Images/ckextended.png, id=855, 930.1149pt x 545.6385pt>
+File: Images/ckextended.png Graphic file (type png)
+<use Images/ckextended.png>
+Package pdftex.def Info: Images/ckextended.png  used on input line 35.
+(pdftex.def)             Requested size: 284.52756pt x 166.91487pt.
+ [55 <./Images/fer2013.png>] [56 <./Images/ckextended.png>] [57]
+\openout3 = `Main.pyg'.
+
+ (./_minted-Main/friendly.pygstyle) (./_minted-Main/589A333AAB3FE851FB635662ABB6961C1C73BE8A84FD6415883EF4FD0B8868EE.pygtex
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 3.
+ (d:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)) [58{d:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [59]
 Chapter 7.
-(./Project Evaluation.tex) [54
+(./Project Evaluation.tex) [60
 
-] (./main.bbl [55
+] (./main.bbl [61
 
 ]
-Overfull \hbox (17.78313pt too wide) in paragraph at lines 69--70
+Overfull \hbox (17.78313pt too wide) in paragraph at lines 73--74
 \T1/cmtt/m/n/12 introduction-[]to-[]machine-[]learning-[]algorithms-[]linear-[]regression-[]14c4e325882a$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[56]
-Overfull \hbox (24.95662pt too wide) in paragraph at lines 78--79
+[62]
+Overfull \hbox (24.95662pt too wide) in paragraph at lines 82--83
 \T1/cmtt/m/n/12 machine-[]learning-[]basics-[]with-[]the-[]k-[]nearest-[]neighbors-[]algorithm-[]6a6e71d01761$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[57]
-Overfull \hbox (22.45662pt too wide) in paragraph at lines 138--139
+[63] [64]
+Overfull \hbox (22.45662pt too wide) in paragraph at lines 153--154
 \T1/cmtt/m/n/12 towardsdatascience . com / convolutional-[]neural-[]networks-[]explained-[]9cc5188c4939$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[58]
-Overfull \hbox (56.32408pt too wide) in paragraph at lines 159--160
+[65]
+Overfull \hbox (56.32408pt too wide) in paragraph at lines 190--191
 \T1/cmtt/m/n/12 a-[]comprehensive-[]guide-[]to-[]convolutional-[]neural-[]networks-[]the-[]eli5-[]way-[]3bd2b1164a53$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[59]) [60] (./Appendix.tex [61
+[66]) [67] (./Appendix.tex [68
 
-]) [62] (./Main.aux)
+]) [69] (./Main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+runsystem(del Main.pyg)...executed.
+
  ) 
 Here is how much of TeX's memory you used:
- 24860 strings out of 474166
- 412231 string characters out of 5749519
+ 28038 strings out of 474166
+ 482104 string characters out of 5749519
  1964528 words of memory out of 5000000
- 46179 multiletter control sequences out of 15000+600000
- 582970 words of font info for 253 fonts, out of 8000000 for 9000
+ 49238 multiletter control sequences out of 15000+600000
+ 585883 words of font info for 270 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,13n,108p,2398b,878s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Italic.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Main.pdf (63 pages, 4469997 bytes).
+<d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Italic.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on Main.pdf (70 pages, 4672035 bytes).
 PDF statistics:
- 1186 PDF objects out of 1200 (max. 8388607)
- 1009 compressed objects within 11 object streams
- 240 named destinations out of 1000 (max. 500000)
- 68742 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1383 PDF objects out of 1440 (max. 8388607)
+ 1187 compressed objects within 12 object streams
+ 277 named destinations out of 1000 (max. 500000)
+ 73984 words of extra memory for PDF output out of 74296 (max. 10000000)
 

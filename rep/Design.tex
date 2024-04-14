@@ -14,8 +14,9 @@ This discussion covers the model's validation, training, and integration into th
 \\
 \indent All of these components provide a thorough explanation of the system's design, addressing structural, behavioral, and aesthetic factors from the abstract to the concrete.
 
-\section{UML Diagrams}
-\subsection{Block Diagram}
+\section{Web Application}
+\subsection{UML Diagrams}
+\subsubsection{Block Diagram}
 Block diagram present a high-level overview of the system's architecture, highlighting the major components and their interactions. \citep{freeman_block}
 This offers insights into the overall system design and its flow.
 \begin{figure}[!ht]
@@ -48,7 +49,7 @@ This component is responsible for fetching the actual music tracks from Spotify 
 \indent This diagram simplifies the conceptual understanding of the system and forms the architectural backbone of the application.
 It also outlines how user actions translate into system responses and result in a music therapy experience.
 \\
-\subsection{Use Case Diagram}
+\subsubsection{Use Case Diagram}
 Use Case diagram is a visual representation of the system's functionalities and the interactions that different types of users have with these functionalities. \citep{ibm_2021_usecase}
 \begin{figure}[!ht]
     \centering
@@ -67,7 +68,7 @@ When a use case incorporates another's behavior or expands the behavior under so
 For example, several use cases in the application such as `Recognize Emotion', `Change Profile Settings', and `Play Music', require the `User' to be authenticated.
 This precondition is captured in the `Validate User' use case, which is included in these use cases to ensure that the `User' is logged in before granting access to the services.
 \\
-\subsection{Sequence Diagrams}
+\subsubsection{Sequence Diagrams}
 Sequence diagrams provide an illustrative view of how various components of a system work together ot accomplish a process, acting as blueprints of interaction across time.\citep{bell_2004_explore}
 They are especially helpful in understanding the flow of messages and actions between objects in response to software system events.
 \begin{figure}[!ht]
@@ -96,7 +97,7 @@ The detected emotion will then influence the music playlist generation.
 \indent Figure \ref{fig:playlist-sequence} shows how the service uses the detected emotion from Figure \ref{fig:fer-sequence} to choose and assemble a series of songs into a coherent playlist.
 From retrieving suitable songs based on the emotional analysis to returning the playlist to the user for playback through Spotify Web Playback service, it demonstrates the cooperation between the system's components.
 \\
-\subsection{Flowchart}
+\subsubsection{Flowchart}
 Flowchart represent the process of a system, the decisions that need to be made, and the flow of control from one step to the next.
 Troubleshooting and system design are made considerably easier with the aid of flowchart as they make the sequential phase and logic paths in complicated processes visible. \citep{lucidchart_2019_what}
 \begin{figure}[!ht]
@@ -109,7 +110,7 @@ Troubleshooting and system design are made considerably easier with the aid of f
 \indent Figure \ref{fig:flowchart-fer-pg} shows the steps taken from the moment a user engages with the feature to capture their emotional state to the point where the system recognizes and outputs the detected emotion.
 Following the \gls{fer} phase, the identified emotion is then used to select suitable music, creating playlist and presenting it to the user. 
 \\
-\subsection{Entity-relationship Diagram}
+\subsubsection{Entity-relationship Diagram}
 \gls{erd} is a structured representation of the data entities within the web application and the interconnections between them. 
 This illustration outlines the database schema, which is foundational for storing, retrieving, and managing data that the application operates upon.
 \begin{figure}[!ht]
@@ -126,7 +127,7 @@ This illustration outlines the database schema, which is foundational for storin
 \indent The relationship between entities are defined by \gls{pk} and \gls{fk}, enforcing referential integrity within the database.
 For example, a one-to-many relationship from `Artists' to `Tracks' indicates that one artist can have multiple tracks, whereas a one-to-one relationship between `Tracks' and `Audio Features' indicates that each track has its own unique features.
 \\
-\section{Logo Design}
+\subsection{Logo Design}
 Figure \ref{subfig:light-logo} and Figure \ref{subfig:dark-logo} is made up of stylized waves that reference the soothing rhythms of ocean waves while also visualizing the representation of an audio signal.
 This duality shows the fundamental purpose of the application, using the ability of music to evoke and influence emotions, providing a calming and therapeutic user experience.
 \begin{figure}[h!]
@@ -156,7 +157,7 @@ This duality shows the fundamental purpose of the application, using the ability
 \indent Accompanying the logo, Figure \ref{subfig:light-banner} and Figure \ref{subfig:dark-banner} incorporates the application's name, `Sentirhy', which itself is a portmanteau derived from `Sentiment' and `Rhythm'.
 This naming convention shows the application's focus on sentiment analysis and rhythm.
 \\
-\section{Interface Design}
+\subsection{Interface Design}
 \gls{ui}s are created through the process of interface design.
 The arrangement of panels, as well as the style of components the user will interact with such as buttons, text fields and others are all included.
 \begin{figure}[!ht]
@@ -196,13 +197,18 @@ The arrangement of panels, as well as the style of components the user will inte
     \label{fig:usr-settings}
 \end{figure}
 \section{Artificial Intelligence and Machine Learning}
-\subsection{Model Architecture}
+\subsection{Models Architecture}
+In computer vision, a model's architecture is the basis that backs up its capacity for learning and generalization.
+The design decisions made when structuring a model determine not only its performance, but also its efficiency in extracting and understanding the complex patterns found in the data. 
+A \gls{fer} model must be able to manage the complexity of human facial emotions with ease. 
+Therefore, the architectures explored and selected are designed with the goal of capturing a complex hierarchy of features.
 \begin{table}[ht]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
         \textbf{Layer (Type)} & \textbf{Output Shape} & \textbf{Parameters} \\
-        \midrule 
+        \midrule
+        Input & (None, 48, 48, 1) & 0 \\ 
         Conv2D (3x3x32) & (None, 48, 48, 32) & 320 \\
         Conv2D (3x3x64) & (None, 48, 48, 64) &  18,496\\
         BatchNormalization & (None, 48, 48, 64) & 256 \\
@@ -222,14 +228,21 @@ The arrangement of panels, as well as the style of components the user will inte
     \caption{Detailed Architecture of the CNNs Model 1}
     \label{tab:cnn-model-1}
 \end{table}
-
-
+\\
+\indent Model 1 (Table \ref{tab:cnn-model-1}) is the first attempt at tackling the challenging issue of \gls{fer}, based on the well-proven architectures similar to VGG-16 \citep{simonyan2015deep}, which are intended to identify nad leverage the strengths of facial feature differentiation.
+The model started with a conservative number of filters in the \gls{conv2d}, from 32 and incrementally increasing to 64, 128, and 256, to ensure the model is able to capture a spectrum of features from basic to complex. 
+Those interspersed `Dropout' layers are used to prevent over-fitting, which then giving the model greater generalization capabilities.
+\\
+\indent In order to reduce dimensionality, pooling layers are implemented throughout the architecture.
+This will compress the spatial volume of features before they are flattened into a format suitable for dense network processing.
+The learning process ends in the `Dense' layers that, through a `Softmax' activation, control the emotional categorization, converting the complex network of extracted features into perceptible emotional states.
 \begin{table}[ht]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
         \textbf{Layer (Type)} & \textbf{Output Shape} & \textbf{Parameters} \\
         \midrule 
+        Input & (None, 48, 48, 1) & 0 \\
         Conv2D (3x3x64) & (None, 48, 48, 64) & 640 \\
         BatchNormalization & (None, 48, 48, 64) & 256 \\
         ReLU Activation & (None, 48, 48, 64) & 0 \\
@@ -267,8 +280,11 @@ The arrangement of panels, as well as the style of components the user will inte
     \caption{Detailed Architecture of the CNNs Model 2}
     \label{tab:cnn-model-2}
 \end{table}
-
-
-    
+\\
+\indent Model 2 (Table \ref{tab:cnn-model-2}) is a refined version of the \gls{fer} model.
+With the addition of L2 regularization and a varied number of filter sizes, this model differs from the first model.
+This version provides theoretical performance improvements, such as higher generalization in unseen data.
+Additionally, this model version is more similar to the VGG-16 model; but, because of resource constraints, the original VGG-16 model, which in theory should yield better results, is not implemented in order to use fewer computer resources.
+   
     
     
