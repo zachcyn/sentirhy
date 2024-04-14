@@ -29,12 +29,12 @@ export const ThemeContext = React.createContext({
 });
 
 export default function ThemeProvider({ children }) {
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState(localStorage.getItem('mode') || 'light');
   const [themeReady, setThemeReady]= useState(false);
 
   const contextValue = useMemo(() => ({
     toggleTheme: () => {
-      console.log(mode);
+      localStorage.setItem('mode', mode)
       setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
     },
     mode,

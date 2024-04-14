@@ -2,7 +2,40 @@
 @import 'simplebar-react/dist/simplebar.min.css';
 
 /* music title */
-@keyframes scroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+@keyframes scrollText {
+  0%, 100% {
+    transform: translateX(0);
   }
+  10%, 45% {
+    transform: translateX(calc(-100% + var(--containerWidth)));
+  }
+  50%, 90% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-transition {
+  animation: slideIn 0.5s forwards;
+}
+
+.slide-out-transition {
+  animation: slideOut 0.5s forwards;
+}

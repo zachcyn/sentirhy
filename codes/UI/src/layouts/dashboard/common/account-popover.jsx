@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -10,8 +10,7 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 
 import { useRouter } from 'src/routes/hooks';
-
-import { account } from 'src/_mock/account';
+import { RouterLink } from 'src/routes/components';
 
 import ThemeToggleButton from 'src/components/mode-button';
 
@@ -22,16 +21,9 @@ import { useAuth } from 'src/sections/login/authContext';
 
 const MENU_OPTIONS = [
   {
-    label: 'Home',
+    label: 'Profile Settings',
     icon: 'eva:home-fill',
-  },
-  {
-    label: 'Profile',
-    icon: 'eva:person-fill',
-  },
-  {
-    label: 'Settings',
-    icon: 'eva:settings-2-fill',
+    path: '/profile-settings' ,
   },
 ];
 
@@ -40,7 +32,28 @@ const MENU_OPTIONS = [
 export default function AccountPopover() {
   const router = useRouter();
   const [open, setOpen] = useState(null);
-  const { logout } = useAuth();
+  const [avatar, setAvatar] = useState(false);
+  const { logout, user } = useAuth();
+
+  const getUserData = () => {
+    if (user) {
+      try {
+        return user;
+      } catch (e) {
+        console.error("Error parsing user data:", e);
+        return null;
+      }
+    }
+    return null;
+  };
+  
+  const userData = getUserData();
+
+  useEffect(() => {
+      if (userData?.img !== 'undefined'){
+          setAvatar(true)
+      }
+  }, [userData])
 
   const handleOpen = (event) => {
     setOpen(event.currentTarget);
@@ -71,16 +84,13 @@ export default function AccountPopover() {
         }}
       >
         <Avatar
-          src={account.photoURL}
-          alt={account.displayName}
+          src={avatar ? `${import.meta.env.VITE_API_URL}/file/user-profile/${userData?.imgurl}` : "None"}
+          alt={userData?.user}
           sx={{
             width: 36,
             height: 36,
-            border: (theme) => `solid 2px ${theme.palette.background.default}`,
           }}
-        >
-          {account.displayName.charAt(0).toUpperCase()}
-        </Avatar>
+        />
       </IconButton>
 
       <Popover
@@ -100,21 +110,25 @@ export default function AccountPopover() {
       >
         <Box sx={{ my: 1.5, px: 2 }}>
           <Typography variant="subtitle2" noWrap>
-            {account.displayName}
+            {`${userData?.fname} ${userData?.lname}`}
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary' }} noWrap>
-            {account.email}
+            {userData?.email}
           </Typography>
         </Box>
 
         <Divider sx={{ borderStyle: 'dashed' }} />
 
         {MENU_OPTIONS.map((option) => (
-          <MenuItem key={option.label} onClick={handleClose}>
+          <MenuItem 
+            key={option.label} 
+            component={RouterLink}
+            href={option.path}
+            >
             {option.label}
           </MenuItem>
         ))}
-
+        <ThemeToggleButton/>
         <Divider sx={{ borderStyle: 'dashed', m: 0 }} />
 
         <MenuItem
@@ -125,9 +139,6 @@ export default function AccountPopover() {
         >
           Logout
         </MenuItem>
-        <MenuItem>
-         <ThemeToggleButton/>
-         </MenuItem>
       </Popover>
     </>
   );

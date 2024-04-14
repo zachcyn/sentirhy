@@ -1,0 +1,101 @@
+\section{Functional Requirements and Non-functional Requirements}
+\subsection{Functional Requirements}
+\begin{longtable}{ |m{1cm}|m{3.5cm}|m{7cm}|m{1.5cm}| }
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
+    \hline
+    \endhead
+    FR1 & \multirow{5}{=}{User Registration and Account Management} & The system must allow user to register by providing a unique username, user's actual name, date of birth, email, and password. & High \\
+    \cline{1-1} \cline{3-4}
+    FR2 &  & The system must verify user accounts through an email verification process. & High \\
+    \cline{1-1} \cline{3-4}
+    FR3 &  & Users must be able to login with their email or username and password. A "Remember Me" option should allow users to stay logged in for 7 days. & High \\
+    \cline{1-1} \cline{3-4}
+    FR4 &  & Users can access a settings page to update their name, date of birth, email, password, and profile picture. Usernames cannot be changed. & Medium \\
+    \cline{1-1} \cline{3-4}
+    FR5 &  & Users must be able to reset their passwords through a password reset feature on the login page. & Medium \\
+    \hline
+    FR6 & Facial Emotion Recognition & The application integrates a machine learning model to recognize user's facial emotions via their device's camera. & High \\
+    \hline
+    FR7 & \multirow{2}{=}{Spotify Web Playback Integration} & The system integrates with Spotify Web Playback SDK to play music within the web application. & High \\
+    \cline{1-1} \cline{3-4}
+    FR8 &  & The application must allow users to connect their Spotify account before accessing music playback services. This integration should facilitate authentication and authorization seamlessly within the web application. & High \\
+    \hline
+    FR9 & Music Recommendation System & The application must generate playlists based on the user's recognized emotion using an algorithm. & High \\
+    \hline
+    FR10 & \multirow{2}{=}{User Interface and Experience} & The web application supports a toggle between light and dark themes, automatically detecting and applying the user's device theme upon first use. & Medium \\
+    \cline{1-1} \cline{3-4}
+    FR11 &  & The application supports multiple languages: English, Japanese, Chinese, Korean, and Malay. & Low \\
+    \hline
+    \caption{Functional Requirements} \\
+\end{longtable}
+\pagebreak
+\subsection{Non-Functional Requirements}
+\begin{longtable}{ |m{1.5cm}|m{3.5cm}|m{7cm}|m{1.5cm}| }
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
+    \hline
+    \endhead
+    NFR1 & \multirow{2}{=}{Performance and Scalability} & The application shall load within 3 seconds for 95\% of its users under standard network conditions. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR2 &  & The system must be scalable to support up to 100 concurrent users without significant degradation in performance. & High \\
+    \hline
+    NFR3 & \multirow{5}{=}{Compliance and Security} & All user data, including passwords and personal information, must be encrypted. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR4 &  & The application must implement secure authentication mechanisms to prevent unauthorized access. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR5 &  & User data must be stored in a secure database with access strictly limited ot the backend server. The database shall not be directly accessible from any public network (0.0.0.0/0). & High \\
+    \cline{1-1} \cline{3-4}
+    NFR6 &  & User passwords must be encrypted using a secure hashing algorithm (e.g., bcrypt) to ensure their safety even in the event of a data breach. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR7 &  & All forms of data transmission involved in user authentication and registration must be over HTTPS, and sensitive information shall not appear in URLs or any part of the HTTP request visible to the client side. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR8 &  & The application must comply with relevant data protection and privacy regulations, including GDPR where applicable, ensuring user's rights to privacy and data security are upheld. & High \\
+    \hline
+    NFR9 & \multirow{2}{=}{Usability} & The application shall be designed with a user-friendly interface, ensuring ease of navigation and accessibility. & Medium \\
+    \cline{1-1} \cline{3-4}
+    NFR10 &  & User input fields should provide immediate feedback to correct errors or invalid data. & Medium \\
+    \hline
+    NFR11 & \multirow{2}{=}{Compatibility and Interoperability} & The web application must be compatible with the latest versions of Chrome, Firefox, Safari and Edge browsers. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR12 &  & The system must ensure seamless integration with the Spotify API and maintain compatibility with Spotify's update. & High \\
+    \hline
+    NFR13 & \multirow{2}{=}{Localization and Internationalization} & The application must support multi-language interfaces, allowing users to switch languages easily. & Medium \\
+    \cline{1-1} \cline{3-4}
+    NFR14 &  & Date and time formats should adapt to the user's selected language and region preferences. & Low \\
+    \hline
+    NFR15 & \multirow{2}{=}{Maintenance and Support} & The system should be designed to allow easy updates and maintenance without significant downtime. & Medium \\
+    \cline{1-1} \cline{3-4}
+    NFR16 &  & Documentation must be provided for end-users and developers, detailing usage, integration features, and troubleshooting steps. & Medium \\
+    \hline
+    NFR17 & \multirow{3}{=}{Application Performance} & The facial emotion recognition feature must provide a response within 5 seconds from the time of user's request under standard network conditions. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR18 &  & The system should ensure a Spotify playback start time of less than 3 seconds after user selection or playlist generation. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR19 &  & The web application's overall time to interactive (TTI) should not exceed 5 seconds for 90\% of its users under standard network conditions. & High \\
+    \hline
+    NFR20 & \multirow{2}{=}{User Interface Design} & The application must adhere to WCAG 2.1 AA standards for color contrast, navigability, and text size to ensure accessibility for users with disabilities. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR21 &  & All user interface components (buttons, links, form elements) must be navigable using a keyboard in a logical order to support users with mobility or visual impairments. & High \\
+    \hline
+    NFR22 & \multirow{2}{=}{Data Handling and Authentication} & Implement OAuth 2.0 for secure authentication with Spotify, ensuring that user credentials are handled safety and in line with best security practices. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR23 &  & Apply secure session management practices, including the generation of unique session tokens for users during login and their secure storage on the client side. & High \\
+    \hline
+    \caption{Non-Functional Requirements} \\
+\end{longtable}
+

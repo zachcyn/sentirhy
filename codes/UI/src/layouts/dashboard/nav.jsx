@@ -1,10 +1,9 @@
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Drawer from '@mui/material/Drawer';
-// import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import { alpha } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
@@ -15,10 +14,10 @@ import { RouterLink } from 'src/routes/components';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { account } from 'src/_mock/account';
-
 import Logo from 'src/components/logo';
 import Scrollbar from 'src/components/scrollbar';
+
+import { useAuth } from 'src/sections/login/authContext';
 
 import { NAV } from './config-layout';
 import navConfig from './config-navigation';
@@ -26,6 +25,29 @@ import navConfig from './config-navigation';
 // ----------------------------------------------------------------------
 
 export default function Nav({ openNav, onCloseNav }) {
+  const [avatar, setAvatar] = useState(false);
+  const { user } = useAuth()
+
+  const getUserData = () => {
+    if (user) {
+      try {
+        return user;
+      } catch (e) {
+        console.error("Error parsing user data:", e);
+        return null;
+      }
+    }
+    return null;
+  };
+  
+  const userData = getUserData();
+
+  useEffect(() => {
+      if (userData?.img !== 'undefined'){
+          setAvatar(true)
+      }
+  }, [userData])
+
   const pathname = usePathname();
 
   const upLg = useResponsive('up', 'lg');
@@ -50,14 +72,10 @@ export default function Nav({ openNav, onCloseNav }) {
         bgcolor: (theme) => alpha(theme.palette.grey[500], 0.12),
       }}
     >
-      <Avatar src={account.photoURL} alt="photoURL" />
+      <Avatar src={avatar ? `${import.meta.env.VITE_API_URL}/file/user-profile/${userData?.imgurl}` : "None"} alt={userData?.user} />
 
       <Box sx={{ ml: 2 }}>
-        <Typography variant="subtitle2">{account.displayName}</Typography>
-
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          {account.role}
-        </Typography>
+        <Typography variant="subtitle2">{userData ? `${userData?.fname} ${userData?.lname}` : 'Unknown'}</Typography>
       </Box>
     </Box>
   );

@@ -10,6 +10,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
+import ScrollableText from '../scrolling-word/scrollable-text';
+
 const TrackItem = ({ track, handlePlay }) => {
   const theme = useTheme();
   
@@ -36,8 +38,8 @@ const TrackItem = ({ track, handlePlay }) => {
         />
       </ListItemIcon>
       <ListItemText 
-        primary={<Typography variant="subtitle1" color={theme.palette.text.primary}>{track.title}</Typography>}
-        secondary={<Typography variant="body2" color={theme.palette.text.secondary}>{track.name}</Typography>}
+        primary={<ScrollableText text={track.title || ''} variant='subtitle1'/>}
+        secondary={<ScrollableText text={track.name || ''} variant='body2' />}
         sx={{ '& .MuiListItemText-primary': { whiteSpace: 'nowrap' } }}
       />
       <Box sx={{ marginLeft: 'auto' }}>

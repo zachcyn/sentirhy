@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "Agrawal",
+        "Bowlby's",
         "Chakrapani",
         "Handouzia",
         "Naseem",
@@ -9,5 +10,44 @@
     "cSpell.enableFiletypes": [
         "!python"
     ],
-    "AutoPreview.serverURL": "localhost:3030"
+    "AutoPreview.serverURL": "localhost:3030",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdflatex ➜ bibtex ➜ makeglossaries ➜ pdflatex (x2)",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "makeglossaries",
+                "pdflatex",
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "makeglossaries",
+            "command": "makeglossaries",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        },
+    ],
+    "workbench.colorTheme": "Monokai Pro"
 }
