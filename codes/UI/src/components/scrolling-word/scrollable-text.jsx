@@ -4,15 +4,15 @@ import React, { useEffect, useRef, useState } from 'react';
 
 import { Typography, Box } from '@mui/material';
 
-const ScrollableText = ({ text = '' }) => {
+const ScrollableText = ({ text = '', variant = ''}) => {
   const textRef = useRef(null);
   const [shouldScroll, setShouldScroll] = useState(false);
+  const containerWidth = textRef.current?.parentNode.offsetWidth ?? 0;
+  const textWidth = textRef.current?.offsetWidth ?? 0;
 
   useEffect(() => {
     const checkScroll = () => {
-        const containerWidth = (textRef.current?.parentNode.parentNode.parentNode.offsetWidth ?? 0) * 0.3036;
-        const textWidth = textRef.current?.offsetWidth;
-        setShouldScroll(textWidth > containerWidth);
+      setShouldScroll(textWidth > containerWidth);
     };
 
     checkScroll();
@@ -21,24 +21,26 @@ const ScrollableText = ({ text = '' }) => {
     return () => {
       window.removeEventListener('resize', checkScroll);
     };
-  }, [text, shouldScroll]);
+  }, [textWidth, containerWidth]);
 
-    const scrollAnimationStyle = shouldScroll ? { 
-    animation: `scroll ${Math.max(10, text.length / 5)}s linear infinite`, 
-    } : {};
-
+  const scrollAnimationStyle = shouldScroll ? {
+    animation: `scrollText 20s linear infinite`, 
+    animationFillMode: 'forwards',
+    '--containerWidth': `${containerWidth}px`
+  } : {};
 
   return (
-    <div style={{ width: '100%', overflow: 'hidden' }}>
-        <div ref={textRef} style={{ overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', ...scrollAnimationStyle }}>
-            <Typography variant="subtitle1" noWrap>{text}</Typography>
-        </div>
-    </div>
+    <Box style={{ overflow: 'hidden'}}>
+        <Box ref={textRef} style={{ width: 'fit-content', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', ...scrollAnimationStyle }}>
+            <Typography variant={variant} noWrap>{text}</Typography>
+        </Box>
+    </Box>
   );
 };
 
 ScrollableText.propTypes = {
     text: PropTypes.string.isRequired,
+    variant: PropTypes.oneOf(['body1', 'caption', 'button', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'overline', 'inherit']),
   };
 
   

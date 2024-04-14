@@ -1,23 +1,42 @@
 import Webcam from 'react-webcam';
-import React, { useRef, useState, useEffect, useCallback } from 'react';
+import PropTypes from 'prop-types';
+import React, { useRef, useState, useEffect, useCallback, forwardRef, useImperativeHandle } from 'react';
 
 import Typography from '@mui/material/Typography';
 
-function Camera() {
+const Camera = forwardRef((props, ref) => {
     const webcamRef = useRef(null);
     const canvasRef = useRef(null);
+    const [cascade, setCascade] = useState(false);
     const [isCvReady, setIsCvReady] = useState(false);
+    const [detecting, setDetecting] = useState(true);
+    const detectingRef = useRef(detecting);
+
+    useEffect(() => {
+        detectingRef.current = detecting;
+    }, [detecting]);
+
+    useImperativeHandle(ref, () => ({
+      toggleDetection: () => {
+        setDetecting((prev) => !prev);
+      },
+    }));
   
     const processVideo = useCallback(() => {
-
       const FPS = 30;
       const classifier = new window.cv.CascadeClassifier();
       classifier.load('haarcascade_frontalface_default.xml');
 
       const processFrame = () => {
+        if (!isCvReady || !detectingRef.current) return;
+
         const begin = Date.now();
               
         const video = webcamRef.current.video;
+        if (!video || video.videoWidth === 0 || video.videoHeight === 0) {
+          requestAnimationFrame(processFrame);
+          return;
+        }
         const canvas = canvasRef.current;
         const dst = new window.cv.Mat(video.videoWidth, video.videoHeight, window.cv.CV_8UC4);
 
@@ -33,14 +52,15 @@ function Camera() {
         src.copyTo(dst);
         window.cv.cvtColor(src, gray, window.cv.COLOR_RGBA2GRAY, 0);
         classifier.detectMultiScale(gray, faces, 1.1, 3, 0);
-        console.log(`Detected faces: ${faces.size()}`);
-        for (let i = 0; i < faces.size(); i+=1) {
-          const face = faces.get(i);
-          const point1 = new window.cv.Point(face.x, face.y);
-          const point2 = new window.cv.Point(face.x + face.width, face.y + face.height);
-          window.cv.rectangle(src, point1, point2, [255, 0, 0, 255], 2, window.cv.LINE_8, 0);
+        console.log(faces.size())
+        if (faces.size() > 0 && detecting) {
+          console.log('face detected')
+          setDetecting(false);
+          detectingRef.current = false;
+          const imageData = canvas.toDataURL('image/png');
+          props.onCapture(imageData); 
         }
-        window.cv.imshow(canvas, src);
+
         const delay = 1000/FPS - (Date.now() - begin);
         setTimeout(processFrame, delay);
 
@@ -52,7 +72,7 @@ function Camera() {
       setTimeout(processFrame, 0);
   
       // eslint-disable-next-line consistent-return
-    }, []);
+    }, [detecting, isCvReady, props, detectingRef]);
   
  
     useEffect(() => {
@@ -81,25 +101,39 @@ function Camera() {
     }, []);
   
     useEffect(() => {
-      if (isCvReady && webcamRef && canvasRef) {
+      if (isCvReady) {
         fetch('/haarcascade_frontalface_default.xml')
         .then(response => response.arrayBuffer()) // Use arrayBuffer() for binary files
         .then(data => {
             const dataHeap = new Uint8Array(data);
             window.cv.FS_createDataFile('/', 'haarcascade_frontalface_default.xml', dataHeap, true, false, false);
-            processVideo();
+            setCascade(true);
         })
         .catch(error => console.error('Error loading classifier:', error));
             }
-    }, [isCvReady, processVideo]);
+    }, [isCvReady]);
+
+    useEffect(() => {
+      if (isCvReady && cascade && detecting) {
+        console.log(detecting)
+        processVideo();
+      }
+    }, [isCvReady, cascade, detecting, processVideo])
 
   return (
     <div>
-      <Typography>{isCvReady ? 'OpenCV is ready' : 'Loading OpenCV...'}</Typography>
-      <Webcam ref={webcamRef} audio={false} style={{ width: "1px", height: "1px", opacity: 0, position: "absolute" }} />
-      <canvas ref={canvasRef} />
+      <Webcam ref={webcamRef} audio={false} 
+      style={{width:"100%"}}
+      />
+      <canvas ref={canvasRef} 
+        style={{ width: "1px", height: "1px", opacity: 0, position: "absolute" }}
+        />
     </div>
   );
-}
+});
+
+Camera.propTypes = {
+  onCapture: PropTypes.func.isRequired
+};
 
 export default Camera;

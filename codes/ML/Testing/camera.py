@@ -3,7 +3,7 @@ import tensorflow as tf
 import numpy as np
 
 # Load the trained model
-model = tf.keras.models.load_model('C:/Users/User/Desktop/Document/UWE/FYP/fyp/codes/ML/Recognition/Model/FER_v3.h5')
+model = tf.keras.models.load_model('C:/Users/User/Desktop/Document/UWE/FYP/sentirhy/sentirhy/codes/ML/Recognition/Model/FER_v3_w_CK+_w_SZU.h5')
 
 
 

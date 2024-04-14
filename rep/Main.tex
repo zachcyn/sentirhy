@@ -36,6 +36,7 @@
 % Formatting Table of Contents/Lists titles
 \renewcommand{\contentsname}{\bfseries\LARGE{CONTENTS}}
 \renewcommand{\listfigurename}{\bfseries\LARGE{LIST OF FIGURES}}
+\renewcommand{\listtablename}{\bfseries\LARGE{LIST OF TABLES}}
 
 % Signature Line for the declaration
 \newbox\namebox
@@ -86,6 +87,7 @@
 
 %Acronym entries
 \makeglossaries
+\newacronym{namt}{NAMT}{National Association for Music Therapy}
 \newacronym{ai}{AI}{Artificial Intelligence}
 \newacronym{ml}{ML}{Machine Learning}
 \newacronym{svm}{SVM}{Support Vector Machine}
@@ -97,6 +99,13 @@
 \newacronym{mse}{MSE}{Mean Squared Error}
 \newacronym{gd}{GD}{Gradient Descent}
 \newacronym{fer}{FER}{Facial Emotion Recognition}
+\newacronym{amta}{AMTA}{American Music Therapy Association}
+\newacronym{ptsd}{PTSD}{Post-traumatic Stress Disorder}
+\newacronym{tbi}{TBI}{Traumatic Brain Injury}
+\newacronym{ui}{UI}{User Interface}
+\newacronym{erd}{ERD}{Entity-Relationship Diagram}
+\newacronym{pk}{PK}{Primary Key}
+\newacronym{fk}{FK}{Foreign Key}
 
 %  -------------------------------------------------
 %  --------- The document starts from here --------- 
@@ -182,7 +191,10 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \addcontentsline{toc}{chapter}{List of Figures} % Add List of figures into contents without any numeration 
 
 
-
+% -------------------  LIST OF TABLES --------------------
+\newpage
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
 
 
 % -------------------  INTRODUCTION  ---------------------
@@ -219,14 +231,11 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \chapter{Project Evaluation}
 \input{Project Evaluation} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents
-                       
-% -------------------  CONCLUSION AND FUTURE OUTLOOK  ---------------------
-\chapter{Conclusion and Future Outlook}
-\input{Conclusion and Future Outlook} % Section/Chapter entries can be done in the Main.tex file or in a  
-                       % separate tex file for longer and more complex documents                       
+                                           
 % -------------------  BIBLIOGRAPHY ---------------------
 \newpage
-\bibliographystyle{abbrvnat}
+% \bibliographystyle{abbrvnat}
+\bibliographystyle{agsm}
 \bibliography{References}
 \addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
 % -------------------  Appendix  ---------------------

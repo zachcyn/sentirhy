@@ -1,55 +1,51 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Main.aux
-The style file: abbrvnat.bst
+The style file: agsm.bst
 Database file #1: References.bib
-Warning--empty year in _14
-Warning--empty year in berwick_an
 Warning--empty publisher in _2019_country
 Warning--empty publisher in frith_2018_rock
 Warning--empty publisher in hiller_2019_electronic
-Warning--empty year in ibm_what
-Warning--empty year in ibm_what_knn
 Warning--empty publisher in tate_2019_hiphop
-You've used 51 entries,
-            2773 wiz_defined-function locations,
-            868 strings with 13977 characters,
-and the built_in function-call counts, 18442 in all, are:
-= -- 1614
-> -- 844
-< -- 44
-+ -- 308
-- -- 255
-* -- 1283
-:= -- 2846
-add.period$ -- 175
-call.type$ -- 51
-change.case$ -- 234
-chr.to.int$ -- 49
-cite$ -- 110
-duplicate$ -- 869
-empty$ -- 1722
-format.name$ -- 318
-if$ -- 3890
-int.to.chr$ -- 3
-int.to.str$ -- 1
-missing$ -- 23
-newline$ -- 285
-num.names$ -- 204
-pop$ -- 590
+You've used 60 entries,
+            2909 wiz_defined-function locations,
+            946 strings with 15302 characters,
+and the built_in function-call counts, 161567 in all, are:
+= -- 25514
+> -- 2221
+< -- 0
++ -- 11704
+- -- 665
+* -- 13108
+:= -- 34178
+add.period$ -- 61
+call.type$ -- 60
+change.case$ -- 836
+chr.to.int$ -- 58
+cite$ -- 64
+duplicate$ -- 765
+empty$ -- 1696
+format.name$ -- 821
+if$ -- 28681
+int.to.chr$ -- 7
+int.to.str$ -- 0
+missing$ -- 25
+newline$ -- 188
+num.names$ -- 608
+pop$ -- 411
 preamble$ -- 1
-purify$ -- 187
+purify$ -- 900
 quote$ -- 0
-skip$ -- 712
+skip$ -- 700
 stack$ -- 0
-substring$ -- 349
-swap$ -- 97
-text.length$ -- 1
+substring$ -- 35111
+swap$ -- 99
+text.length$ -- 840
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 536
-warning$ -- 8
-while$ -- 164
+type$ -- 230
+warning$ -- 4
+while$ -- 1274
 width$ -- 0
-write$ -- 669
-(There were 8 warnings)
+write$ -- 737
+(There were 4 warnings)
