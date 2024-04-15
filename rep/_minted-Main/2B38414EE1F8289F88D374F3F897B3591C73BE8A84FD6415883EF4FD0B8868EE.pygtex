@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{es} \PYG{o}{=} \PYG{n}{EarlyStopping}\PYG{p}{(}\PYG{n}{monitor}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}val\PYGZus{}accuracy\PYGZsq{}}\PYG{p}{,} \PYG{n}{patience}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{restore\PYGZus{}best\PYGZus{}weights}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\end{Verbatim}

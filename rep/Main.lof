@@ -36,5 +36,10 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces FER-2013 Dataset}}{55}{figure.caption.44}%
 \contentsline {figure}{\numberline {6.2}{\ignorespaces CK+ Dataset}}{56}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SZU-EmoDage Dataset}}{56}{figure.caption.46}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Parameter Grid}}{59}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Early Stopping}}{59}{figure.caption.48}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Steps per epoch}}{60}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces PERN Stack \citep {alves_2023_get}}}{61}{figure.caption.51}%
 \addvspace {10\p@ }
 \contentsfinish 
