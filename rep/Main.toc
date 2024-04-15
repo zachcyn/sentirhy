@@ -62,9 +62,13 @@
 \contentsline {subsection}{\numberline {6.2.3}Model Evaluation}{60}{subsection.6.2.3}%
 \contentsline {subsection}{\numberline {6.2.4}Model Comparison and Selection}{60}{subsection.6.2.4}%
 \contentsline {section}{\numberline {6.3}Web Application}{60}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Project Evaluation}{62}{chapter.7}%
-\contentsline {chapter}{References}{69}{chapter*.52}%
-\contentsline {chapter}{Appendix}{70}{chapter*.53}%
-\contentsline {section}{Appendix A}{70}{chapter*.53}%
-\contentsline {section}{Appendix B}{72}{chapter*.53}%
+\contentsline {subsection}{\numberline {6.3.1}Login and Registration}{61}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Integration with Music Services}{63}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Emotion Detector}{63}{subsection.6.3.3}%
+\contentsline {chapter}{\numberline {7}Project Evaluation}{66}{chapter.7}%
+\contentsline {chapter}{References}{73}{chapter*.59}%
+\contentsline {chapter}{Appendices}{74}{appendix*.60}%
+\contentsline {section}{\numberline {Appendix A}}{74}{section.Alph0.1}%
+\contentsline {section}{\numberline {Appendix B}}{76}{section.Alph0.2}%
+\contentsline {section}{\numberline {Appendix C}}{77}{section.Alph0.3}%
 \contentsfinish 

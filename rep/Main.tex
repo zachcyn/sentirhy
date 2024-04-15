@@ -241,8 +241,10 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \bibliography{References}
 \addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
 % -------------------  Appendix  ---------------------
-\chapter*{Appendix}
-\addcontentsline{toc}{chapter}{Appendix}
+\appendix
+\renewcommand{\thesection}{Appendix \Alph{section}}
+\chapter*{Appendices}
+\addcontentsline{toc}{chapter}{Appendices}
 \input{Appendix} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents                       
 
