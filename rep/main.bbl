@@ -12,6 +12,10 @@
 \harvarditem{Agrawal \harvardand\ Mittal}{2019}{agrawal_2019_using}
 Agrawal, A. \harvardand\ Mittal, N.  \harvardyearleft 2019\harvardyearright , `Using cnn for facial expression recognition: a study of the effects of kernel size and number of filters on accuracy', {\em The Visual Computer} {\bf 36},~405--412.
 
+\harvarditem{Alves}{2023}{alves_2023_get}
+Alves, R.  \harvardyearleft 2023\harvardyearright , `Get started with the pern stack: an introduction and implementation guide'.
+\newline\harvardurl{https://medium.com/@ritapalves/get-started-with-the-pern-stack-an-introduction-and-implementation-guide-e33c55d09994}
+
 \harvarditem{Athavle}{2021}{athavle_2021_music}
 Athavle, M.  \harvardyearleft 2021\harvardyearright , `Music recommendation based on face emotion recognition', {\em Journal of Informatics Electrical and Electronics Engineering (JIEEE)} {\bf 2},~1--11.
 
@@ -59,6 +63,10 @@ Farley, P., Urban, E. \harvardand\ Mehrotra, N.  \harvardyearleft 2023\harvardye
 \harvarditem{Finkel \harvardand\ Taylor}{2021}{a2021_how}
 Finkel, I. \harvardand\ Taylor, J.  \harvardyearleft 2021\harvardyearright , `How to write cuneiform', \url{https://www.britishmuseum.org/blog/how-write-cuneiform}.
 
+\harvarditem{Foundation}{2017}{openjsfoundation_2017_express}
+Foundation, O.  \harvardyearleft 2017\harvardyearright , `Express - node.js web application framework'.
+\newline\harvardurl{https://expressjs.com/}
+
 \harvarditem{Freeman}{n.d.}{freeman_block}
 Freeman, J.  \harvardyearleft n.d.\harvardyearright , `Block diagram | complete guide with examples'.
 \newline\harvardurl{https://www.edrawsoft.com/block-diagram.html}
@@ -74,6 +82,10 @@ Gandhi, R.  \harvardyearleft 2018\harvardyearright , `Introduction to machine le
 
 \harvarditem{GeeksforGeeks}{2018}{geeksforgeeks_2018_knearest}
 GeeksforGeeks  \harvardyearleft 2018\harvardyearright , `K-nearest neighbours - geeksforgeeks', \url{https://www.geeksforgeeks.org/k-nearest-neighbours/}.
+
+\harvarditem{Group}{2019}{thepostgresqlglobaldevelopmentgroup_2019_postgresql}
+Group, T. P. G.~D.  \harvardyearleft 2019\harvardyearright , `Postgresql: The world's most advanced open source database'.
+\newline\harvardurl{https://www.postgresql.org/}
 
 \harvarditem{Géron}{2019}{gron_2019_handson}
 Géron, A.  \harvardyearleft 2019\harvardyearright , {\em Hands-on machine learning with Scikit-Learn and TensorFlow concepts, tools, and techniques to build intelligent systems}, 2 edn, O'Reilly Media, Inc.
@@ -158,6 +170,10 @@ Munasinghe, M. I. N.~P.  \harvardyearleft 2018\harvardyearright , `Facial expres
 \harvarditem[Naseem et~al.]{Naseem, Togneri \harvardand\ Bennamoun}{2010}{naseem_2010_linear}
 Naseem, I., Togneri, R. \harvardand\ Bennamoun, M.  \harvardyearleft 2010\harvardyearright , `Linear regression for face recognition', {\em IEEE Transactions on Pattern Analysis and Machine Intelligence} {\bf 32},~2106--2112.
 
+\harvarditem{Node.js}{2023}{nodejs_2023_nodejs}
+Node.js  \harvardyearleft 2023\harvardyearright , `Node.js'.
+\newline\harvardurl{https://nodejs.org/en}
+
 \harvarditem{Numpy}{2009}{numpy_2009_numpy}
 Numpy  \harvardyearleft 2009\harvardyearright , `Numpy'.
 \newline\harvardurl{https://numpy.org/}
@@ -205,6 +221,10 @@ seaborn  \harvardyearleft 2012\harvardyearright , `seaborn: Statistical data vis
 
 \harvarditem{Simonyan \harvardand\ Zisserman}{2015}{simonyan2015deep}
 Simonyan, K. \harvardand\ Zisserman, A.  \harvardyearleft 2015\harvardyearright , `Very deep convolutional networks for large-scale image recognition'.
+
+\harvarditem{Source}{2024}{metaopensource_2024_react}
+Source, M.~O.  \harvardyearleft 2024\harvardyearright , `React'.
+\newline\harvardurl{https://react.dev/}
 
 \harvarditem{Srivastava}{2019}{srivastava_2019_introduction}
 Srivastava, T.  \harvardyearleft 2019\harvardyearright , `Introduction to knn, k-nearest neighbors : Simplified', \url{https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/}.
