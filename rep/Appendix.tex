@@ -1,5 +1,9 @@
-\section*{Appendix A}
-\addcontentsline{toc}{section}{Appendix A}
+% Appendix A
+
+% \addcontentsline{toc}{section}{Appendix A}
+\section{}
+\label{app:appendix-a}
+
 \begin{minted}[frame=single, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, breaklines,linenos, numbersep=5pt]{text}
 2023-12-27 23:22:26.546868:
 (32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.0, 512, 'adam', 32, 10) CHECKED
@@ -33,6 +37,37 @@ Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128,
 Best Score: 0.5906981825828552
 Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
 \end{minted}
+
 \newpage
-\section*{Appendix B}
-\addcontentsline{toc}{section}{Appendix B}
+
+% \addcontentsline{toc}{section}{Appendix B}
+\section{}
+\label{app:appendix-b}
+
+\newpage
+\begin{landscape}
+\section{}
+\label{app:appendix-c}
+\begin{longtable}{ |m{1cm}|m{1cm}|m{5cm}|m{5cm}|m{5cm}|m{2cm}| }
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Test No.} & \textbf{Cats.} & \textbf{Intention} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Pass/Fail} \\
+    \hline
+    \endfirsthead
+
+    \hline
+    \rowcolor{lightgray}
+    \textbf{Test No.} & \textbf{Cats.} & \textbf{Intention} & \textbf{Expected Result} & \textbf{Actual Result} & \textbf{Pass/Fail} \\
+    \hline
+    \endhead
+    1 & \gls{ui} & Registration & User registered & User registered and information added to database & Pass \\
+    \hline
+    2 & \gls{ui} & Login & User logged in & User logged in successfully & Pass \\
+    \hline
+    3 & \gls{ui} & Incorrect credentials upon login & User login failed and error message display & Error message displayed and user unable to login & Pass \\
+    \hline
+    4 & \gls{ui} & Account Activation & User received email and activate account from link & User activate account successfully from link & Pass \\
+    \hline
+    \caption{Test Table}
+\end{longtable}
+\end{landscape}
