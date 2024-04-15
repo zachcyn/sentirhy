@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{function} \PYG{n}{generateProgressivePlaylist}\PYG{p}{(}\PYG{n}{user\PYGZus{}emotion\PYGZus{}tracks}\PYG{p}{,} \PYG{n}{neutral\PYGZus{}tracks}\PYG{p}{,} \PYG{n}{happy\PYGZus{}tracks}\PYG{p}{,} \PYG{n}{playlistLength}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+
+        \PYG{n}{const} \PYG{n}{allTracks} \PYG{o}{=} \PYG{n}{user\PYGZus{}emotion\PYGZus{}tracks}\PYG{o}{.}\PYG{n}{concat}\PYG{p}{(}\PYG{n}{neutral\PYGZus{}tracks}\PYG{p}{,} \PYG{n}{happy\PYGZus{}tracks}\PYG{p}{);}
+        \PYG{n}{allTracks}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{((}\PYG{n}{a}\PYG{p}{,} \PYG{n}{b}\PYG{p}{)} \PYG{o}{=\PYGZgt{}} \PYG{n}{a}\PYG{o}{.}\PYG{n}{valence} \PYG{o}{\PYGZhy{}} \PYG{n}{b}\PYG{o}{.}\PYG{n}{valence}\PYG{p}{);}
+        \PYG{n}{const} \PYG{n}{step} \PYG{o}{=} \PYG{n}{Math}\PYG{o}{.}\PYG{n}{floor}\PYG{p}{(}\PYG{n}{allTracks}\PYG{o}{.}\PYG{n}{length} \PYG{o}{/} \PYG{n}{playlistLength}\PYG{p}{);}
+
+        \PYG{n}{const} \PYG{n}{selectedTracks} \PYG{o}{=} \PYG{p}{[];}
+        \PYG{k}{for} \PYG{p}{(}\PYG{n}{let} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{playlistLength} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{p}{(}\PYG{n}{i} \PYG{o}{*} \PYG{n}{step}\PYG{p}{)} \PYG{o}{\PYGZlt{}} \PYG{n}{allTracks}\PYG{o}{.}\PYG{n}{length}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+            \PYG{n}{selectedTracks}\PYG{o}{.}\PYG{n}{push}\PYG{p}{(}\PYG{n}{allTracks}\PYG{p}{[}\PYG{n}{i} \PYG{o}{*} \PYG{n}{step}\PYG{p}{]);}
+        \PYG{p}{\PYGZcb{}}
+
+        \PYG{k}{return} \PYG{n}{selectedTracks}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}

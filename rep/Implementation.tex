@@ -91,17 +91,18 @@ In addition to the training, validation, and testing data, SZU-EmoDage dataset i
         'conv_2_filters': [64, 96, 128],
         'conv_3_filters': [128, 192, 224],
         'conv_4_filters': [128, 160, 224, 256],
-        'conv_1_kernel': [3, 5],
-        'conv_2_kernel': [3, 5],
-        'conv_3_kernel': [3, 5],
-        'conv_4_kernel': [3, 5],
+        'conv_1_kernel': [3, 6, 8],
+        'conv_2_kernel': [3, 5, 8],
+        'conv_3_kernel': [3, 5, 8],
+        'conv_4_kernel': [3, 5, 8],
         'dropout_1': [0.1, 0.2, 0.4],
         'dropout_2': [0.0, 0.2, 0.3],
         'dropout_3': [0.0, 0.2, 0.3, 0.4],
         'dense_units': [512, 768, 1024],
-        'optimizer': ['adam'],
-        'batch_size': [32, 64],  
-        'epochs': [10, 50, 100] 
+        'l1_reg': [0.01, 0.001, 0.0001],
+        'optimizer': ['adam', 'sgd'],
+        'learning_rate': [1e-2, 1e-3, 1e-4], 
+        'epochs': [10, 50, 100]
     }
 \end{minted}
     \caption{Parameter Grid}
@@ -113,7 +114,7 @@ The training process started with a thorough grid search to optimize hyper-param
 Both models shared the same parameter grid as Figure \ref{fig:param_grid}.
 This approach made it easier to explore the configuration space in an organized way, ensuring that each model was tuned to perform optimally.
 \\
-\indent After searching through the parameter grid, the process focuses on configuring each model's architecture to best capture the nuances of facial expression for \gls{fer}.
+\indent After searching through the parameter grid (\ref{app:appendix-a}), the process focuses on configuring each model's architecture to best capture the nuances of facial expression for \gls{fer}.
 Model 1 (Table \ref{tab:cnn-model-1}) has a relatively simple architecture, which require careful tuning if dropout rates and filter sizes to balance feature learning against the risk of over-fitting.
 Model 2 (Table \ref{tab:cnn-model-2}) has more additional layers to capture a richer set of features before the final classification layer . 
 But this led to a more thorough analysis required for the network's depth in relation to its performance on the validation set, which assisted in identifying when to add dropout and how to adjust the pooling layers.  
@@ -180,3 +181,102 @@ For the backend, Node.js was chosen for its non-blocking, event-driven architect
 This architecture is well-suited for managing workloads that involve asynchronous operations, real-time applications and I/O-bound tasks.
 The backend API is then constructed using Express.js, a simple and adaptable Node.js web application framework.
 PostgreSQL is the chosen database system as it is well-known for its advanced features, data integrity and robustness.
+\subsection{Login and Registration}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{Images/register-ui.png}
+    \caption{Register Page - UI}
+    \label{fig:register-page-ui}
+\end{figure}
+Users first provide their personal information, which consists of their date of birth, fist and last names, preferred username, and email address, to begin the registration process. (Figure \ref{fig:register-page-ui}) 
+The entered data is then validated by cross-referencing it with existing entries in the `sentirhy.user' table within the PostgreSQL database.
+If there is duplicated username or email, the user will be notified that the credentials have already been taken and the process will stopped.
+When there is no duplicate entry, the user's password is securely hashed with `bcrypt', and the crypto module sends an unique activation token to the user's email for account verification.
+The generated token with an expiration date is also stored in the database with the user credentials for security purposes. 
+\\
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{Images/acc-activation.png}
+    \caption{Account Activation Email - UI}
+    \label{fig:account-activation-ui}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{Images/login-ui.png}
+    \caption{Login Page - UI}
+    \label{fig:login-page-ui}
+\end{figure}
+\\
+\indent An activation email (Figure \ref{fig:account-activation-ui}) is sent out using the `nodemailer' after the new user's database entry.
+For the login process (Figure \ref{fig:login-page-ui}), the username and password are required.
+After user submitted the credentials, the system compares those credentials to those kept in the database. 
+Then, access to the application is granted with a successful match and an activated account.
+\\
+\subsection{Integration with Music Services}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{Images/connect-api.png}
+    \caption{Music Services Connection - UI}
+    \label{fig:music-service}
+\end{figure}
+As users log into the application, they are greeted with a dashboard.
+There will be a modal component (Figure~\ref{fig:music-service}) showing on the dashboard, allowing users to connect to different music services, which is required to the app's function to play music.
+Users are redirected to Spotify's authorization interface through an OAuth 2.0 authorization flow in order to grant permissions when they choose to link their accounts.
+Once user's permission is acquired, an access token from Spotify's token endpoint gives the application the authority to request services from the Spotify API on the user's behalf, like playing music.
+Unfortunately, as of right now, the only integration that is operational is Spotify; Youtube connectivity is indicated as a planned addition.
+\\
+\subsection{Emotion Detector}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=14cm]{Images/emotion-detector.png}
+    \caption{Emotion Detector - UI}
+    \label{fig:emo-detect}
+\end{figure}
+When user enters the Emotion Detection page (Figure~\ref{fig:emo-detect}), they encounter an interactive interface that requires access to the camera to proceed.
+With the user's permission, the application launches the Haarcascade frontal face identification algorithm and opencv.js, the \gls{js} library of OpenCV, enabling real-time face detection through the live video feed.
+\\
+\begin{figure}[h!] 
+    \centering
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+    async function predictEmotion(imageFilename) {
+        const imagePath = path.join(__dirname, '/user_emotion/', imageFilename);
+        const model = await loadModel()
+        const imageBuffer = await fs.promises.readFile(imagePath);
+        const tensor = tf.node.decodeImage(imageBuffer).resizeBilinear([48, 48]).mean(2).expandDims(-1).expandDims(0).toFloat().div(tf.scalar(255));
+        const prediction = model.predict(tensor);
+        const emotionIndex = prediction.argMax(1).dataSync()[0];
+
+        return emotions[emotionIndex];
+    }
+\end{minted}
+    \caption{Load Model and Preprocess data}
+    \label{fig:load-process}
+\end{figure}
+\indent The system is designed to identify faces quickly and captures the frame.
+The captured frame is then sent to the backend in a binary format appropriate for transmission over the network.
+The backend, which has been configured with TensorFlow.js, awaits the binary format data to perform its function.
+It loads the trained model, then resize the image to 48x48 pixels, converted to grayscale, normalized to scale the pixel values, and batched for the model's evaluation in order to meet the model's needs. (Figure~\ref{fig:load-process})
+\\
+\begin{figure}[h!] 
+    \centering
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+    function generateProgressivePlaylist(user_emotion_tracks, neutral_tracks, happy_tracks, playlistLength) {
+
+        const allTracks = user_emotion_tracks.concat(neutral_tracks, happy_tracks);
+        allTracks.sort((a, b) => a.valence - b.valence);
+        const step = Math.floor(allTracks.length / playlistLength);
+
+        const selectedTracks = [];
+        for (let i = 0; i < playlistLength && (i * step) < allTracks.length; i++) {
+            selectedTracks.push(allTracks[i * step]);
+        }
+
+        return selectedTracks;
+    }
+\end{minted}
+    \caption{Generate Playlist}
+    \label{fig:generate-playlist}
+\end{figure}
+\indent When the image is in an acceptable format, the model starts to recognize the user's current emotional state.
+Once the emotion is deciphered, the system responds by creating playlist that corresponds with the feeling. (Figure~\ref{fig:generate-playlist})
+The generated playlist is then dynamically displayed on the \gls{ui}.
