@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.8)  15 APR 2024 01:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.8)  15 APR 2024 18:04
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -873,7 +873,15 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 )
 runsystem(if not exist _minted-Main mkdir _minted-Main)...executed.
 
+) (d:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (d:/texlive/2023/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+ (d:/texlive/2023/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
 \namebox=\box80
 \signboxdim=\dimen286
 \glswrite=\write5
@@ -1057,7 +1065,22 @@ LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 1.
 LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 1.
- [5] [6])
+ [5] [6]
+Overfull \hbox (32.66872pt too wide) detected at line 71
+\T1/Arimo-TLF/m/n/12 Appendix A 
+ []
+
+
+Overfull \hbox (32.66872pt too wide) detected at line 72
+\T1/Arimo-TLF/m/n/12 Appendix B 
+ []
+
+
+Overfull \hbox (33.33112pt too wide) detected at line 73
+\T1/Arimo-TLF/m/n/12 Appendix C 
+ []
+
+)
 \tf@toc=\write8
 \openout8 = `Main.toc'.
 
@@ -1076,7 +1099,7 @@ Chapter 1.
 ]
 Chapter 2.
 (./Literature Review.tex
-<Images/cuneiform.jpg, id=307, 931.48pt x 842.14626pt>
+<Images/cuneiform.jpg, id=333, 931.48pt x 842.14626pt>
 File: Images/cuneiform.jpg Graphic file (type jpg)
 <use Images/cuneiform.jpg>
 Package pdftex.def Info: Images/cuneiform.jpg  used on input line 63.
@@ -1087,7 +1110,7 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 8.0pt on input line 63.
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
 (Font)              scaled to size 8.0pt on input line 63.
-<Images/first_song.jpg, id=312, 634.37pt x 440.64626pt>
+<Images/first_song.jpg, id=338, 634.37pt x 440.64626pt>
 File: Images/first_song.jpg Graphic file (type jpg)
 <use Images/first_song.jpg>
 Package pdftex.def Info: Images/first_song.jpg  used on input line 65.
@@ -1095,7 +1118,7 @@ Package pdftex.def Info: Images/first_song.jpg  used on input line 65.
  [12
 
 ] [13{d:/texlive/2023/texmf-dist/fonts/enc/dvips/arimo/arm_c3z4r2.enc} <./Images/cuneiform.jpg> <./Images/first_song.jpg>] [14] [15]
-<Images/lr.png, id=392, 1541.76pt x 965.85844pt>
+<Images/lr.png, id=418, 1541.76pt x 965.85844pt>
 File: Images/lr.png Graphic file (type png)
 <use Images/lr.png>
 Package pdftex.def Info: Images/lr.png  used on input line 139.
@@ -1105,12 +1128,12 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
  [16]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
 (Font)              scaled to size 6.0pt on input line 147.
-<Images/gd.png, id=410, 1541.76pt x 895.84688pt>
+<Images/gd.png, id=436, 1541.76pt x 895.84688pt>
 File: Images/gd.png Graphic file (type png)
 <use Images/gd.png>
 Package pdftex.def Info: Images/gd.png  used on input line 155.
 (pdftex.def)             Requested size: 284.52756pt x 165.31898pt.
-<Images/svm.png, id=415, 1541.76pt x 902.6222pt>
+<Images/svm.png, id=441, 1541.76pt x 902.6222pt>
 File: Images/svm.png Graphic file (type png)
 <use Images/svm.png>
 Package pdftex.def Info: Images/svm.png  used on input line 169.
@@ -1118,75 +1141,75 @@ Package pdftex.def Info: Images/svm.png  used on input line 169.
  [17 <./Images/lr.png> <./Images/gd.png>] [18 <./Images/svm.png>]
 LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/it' will be
 (Font)              scaled to size 12.0pt on input line 220.
-<Images/rf.png, id=449, 1121.28pt x 1121.28pt>
+<Images/rf.png, id=475, 1121.28pt x 1121.28pt>
 File: Images/rf.png Graphic file (type png)
 <use Images/rf.png>
 Package pdftex.def Info: Images/rf.png  used on input line 224.
 (pdftex.def)             Requested size: 284.52756pt x 284.5282pt.
  [19 <./Images/rf.png>]
-<Images/knn.png, id=469, 1215.03937pt x 848.4197pt>
+<Images/knn.png, id=495, 1215.03937pt x 848.4197pt>
 File: Images/knn.png Graphic file (type png)
 <use Images/knn.png>
 Package pdftex.def Info: Images/knn.png  used on input line 244.
 (pdftex.def)             Requested size: 284.52756pt x 198.66663pt.
  [20 <./Images/knn.png>]
-<Images/mlp.png, id=481, 1297.84875pt x 649.67719pt>
+<Images/mlp.png, id=507, 1297.84875pt x 649.67719pt>
 File: Images/mlp.png Graphic file (type png)
 <use Images/mlp.png>
 Package pdftex.def Info: Images/mlp.png  used on input line 267.
 (pdftex.def)             Requested size: 284.52756pt x 142.42384pt.
-<Images/cnns.png, id=490, 1643.3897pt x 691.08188pt>
+<Images/cnns.png, id=516, 1643.3897pt x 691.08188pt>
 File: Images/cnns.png Graphic file (type png)
 <use Images/cnns.png>
 Package pdftex.def Info: Images/cnns.png  used on input line 286.
 (pdftex.def)             Requested size: 455.24408pt x 191.43477pt.
  [21 <./Images/mlp.png>]
-<Images/landmarks.jpg, id=503, 373.395pt x 247.67531pt>
+<Images/landmarks.jpg, id=529, 373.395pt x 247.67531pt>
 File: Images/landmarks.jpg Graphic file (type jpg)
 <use Images/landmarks.jpg>
 Package pdftex.def Info: Images/landmarks.jpg  used on input line 313.
 (pdftex.def)             Requested size: 284.52756pt x 188.73782pt.
-<Images/fer1stknn.png, id=510, 611.28375pt x 276.28218pt>
+<Images/fer1stknn.png, id=536, 611.28375pt x 276.28218pt>
 File: Images/fer1stknn.png Graphic file (type png)
 <use Images/fer1stknn.png>
 Package pdftex.def Info: Images/fer1stknn.png  used on input line 326.
 (pdftex.def)             Requested size: 199.16928pt x 90.01828pt.
-<Images/fer1stmlp.png, id=511, 586.44093pt x 271.0125pt>
+<Images/fer1stmlp.png, id=537, 586.44093pt x 271.0125pt>
 File: Images/fer1stmlp.png Graphic file (type png)
 <use Images/fer1stmlp.png>
 Package pdftex.def Info: Images/fer1stmlp.png  used on input line 328.
 (pdftex.def)             Requested size: 190.63338pt x 88.09454pt.
-<Images/new_cnn_model1.png, id=525, 459.21562pt x 398.99063pt>
+<Images/new_cnn_model1.png, id=551, 459.21562pt x 398.99063pt>
 File: Images/new_cnn_model1.png Graphic file (type png)
 <use Images/new_cnn_model1.png>
 Package pdftex.def Info: Images/new_cnn_model1.png  used on input line 355.
 (pdftex.def)             Requested size: 193.47882pt x 168.10458pt.
-<Images/new_cnn_model2.png, id=526, 467.49657pt x 386.94562pt>
+<Images/new_cnn_model2.png, id=552, 467.49657pt x 386.94562pt>
 File: Images/new_cnn_model2.png Graphic file (type png)
 <use Images/new_cnn_model2.png>
 Package pdftex.def Info: Images/new_cnn_model2.png  used on input line 357.
 (pdftex.def)             Requested size: 199.16928pt x 164.85416pt.
-<Images/new_cnn_cm_1.png, id=532, 461.47406pt x 420.82219pt>
+<Images/new_cnn_cm_1.png, id=558, 461.47406pt x 420.82219pt>
 File: Images/new_cnn_cm_1.png Graphic file (type png)
 <use Images/new_cnn_cm_1.png>
 Package pdftex.def Info: Images/new_cnn_cm_1.png  used on input line 370.
 (pdftex.def)             Requested size: 199.16928pt x 181.62424pt.
-<Images/new_cnn_cm_2.png, id=533, 461.47406pt x 410.2828pt>
+<Images/new_cnn_cm_2.png, id=559, 461.47406pt x 410.2828pt>
 File: Images/new_cnn_cm_2.png Graphic file (type png)
 <use Images/new_cnn_cm_2.png>
 Package pdftex.def Info: Images/new_cnn_cm_2.png  used on input line 372.
 (pdftex.def)             Requested size: 199.16928pt x 177.0755pt.
-<Images/lr_result.png, id=540, 206.27063pt x 99.37125pt>
+<Images/lr_result.png, id=566, 206.27063pt x 99.37125pt>
 File: Images/lr_result.png Graphic file (type png)
 <use Images/lr_result.png>
 Package pdftex.def Info: Images/lr_result.png  used on input line 383.
 (pdftex.def)             Requested size: 170.71652pt x 82.2446pt.
-<Images/rf_result.png, id=547, 461.47406pt x 175.40532pt>
+<Images/rf_result.png, id=573, 461.47406pt x 175.40532pt>
 File: Images/rf_result.png Graphic file (type png)
 <use Images/rf_result.png>
 Package pdftex.def Info: Images/rf_result.png  used on input line 396.
 (pdftex.def)             Requested size: 284.52756pt x 108.14795pt.
-<Images/svm_result.png, id=555, 432.86719pt x 156.585pt>
+<Images/svm_result.png, id=581, 432.86719pt x 156.585pt>
 File: Images/svm_result.png Graphic file (type png)
 <use Images/svm_result.png>
 Package pdftex.def Info: Images/svm_result.png  used on input line 408.
@@ -1202,7 +1225,7 @@ Overfull \vbox (21.75002pt too high) detected at line 27
 ] [30] [31] [32] [33]) [34]
 Chapter 4.
 (./Methodology.tex
-<Images/watefall.png, id=647, 1606.0pt x 903.375pt>
+<Images/watefall.png, id=673, 1606.0pt x 903.375pt>
 File: Images/watefall.png Graphic file (type png)
 <use Images/watefall.png>
 Package pdftex.def Info: Images/watefall.png  used on input line 13.
@@ -1210,19 +1233,19 @@ Package pdftex.def Info: Images/watefall.png  used on input line 13.
  [35
 
 ]
-<Images/spiral.png, id=659, 662.475pt x 611.28375pt>
+<Images/spiral.png, id=685, 662.475pt x 611.28375pt>
 File: Images/spiral.png Graphic file (type png)
 <use Images/spiral.png>
 Package pdftex.def Info: Images/spiral.png  used on input line 25.
 (pdftex.def)             Requested size: 199.16928pt x 183.77829pt.
  [36 <./Images/watefall.png> <./Images/spiral.png>]
-<Images/agile.png, id=672, 1686.3pt x 1303.87125pt>
+<Images/agile.png, id=698, 1686.3pt x 1303.87125pt>
 File: Images/agile.png Graphic file (type png)
 <use Images/agile.png>
 Package pdftex.def Info: Images/agile.png  used on input line 39.
 (pdftex.def)             Requested size: 199.16928pt x 153.99075pt.
  [37 <./Images/agile.png>] [38]
-<Images/kanban.png, id=686, 654.94687pt x 576.65437pt>
+<Images/kanban.png, id=712, 654.94687pt x 576.65437pt>
 File: Images/kanban.png Graphic file (type png)
 <use Images/kanban.png>
 Package pdftex.def Info: Images/kanban.png  used on input line 107.
@@ -1230,7 +1253,7 @@ Package pdftex.def Info: Images/kanban.png  used on input line 107.
  [39 <./Images/kanban.png>]) [40]
 Chapter 5.
 (./Design.tex
-<Images/block.png, id=701, 1087.4226pt x 549.7338pt>
+<Images/block.png, id=728, 1087.4226pt x 549.7338pt>
 File: Images/block.png Graphic file (type png)
 <use Images/block.png>
 Package pdftex.def Info: Images/block.png  used on input line 24.
@@ -1238,55 +1261,55 @@ Package pdftex.def Info: Images/block.png  used on input line 24.
  [41
 
 ] [42 <./Images/block.png>]
-<Images/usecase.png, id=723, 3538.21875pt x 2409.0pt>
+<Images/usecase.png, id=749, 3538.21875pt x 2409.0pt>
 File: Images/usecase.png Graphic file (type png)
 <use Images/usecase.png>
 Package pdftex.def Info: Images/usecase.png  used on input line 56.
 (pdftex.def)             Requested size: 398.33858pt x 271.20297pt.
  [43 <./Images/usecase.png>]
-<Images/login-sequence.png, id=733, 4065.1875pt x 2559.5625pt>
+<Images/login-sequence.png, id=759, 4065.1875pt x 2559.5625pt>
 File: Images/login-sequence.png Graphic file (type png)
 <use Images/login-sequence.png>
 Package pdftex.def Info: Images/login-sequence.png  used on input line 76.
 (pdftex.def)             Requested size: 398.33858pt x 250.77682pt.
-<Images/fer-sequence.png, id=734, 3312.375pt x 2559.5625pt>
+<Images/fer-sequence.png, id=760, 3312.375pt x 2559.5625pt>
 File: Images/fer-sequence.png Graphic file (type png)
 <use Images/fer-sequence.png>
 Package pdftex.def Info: Images/fer-sequence.png  used on input line 82.
 (pdftex.def)             Requested size: 398.33858pt x 307.7982pt.
-<Images/playlist-sequence.png, id=735, 4516.875pt x 1908.12875pt>
+<Images/playlist-sequence.png, id=761, 4516.875pt x 1908.12875pt>
 File: Images/playlist-sequence.png Graphic file (type png)
 <use Images/playlist-sequence.png>
 Package pdftex.def Info: Images/playlist-sequence.png  used on input line 88.
 (pdftex.def)             Requested size: 398.33858pt x 168.25941pt.
-<Images/flowchart.png, id=741, 3049.3925pt x 851.18pt>
+<Images/flowchart.png, id=767, 3049.3925pt x 851.18pt>
 File: Images/flowchart.png Graphic file (type png)
 <use Images/flowchart.png>
 Package pdftex.def Info: Images/flowchart.png  used on input line 105.
 (pdftex.def)             Requested size: 398.33858pt x 111.17679pt.
  [44] [45 <./Images/login-sequence.png> <./Images/fer-sequence.png>]
-<Images/erd.png, id=756, 2447.1425pt x 1609.01125pt>
+<Images/erd.png, id=782, 2447.1425pt x 1609.01125pt>
 File: Images/erd.png Graphic file (type png)
 <use Images/erd.png>
 Package pdftex.def Info: Images/erd.png  used on input line 118.
 (pdftex.def)             Requested size: 398.33858pt x 261.89088pt.
  [46 <./Images/playlist-sequence.png> <./Images/flowchart.png>]
-<Images/dark.png, id=771, 1084.05pt x 1084.05pt>
+<Images/dark.png, id=797, 1084.05pt x 1084.05pt>
 File: Images/dark.png Graphic file (type png)
 <use Images/dark.png>
 Package pdftex.def Info: Images/dark.png  used on input line 135.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<Images/dark-banner.png, id=772, 952.30782pt x 289.83281pt>
+<Images/dark-banner.png, id=798, 952.30782pt x 289.83281pt>
 File: Images/dark-banner.png Graphic file (type png)
 <use Images/dark-banner.png>
 Package pdftex.def Info: Images/dark-banner.png  used on input line 137.
 (pdftex.def)             Requested size: 199.16928pt x 60.6146pt.
-<Images/light.png, id=773, 1084.05pt x 1084.05pt>
+<Images/light.png, id=799, 1084.05pt x 1084.05pt>
 File: Images/light.png Graphic file (type png)
 <use Images/light.png>
 Package pdftex.def Info: Images/light.png  used on input line 153.
 (pdftex.def)             Requested size: 85.35826pt x 85.35284pt.
-<Images/light-banner.png, id=774, 1269.74374pt x 386.44376pt>
+<Images/light-banner.png, id=800, 1269.74374pt x 386.44376pt>
 File: Images/light-banner.png Graphic file (type png)
 <use Images/light-banner.png>
 Package pdftex.def Info: Images/light-banner.png  used on input line 153.
@@ -1296,32 +1319,32 @@ Package mdframed Info: mdframed inside float
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 153.
  [47 <./Images/erd.png>]
-<Images/login.png, id=784, 607.51968pt x 395.22656pt>
+<Images/login.png, id=810, 607.51968pt x 395.22656pt>
 File: Images/login.png Graphic file (type png)
 <use Images/login.png>
 Package pdftex.def Info: Images/login.png  used on input line 165.
 (pdftex.def)             Requested size: 341.43306pt x 222.12744pt.
-<Images/signup.png, id=785, 607.51968pt x 395.22656pt>
+<Images/signup.png, id=811, 607.51968pt x 395.22656pt>
 File: Images/signup.png Graphic file (type png)
 <use Images/signup.png>
 Package pdftex.def Info: Images/signup.png  used on input line 171.
 (pdftex.def)             Requested size: 341.43306pt x 222.12744pt.
-<Images/overview.png, id=786, 1026.08344pt x 540.51938pt>
+<Images/overview.png, id=812, 1026.08344pt x 540.51938pt>
 File: Images/overview.png Graphic file (type png)
 <use Images/overview.png>
 Package pdftex.def Info: Images/overview.png  used on input line 177.
 (pdftex.def)             Requested size: 341.43306pt x 179.85652pt.
-<Images/emotion.png, id=787, 491.58656pt x 252.945pt>
+<Images/emotion.png, id=813, 491.58656pt x 252.945pt>
 File: Images/emotion.png Graphic file (type png)
 <use Images/emotion.png>
 Package pdftex.def Info: Images/emotion.png  used on input line 183.
 (pdftex.def)             Requested size: 341.43306pt x 175.69012pt.
-<Images/detection.png, id=788, 515.67656pt x 262.73157pt>
+<Images/detection.png, id=814, 515.67656pt x 262.73157pt>
 File: Images/detection.png Graphic file (type png)
 <use Images/detection.png>
 Package pdftex.def Info: Images/detection.png  used on input line 189.
 (pdftex.def)             Requested size: 341.43306pt x 173.9606pt.
-<Images/user-settings.png, id=789, 523.20468pt x 222.07968pt>
+<Images/user-settings.png, id=815, 523.20468pt x 222.07968pt>
 File: Images/user-settings.png Graphic file (type png)
 <use Images/user-settings.png>
 Package pdftex.def Info: Images/user-settings.png  used on input line 195.
@@ -1341,17 +1364,17 @@ Chapter 6.
 (./Implementation.tex [54
 
 ]
-<Images/fer2013.png, id=866, 930.1149pt x 545.6385pt>
+<Images/fer2013.png, id=892, 930.1149pt x 545.6385pt>
 File: Images/fer2013.png Graphic file (type png)
 <use Images/fer2013.png>
 Package pdftex.def Info: Images/fer2013.png  used on input line 25.
 (pdftex.def)             Requested size: 284.52756pt x 166.91487pt.
-<Images/ckextended.png, id=871, 930.1149pt x 545.6385pt>
+<Images/ckextended.png, id=897, 930.1149pt x 545.6385pt>
 File: Images/ckextended.png Graphic file (type png)
 <use Images/ckextended.png>
 Package pdftex.def Info: Images/ckextended.png  used on input line 35.
 (pdftex.def)             Requested size: 284.52756pt x 166.91487pt.
-<Images/szuemodage.png, id=874, 1291.82625pt x 757.83125pt>
+<Images/szuemodage.png, id=900, 1291.82625pt x 757.83125pt>
 File: Images/szuemodage.png Graphic file (type png)
 <use Images/szuemodage.png>
 Package pdftex.def Info: Images/szuemodage.png  used on input line 45.
@@ -1359,7 +1382,7 @@ Package pdftex.def Info: Images/szuemodage.png  used on input line 45.
  [55 <./Images/fer2013.png>] [56 <./Images/ckextended.png> <./Images/szuemodage.png>] [57]
 \openout3 = `Main.pyg'.
 
- (./_minted-Main/friendly.pygstyle) (./_minted-Main/589A333AAB3FE851FB635662ABB6961C1C73BE8A84FD6415883EF4FD0B8868EE.pygtex
+ (./_minted-Main/friendly.pygstyle) (./_minted-Main/03AC32EDE0D3711A1FAF6E4DDFDCBD2A1C73BE8A84FD6415883EF4FD0B8868EE.pygtex
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 3.
  (d:/texlive/2023/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
@@ -1380,27 +1403,66 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 )
 \openout3 = `Main.pyg'.
 
- (./_minted-Main/E2FEF9E070CA4D44EFE3A07E46B9A9FC1C73BE8A84FD6415883EF4FD0B8868EE.pygtex) [58]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[59{d:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-<Images/pern.png, id=928, 722.7pt x 373.395pt>
+ (./_minted-Main/E2FEF9E070CA4D44EFE3A07E46B9A9FC1C73BE8A84FD6415883EF4FD0B8868EE.pygtex) [58] [59{d:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<Images/pern.png, id=955, 722.7pt x 373.395pt>
 File: Images/pern.png Graphic file (type png)
 <use Images/pern.png>
-Package pdftex.def Info: Images/pern.png  used on input line 171.
+Package pdftex.def Info: Images/pern.png  used on input line 172.
 (pdftex.def)             Requested size: 284.52756pt x 147.00797pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [60] [61 <./Images/pern.png>]
+[60]
+<Images/register-ui.png, id=982, 1927.2pt x 914.41624pt>
+File: Images/register-ui.png Graphic file (type png)
+<use Images/register-ui.png>
+Package pdftex.def Info: Images/register-ui.png  used on input line 187.
+(pdftex.def)             Requested size: 398.33858pt x 188.99135pt.
+<Images/acc-activation.png, id=984, 1927.2pt x 1055.945pt>
+File: Images/acc-activation.png Graphic file (type png)
+<use Images/acc-activation.png>
+Package pdftex.def Info: Images/acc-activation.png  used on input line 199.
+(pdftex.def)             Requested size: 398.33858pt x 218.2425pt.
+<Images/login-ui.png, id=985, 1927.2pt x 914.41624pt>
+File: Images/login-ui.png Graphic file (type png)
+<use Images/login-ui.png>
+Package pdftex.def Info: Images/login-ui.png  used on input line 205.
+(pdftex.def)             Requested size: 398.33858pt x 188.99135pt.
+ [61 <./Images/pern.png> <./Images/register-ui.png>] [62 <./Images/acc-activation.png> <./Images/login-ui.png>]
+<Images/connect-api.png, id=999, 1927.2pt x 914.41624pt>
+File: Images/connect-api.png Graphic file (type png)
+<use Images/connect-api.png>
+Package pdftex.def Info: Images/connect-api.png  used on input line 218.
+(pdftex.def)             Requested size: 398.33858pt x 188.99135pt.
+<Images/emotion-detector.png, id=1001, 1445.4pt x 683.55376pt>
+File: Images/emotion-detector.png Graphic file (type png)
+<use Images/emotion-detector.png>
+Package pdftex.def Info: Images/emotion-detector.png  used on input line 231.
+(pdftex.def)             Requested size: 398.33858pt x 188.37943pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+\openout3 = `Main.pyg'.
+
+(./_minted-Main/BA8BD15A3BEAEDA3A40A76B4E426FC551C73BE8A84FD6415883EF4FD0B8868EE.pygtex
+LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
+(Font)              scaled to size 5.0pt on input line 6.
+)
+\openout3 = `Main.pyg'.
+
+ (./_minted-Main/D0A979E24F268BEE5E5EEACBB14703061C73BE8A84FD6415883EF4FD0B8868EE.pygtex)) [63 <./Images/connect-api.png>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[64 <./Images/emotion-detector.png>] [65]
 Chapter 7.
-(./Project Evaluation.tex) [62
+(./Project Evaluation.tex) [66
 
-] (./main.bbl [63
+] (./main.bbl [67
 
-] [64]
+] [68]
 Overfull \hbox (17.78313pt too wide) in paragraph at lines 81--82
 \T1/cmtt/m/n/12 introduction-[]to-[]machine-[]learning-[]algorithms-[]linear-[]regression-[]14c4e325882a$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
@@ -1410,25 +1472,24 @@ Overfull \hbox (24.95662pt too wide) in paragraph at lines 94--95
 \T1/cmtt/m/n/12 machine-[]learning-[]basics-[]with-[]the-[]k-[]nearest-[]neighbors-[]algorithm-[]6a6e71d01761$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[65] [66]
+[69] [70]
 Overfull \hbox (22.45662pt too wide) in paragraph at lines 165--166
 \T1/cmtt/m/n/12 towardsdatascience . com / convolutional-[]neural-[]networks-[]explained-[]9cc5188c4939$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[67]
+[71]
 Overfull \hbox (56.32408pt too wide) in paragraph at lines 206--207
 \T1/cmtt/m/n/12 a-[]comprehensive-[]guide-[]to-[]convolutional-[]neural-[]networks-[]the-[]eli5-[]way-[]3bd2b1164a53$[][]\T1/Arimo-TLF/m/n/12 (-20) . 
  []
 
-[68]) [69] (./Appendix.tex
+[72]) [73] (./Appendix.tex
 \openout3 = `Main.pyg'.
 
- (./_minted-Main/01DBA739E842051601EACB66FA76CF530192CDF4478C1EE2323CE3D45E980029.pygtex
-LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 5.0pt on input line 5.
- [70
+ (./_minted-Main/01DBA739E842051601EACB66FA76CF530192CDF4478C1EE2323CE3D45E980029.pygtex [74
 
-]) [71]) [72] (./Main.aux)
+]) [75] [76] [77
+
+]) (./Main.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
@@ -1437,18 +1498,18 @@ runsystem(del Main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 28180 strings out of 474166
- 486326 string characters out of 5749519
+ 28336 strings out of 474166
+ 491089 string characters out of 5749519
  1964528 words of memory out of 5000000
- 49339 multiletter control sequences out of 15000+600000
+ 49460 multiletter control sequences out of 15000+600000
  587452 words of font info for 282 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,108p,2398b,975s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,108p,2398b,973s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo-Italic.pfb><d:/texlive/2023/texmf-dist/fonts/type1/google/arimo/Arimo.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><d:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on Main.pdf (73 pages, 4858693 bytes).
+Output written on Main.pdf (78 pages, 5909302 bytes).
 PDF statistics:
- 1455 PDF objects out of 1728 (max. 8388607)
- 1247 compressed objects within 13 object streams
- 292 named destinations out of 1000 (max. 500000)
- 80650 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 1541 PDF objects out of 1728 (max. 8388607)
+ 1317 compressed objects within 14 object streams
+ 311 named destinations out of 1000 (max. 500000)
+ 80707 words of extra memory for PDF output out of 89155 (max. 10000000)
 

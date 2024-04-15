@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{async} \PYG{n}{function} \PYG{n}{predictEmotion}\PYG{p}{(}\PYG{n}{imageFilename}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{const} \PYG{n}{imagePath} \PYG{o}{=} \PYG{n}{path}\PYG{o}{.}\PYG{n}{join}\PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}dirname}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}/user\PYGZus{}emotion/\PYGZsq{}}\PYG{p}{,} \PYG{n}{imageFilename}\PYG{p}{);}
+        \PYG{n}{const} \PYG{n}{model} \PYG{o}{=} \PYG{k}{await} \PYG{n}{loadModel}\PYG{p}{()}
+        \PYG{n}{const} \PYG{n}{imageBuffer} \PYG{o}{=} \PYG{k}{await} \PYG{n}{fs}\PYG{o}{.}\PYG{n}{promises}\PYG{o}{.}\PYG{n}{readFile}\PYG{p}{(}\PYG{n}{imagePath}\PYG{p}{);}
+        \PYG{n}{const} \PYG{n}{tensor} \PYG{o}{=} \PYG{n}{tf}\PYG{o}{.}\PYG{n}{node}\PYG{o}{.}\PYG{n}{decodeImage}\PYG{p}{(}\PYG{n}{imageBuffer}\PYG{p}{)}\PYG{o}{.}\PYG{n}{resizeBilinear}\PYG{p}{([}\PYG{l+m+mi}{48}\PYG{p}{,} \PYG{l+m+mi}{48}\PYG{p}{])}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{.}\PYG{n}{expandDims}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{.}\PYG{n}{expandDims}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{o}{.}\PYG{n}{toFloat}\PYG{p}{()}\PYG{o}{.}\PYG{n}{div}\PYG{p}{(}\PYG{n}{tf}\PYG{o}{.}\PYG{n}{scalar}\PYG{p}{(}\PYG{l+m+mi}{255}\PYG{p}{));}
+        \PYG{n}{const} \PYG{n}{prediction} \PYG{o}{=} \PYG{n}{model}\PYG{o}{.}\PYG{n}{predict}\PYG{p}{(}\PYG{n}{tensor}\PYG{p}{);}
+        \PYG{n}{const} \PYG{n}{emotionIndex} \PYG{o}{=} \PYG{n}{prediction}\PYG{o}{.}\PYG{n}{argMax}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{o}{.}\PYG{n}{dataSync}\PYG{p}{()[}\PYG{l+m+mi}{0}\PYG{p}{];}
+
+        \PYG{k}{return} \PYG{n}{emotions}\PYG{p}{[}\PYG{n}{emotionIndex}\PYG{p}{];}
+    \PYG{p}{\PYGZcb{}}
+\end{Verbatim}
