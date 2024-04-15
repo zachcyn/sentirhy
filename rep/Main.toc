@@ -55,16 +55,16 @@
 \contentsline {subsubsection}{\numberline {6.2.1.1}Environment Setup}{54}{subsubsection.6.2.1.1}%
 \contentsline {subsubsection}{\numberline {6.2.1.2}Data Preparation}{55}{subsubsection.6.2.1.2}%
 \contentsline {paragraph}{\numberline {6.2.1.2.1}Data Collection}{55}{paragraph.6.2.1.2.1}%
-\contentsline {paragraph}{\numberline {6.2.1.2.2}Preprocessing Steps}{56}{paragraph.6.2.1.2.2}%
+\contentsline {paragraph}{\numberline {6.2.1.2.2}Preprocessing Steps}{57}{paragraph.6.2.1.2.2}%
 \contentsline {paragraph}{\numberline {6.2.1.2.3}Augmentation}{57}{paragraph.6.2.1.2.3}%
-\contentsline {paragraph}{\numberline {6.2.1.2.4}Dataset Splitting}{57}{paragraph.6.2.1.2.4}%
+\contentsline {paragraph}{\numberline {6.2.1.2.4}Dataset Splitting}{58}{paragraph.6.2.1.2.4}%
 \contentsline {subsection}{\numberline {6.2.2}Training Process}{58}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Model Evaluation}{59}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Model Comparison and Selection}{59}{subsection.6.2.4}%
-\contentsline {section}{\numberline {6.3}Web Application}{59}{section.6.3}%
-\contentsline {chapter}{\numberline {7}Project Evaluation}{60}{chapter.7}%
-\contentsline {chapter}{References}{67}{chapter*.46}%
-\contentsline {chapter}{Appendix}{68}{chapter*.47}%
-\contentsline {section}{Appendix A}{68}{chapter*.47}%
-\contentsline {section}{Appendix B}{69}{chapter*.47}%
+\contentsline {subsection}{\numberline {6.2.3}Model Evaluation}{60}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Model Comparison and Selection}{60}{subsection.6.2.4}%
+\contentsline {section}{\numberline {6.3}Web Application}{60}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Project Evaluation}{62}{chapter.7}%
+\contentsline {chapter}{References}{69}{chapter*.52}%
+\contentsline {chapter}{Appendix}{70}{chapter*.53}%
+\contentsline {section}{Appendix A}{70}{chapter*.53}%
+\contentsline {section}{Appendix B}{72}{chapter*.53}%
 \contentsfinish 

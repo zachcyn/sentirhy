@@ -34,12 +34,18 @@ This makes it suited for training \gls{fer} models.
     \centering
     \includegraphics[width=10cm]{Images/ckextended.png}
     \caption{CK+ Dataset}
-    \label{fig:fer2013}
+    \label{fig:ckextended}
 \end{figure}
 \\
 \indent To increase the diversity of the data, CK+ \citep{5543262} dataset is included to the FER-2013. 
 This dataset contains labelled facial expressions from varied populations and light scenarios.
 This addition was to provide the models a more comprehensive learning environment by exposing them to a greater variety of face emotions and characteristics.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10cm]{Images/szuemodage.png}
+    \caption{SZU-EmoDage Dataset}
+    \label{fig:szu-emodage}
+\end{figure}
 \\
 \indent Moreover, SZU-EmoDage \citep{who_2022_a} dataset was also included to the collection to ensure the models are capable of identifying facial expressions on Asian faces.
 With these additions, each dataset was integrated with a different set of challenges and viewpoints, which then improve the model's accuracy and practicality in real-world situation.
@@ -77,10 +83,8 @@ This collection is essential for adjusting the hyper-parameters of the model and
 The `PrivateTest' subset of the FER-2013 was used to do the final evaluation of the model's performance.
 In addition to the training, validation, and testing data, SZU-EmoDage dataset is used specifically for transfer learning purpose. 
 \subsection{Training Process}
-In the training process, a common training framework was introduced for both models (Table \ref{tab:cnn-model-1} and Table \ref{tab:cnn-model-2}) to ensure consistency in the methodological approach.
-But some specific adjustments to address the unique characteristics of each model is allowed.
-The training process started with a thorough grid search to optimize hyper-parameters including dropout rates, kernel sizes, convolutional filter counts, and dense layer unit counts.
-Both models shared the same parameter grid as follow:
+\begin{figure}[h!] 
+    \centering
 \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{python}
     param_grid = {
         'conv_1_filters': [32, 64],
@@ -100,9 +104,79 @@ Both models shared the same parameter grid as follow:
         'epochs': [10, 50, 100] 
     }
 \end{minted}
+    \caption{Parameter Grid}
+    \label{fig:param_grid}
+\end{figure}
+In the training process, a common training framework was introduced for both models (Table \ref{tab:cnn-model-1} and Table \ref{tab:cnn-model-2}) to ensure consistency in the methodological approach.
+But some specific adjustments to address the unique characteristics of each model is allowed.
+The training process started with a thorough grid search to optimize hyper-parameters including dropout rates, kernel sizes, convolutional filter counts, and dense layer unit counts.
+Both models shared the same parameter grid as Figure \ref{fig:param_grid}.
 This approach made it easier to explore the configuration space in an organized way, ensuring that each model was tuned to perform optimally.
-After searching through the parameter grid, the training was conducted with a batch size of 32 and 100 epochs. 
+\\
+\indent After searching through the parameter grid, the process focuses on configuring each model's architecture to best capture the nuances of facial expression for \gls{fer}.
+Model 1 (Table \ref{tab:cnn-model-1}) has a relatively simple architecture, which require careful tuning if dropout rates and filter sizes to balance feature learning against the risk of over-fitting.
+Model 2 (Table \ref{tab:cnn-model-2}) has more additional layers to capture a richer set of features before the final classification layer . 
+But this led to a more thorough analysis required for the network's depth in relation to its performance on the validation set, which assisted in identifying when to add dropout and how to adjust the pooling layers.  
+\\
+\begin{figure}[h!] 
+    \centering
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{python}
+    es = EarlyStopping(monitor='val_accuracy', patience=5, restore_best_weights=True)
+\end{minted}
+    \caption{Early Stopping}
+    \label{fig:earlystopping}
+\end{figure}
+\\
+\indent To prevent over-fitting, early stopping mechanism, which configured as `EarlyStopping' callback (Figure \ref{fig:earlystopping}), is integrated into the training to monitor validation accuracy and automatically halt training if no improvement was detected for five consecutive epochs.
+Most important of all, the callback (Figure \ref{fig:earlystopping}) was set to restore the weights form the epoch with the best validation accuracy, ensuring that the model maintained any progress made prior to the plateau.
+This approach allows to train the model as long as beneficial, in the meantime, avoiding over-fitting and maintaining the optimal state achieved during training.
+\\
+\begin{figure}[h!] 
+    \centering
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos]{python}
+    steps_per_epoch=len(train_X) / batch_size
+\end{minted}
+    \caption{Steps per epoch}
+    \label{fig:steps_per_epoch}
+\end{figure}
+\\
+\indent Furthermore, the `\texttt{steps\_per\_epoch}' (Figure \ref{fig:steps_per_epoch}) parameter was calculated to ensure that each epoch processed the entire dataset.
+With these techniques, early stopping and calculated epoch steps, the models were able to achieve a balance between computational prudence and strong learning.
+Consequently, the models were well-positioned for dependable performance in \gls{fer}, having learned from training data efficiently and been prevented from the risk of over-fitting. 
 \subsection{Model Evaluation}
-\subsection{Model Comparison and Selection}
-\section{Web Application}
 
+\subsection{Model Comparison and Selection}
+\begin{table}[ht]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
+    \toprule
+    \textbf{Property} & \textbf{Model 1} & \textbf{Model 2} \\
+    \midrule
+    Input shape & 48 x 48 x 1 & 48 x 48 x 1 \\
+    Weight layers & 6 & 10 \\
+    Conv layers & 4 & 7 \\
+    Kernel size & 3x3 & 3x3 \\
+    Training params & 32,113,028 & 56,303,556 \\
+    Model size & - & - \\
+    Accuracy (\%) & 72.36 & - \\
+    \bottomrule
+    \end{tabular*}
+    \caption{Comparison of Model 1 with Model 2}
+    \label{tab:comparison-models}
+\end{table}
+\section{Web Application}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=10cm]{Images/pern.png}
+    \caption{PERN Stack \citep{alves_2023_get}}
+    \label{fig:pern}
+\end{figure}
+The web application uses the PERN stack (Figure \ref{fig:pern}), which is an acronym for PostgreSQL \citep{thepostgresqlglobaldevelopmentgroup_2019_postgresql}, Express \citep{openjsfoundation_2017_express}, React \citep{metaopensource_2024_react} and Node.js \citep{nodejs_2023_nodejs}.
+This set of technologies provides a comprehensive end-to-end foundation for creating dynamic web application.
+\\
+\indent The frontend was built with React.js, a widely-used \gls{js} \gls{ui} framework, which was chosen for its declarative and effective method of creating \gls{ui}.
+For the backend, Node.js was chosen for its non-blocking, event-driven architecture.
+This architecture is well-suited for managing workloads that involve asynchronous operations, real-time applications and I/O-bound tasks.
+The backend API is then constructed using Express.js, a simple and adaptable Node.js web application framework.
+PostgreSQL is the chosen database system as it is well-known for its advanced features, data integrity and robustness.

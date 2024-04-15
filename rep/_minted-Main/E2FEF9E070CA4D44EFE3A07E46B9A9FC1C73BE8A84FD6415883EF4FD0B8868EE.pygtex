@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{n}{steps\PYGZus{}per\PYGZus{}epoch}\PYG{o}{=}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{train\PYGZus{}X}\PYG{p}{)} \PYG{o}{/} \PYG{n}{batch\PYGZus{}size}
+\end{Verbatim}
