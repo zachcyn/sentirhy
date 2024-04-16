@@ -160,49 +160,50 @@ This naming convention shows the application's focus on sentiment analysis and r
 \subsection{Interface Design}
 \gls{ui}s are created through the process of interface design.
 The arrangement of panels, as well as the style of components the user will interact with such as buttons, text fields and others are all included.
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/login.png}
     \caption{Login Page}
     \label{fig:login}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/signup.png}
     \caption{Sign Up Page}
     \label{fig:signup}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/overview.png}
     \caption{Dashboard Page}
     \label{fig:dashboard}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/emotion.png}
     \caption{Emotion Music Page}
     \label{fig:emotion}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/detection.png}
     \caption{Emotion Recognition Page}
     \label{fig:emotion-recog}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/user-settings.png}
     \caption{User Settings Page}
     \label{fig:usr-settings}
 \end{figure}
+
 \section{Artificial Intelligence and Machine Learning}
 \subsection{Models Architecture}
 In computer vision, a model's architecture is the basis that backs up its capacity for learning and generalization.
 The design decisions made when structuring a model determine not only its performance, but also its efficiency in extracting and understanding the complex patterns found in the data. 
 A \gls{fer} model must be able to manage the complexity of human facial emotions with ease. 
 Therefore, the architectures explored and selected are designed with the goal of capturing a complex hierarchy of features.
-\begin{table}[ht]
+\begin{table}[h!]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
@@ -236,7 +237,7 @@ Those interspersed `Dropout' layers are used to prevent over-fitting, which then
 \indent In order to reduce dimensionality, pooling layers are implemented throughout the architecture.
 This will compress the spatial volume of features before they are flattened into a format suitable for dense network processing.
 The learning process ends in the `Dense' layers that, through a `Softmax' activation, control the emotional categorization, converting the complex network of extracted features into perceptible emotional states.
-\begin{table}[ht]
+\begin{table}[h!]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
