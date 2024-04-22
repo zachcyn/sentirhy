@@ -114,7 +114,7 @@ The training process started with a thorough grid search to optimize hyper-param
 Both models shared the same parameter grid as Figure \ref{fig:param_grid}.
 This approach made it easier to explore the configuration space in an organized way, ensuring that each model was tuned to perform optimally.
 \\
-\indent After searching through the parameter grid (\ref{app:appendix-a}), the process focuses on configuring each model's architecture to best capture the nuances of facial expression for \gls{fer}.
+\indent After searching through the parameter grid (Figure~\ref{fig:model-1-grid-result} and Figure~\ref{fig:model-2-grid-result}), the process focuses on configuring each model's architecture to best capture the nuances of facial expression for \gls{fer}.
 Model 1 (Table \ref{tab:cnn-model-1}) has a relatively simple architecture, which require careful tuning if dropout rates and filter sizes to balance feature learning against the risk of over-fitting.
 Model 2 (Table \ref{tab:cnn-model-2}) has more additional layers to capture a richer set of features before the final classification layer . 
 But this led to a more thorough analysis required for the network's depth in relation to its performance on the validation set, which assisted in identifying when to add dropout and how to adjust the pooling layers.  
@@ -144,10 +144,123 @@ This approach allows to train the model as long as beneficial, in the meantime, 
 \indent Furthermore, the `\texttt{steps\_per\_epoch}' (Figure \ref{fig:steps_per_epoch}) parameter was calculated to ensure that each epoch processed the entire dataset.
 With these techniques, early stopping and calculated epoch steps, the models were able to achieve a balance between computational prudence and strong learning.
 Consequently, the models were well-positioned for dependable performance in \gls{fer}, having learned from training data efficiently and been prevented from the risk of over-fitting. 
-\subsection{Model Evaluation}
+\subsection{Models Evaluation}
+Analytical tools such as confusion matrices, accuracy graph over epochs, and classification reports are used to evaluate the effectiveness of the \gls{cnns} models. 
+These insights will help in understanding the strengths and weaknesses of the models, and guide future improvements to improve the model's emotional intelligence.
+
+\subsection{Model 1}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{
+        @{\extracolsep{\fill}}
+        l
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=4.0]
+    }
+      \toprule
+      \textbf{Category} & {\textbf{Precision}} & {\textbf{Recall}} & {\textbf{F1-score}} & {\textbf{Support}} \\
+      \midrule
+      Angry & 0.68 & 0.63 & 0.65 & 491 \\
+      Happy & 0.86 & 0.89 & 0.87 & 879 \\
+      Sad & 0.61 & 0.54 & 0.57 & 594 \\
+      Neutral & 0.62 & 0.71 & 0.66 & 626 \\
+      \midrule
+      Accuracy & & & 0.71 & 2590 \\
+      Macro avg & 0.69 & 0.69 & 0.69 & 2590 \\
+      Weighted avg & 0.71 & 0.71 & 0.71 & 2590 \\
+      \bottomrule
+    \end{tabular*}
+    \caption{Model 1 Classification Report}
+    \label{tab:m1-class-report}
+\end{table}
+In the classification reports (Table~\ref{tab:m1-class-report} and Table~\ref{tab:m2-class-report}), the precision, recall, and F1-score for each emotion category provide insights into model performance for each specific emotion.
+While evaluating the performance of Model 1, the classification report (Table~\ref{tab:m1-class-report}) shows that the `Happy' emotion achieved the highest precision of 0.86.
+It indicates a high ratio of correctly predicted happy instances relative to all predictions for happiness. 
+Additionally, the recall for `Happy' is 0.89, showing that the model is adept at identifying true happy states from the test data.
+With a balanced recall and prevision, the `Neutral' category has an F1-score of 0.66, indicating an excellent performance in identifying neutral emotions.
+The model's overall accuracy is 0.71 meaning that 71\% of predictions were accurate.
+\\
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Model 1 Accuracy Variation \label{fig:model-1-acc-var}]{{\includegraphics[width=7cm]{Images/model-1-graph.png}}}%
+    \qquad
+    \subfloat[\centering Model 1 Confusion Matrix \label{fig:model-1-cm}]{{\includegraphics[width=6.7cm]{Images/model-1-conf-mat.png}}}%
+    \vspace{0.5cm}
+    \\
+    \scriptsize{Model 1 Graphs}
+\end{figure}
+\indent The normalized confusion matrices (Figure~\ref{fig:model-1-cm} and Figure~\ref{fig:model-2-cm}) offers a visual and numerical representation of the model's performance, highlighting correct predictions along the diagonal and errors elsewhere.
+Confusion matrices provide a clear view of both true positives and true negatives, which indicate instances in which the model accurately identified the emotional states, as well as false positives and false negatives, which indicate instances in which the model confused one emotion for another.
+The diagonal values (Figure~\ref{fig:model-1-cm}) show the percentage of true positives, with `Happy' and `Neutral' emotions have higher values, at 0.89 and 0.71, respectively, suggesting that the model is more confidence in recognizing these emotions correctly.
+But, there are some misclassifications, for example, `Angry' being misclassified as `Sad' or `Neutral', and `Sad' being confused with `Neutral'. 
+These off-diagonal parts shows where more training data or fine-tuning are required to improve the model's ability to distinguish between emotions with small facial expression differences. 
+\\
+\indent 
+Accuracy graphs (Figure~\ref{fig:model-1-acc-var} and Figure~\ref{fig:model-2-acc-var}) plot the models' performance over each training epoch for both the training and validation datasets.
+The graphs provide a clear picture of how the model improves or plateaus over time. 
+The graphs also demonstrate the general trend that provides insights about the model's stability and learning capability, as well as the difference in accuracy between training and validation, which shows potential over-fitting.
+When the accuracy on the validation is noticeably lower than on the training set, this could be a sign of over-fitting, showing that the model may not generalize well to new data. 
+\\
+\indent From Figure \ref{fig:model-1-acc-var}, the training dataset shows a noticeable improvement in accuracy with time, showing that model's capacity to pick up knowledge and get better at it.
+But, following some initial fluctuations, the test accuracy starts to plateau at about epoch 5, indicating that the model's learning has reached a stable state.
+This plateau can indicate that the model has learned as much as it can with the provided architecture and dataset. 
+These insights give a thorough understanding of Model 1's performance and suggest possible improvements, including using data enrichment or model refinement to solve misclassifications.
+
+\subsubsection{Model 2}
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{
+        @{\extracolsep{\fill}}
+        l
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=4.0]
+    }
+      \toprule
+      \textbf{Category} & {\textbf{Precision}} & {\textbf{Recall}} & {\textbf{F1-score}} & {\textbf{Support}} \\
+      \midrule
+      Angry & 0.73 & 0.62 & 0.67 & 491 \\
+      Happy & 0.91 & 0.91 & 0.91 & 879 \\
+      Sad & 0.70 & 0.52 & 0.60 & 594 \\
+      Neutral & 0.60 & 0.82 & 0.69 & 626 \\
+      \midrule
+      Accuracy & & & 0.74 & 2590 \\
+      Macro avg & 0.74 & 0.72 & 0.72 & 2590 \\
+      Weighted avg & 0.75 & 0.74 & 0.74 & 2590 \\
+      \bottomrule
+    \end{tabular*}
+    \caption{Model 2 Classification Report}
+    \label{tab:m2-class-report}
+\end{table}
+The classification report (Table~\ref{tab:m2-class-report}) shows that the model performs well in identifying `Happy' expressions, with high precision (0.91) and recall (0.91) for the `Happy' category.
+The precision of `Neutral' is relatively lower at 0.60, indicating some misclassifications.
+`Angry' and `Sad' emotions show balanced precision and recall, which indicate that there is still potential for development in accurately identifying these emotions.
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Model 2 Accuracy Variation \label{fig:model-2-acc-var}]{{\includegraphics[width=7cm]{Images/model-2-graphs.png}}}%
+    \qquad
+    \subfloat[\centering Model 2 Confusion Matrix \label{fig:model-2-cm}]{{\includegraphics[width=6.7cm]{Images/model-2-conf-mat.png}}}%
+    \vspace{0.5cm}
+    \\
+    \scriptsize{Figure Collection: Model 2 Graphs}
+\end{figure}
+\indent These findings are further supported by the confusion matrix (Figure~\ref{fig:model-2-cm}), which shows the model's capacity to accurately identify `Happy' and `Neutral' emotions with higher confidence.
+These categories are indicated by darker shades along the diagonal.
+The off-diagonal figures in the `Angry' and `Sad' sections, with the lighter shades, shows confusion, mainly with `Neutral' expressions.
+\\
+\indent Training and testing accuracy both steadily rise across epochs in the accuracy graph (Figure~\ref{fig:model-2-acc-var}).
+The test accuracy plateaus at about the 15th epoch, indicating that continued training beyond this may not produce meaningful gains and may even worsen over-fitting problems.
+\\
+\indent All of these results shows that although Model 2 is quite good at identifying `Happy', it struggles to identify `Angry' and `Sad'.
+These issues could be resolved by improving the model's generalizability by additional model tuning or data augmentation techniques.
 
 \subsection{Model Comparison and Selection}
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \renewcommand{\arraystretch}{1.5}
     \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcr}
@@ -159,13 +272,90 @@ Consequently, the models were well-positioned for dependable performance in \gls
     Conv layers & 4 & 7 \\
     Kernel size & 3x3 & 3x3 \\
     Training params & 32,113,028 & 56,303,556 \\
-    Model size & - & - \\
-    Accuracy (\%) & 72.36 & - \\
+    Model size (MB) & 367 & 644 \\
+    Accuracy (\%) & 71.35 & 74.32 \\
     \bottomrule
     \end{tabular*}
     \caption{Comparison of Model 1 with Model 2}
     \label{tab:comparison-models}
 \end{table}
+The performance of Model 1 and Model 2 is weighted to determine which is more suitable for deployment in this section.
+In addition to these variables, recall, accuracy, precision, and the F1-score for every emotional category, the architecture of the model, which depended on computational resources, is also taken into account in this decision making stage. 
+\\
+\indent The comparative analysis between Model 1 and Model 2 (Table~\ref{tab:comparison-models}) shows that Model 1 with fewer weight and convolutional layers, has much smaller in megabytes and has less training parameters compare to Model 2 which has more complex layers and greater model size.
+Besides, Model 2 achieves higher accuracy, which is an important consideration when choosing a model.
+It is because the project's objective is to accurately recognizing user's emotional states in order to provide music therapy. 
+\\
+\indent Although Model 1 has the advantage of being a lighter model which may be beneficial in environments where computational resources are limited, the higher accuracy of Model 2 cannot be disregarded.
+The additional complexity of Model 2 is justified given the significance of accurate emotion detection in the context of the web application.
+\\
+\indent The decision between Model 1 and Model 2 will ultimately come down to balancing accuracy and computational efficiency.
+Despite its larger size and more parameters, Model 2 is the better option in terms of giving the best possible music therapy experience since its improved accuracy is more important in achieving the intended user experience.
+Therefore, Model 2 is chosen, with further research and development to be done on optimization and efficiency issues.
+\\
+\subsection{Transfer Learning}
+Transfer learning, an approach that repurpose a pre-trained model for a different but related task, is implemented to fine-tune the selected Model 2 for better recognition of Asian facial features, which are underrepresented in the dataset primarily used for training - FER2013 (Figure~\ref{fig:fer2013}) and CK+ (Figure~\ref{fig:ckextended}).
+The integration of Szu-EmoDage (Figure~\ref{fig:szu-emodage}) aimed to address and improve the model's ethnic diversity-related limitations.
+\begin{figure}[ht!]
+    \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+    for layer in base_model.layers:
+        layer.trainable = True 
+    \end{minted}
+    \caption{Layer Trainable}
+    \label{fig:layer-trainable}
+\end{figure}
+\\
+\indent The transfer learning process involved retraining the model's layers, allowing it to learn from new features.
+During the fine-tuning stage, it is recommended to freeze certain layers of the model to preserve the knowledge it has acquired from the original datasets, while others were allowed to adjust their weights to the new data.
+However, all layers are set to trainable (Figure~\ref{fig:layer-trainable}) in this instance since Szu-EmoDage's size is significantly smaller than the original dataset which is less likely that it would overwrite the learned features from the original datasets.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{
+        @{\extracolsep{\fill}}
+        l
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=4.0]
+    }
+      \toprule
+      \textbf{Category} & {\textbf{Precision}} & {\textbf{Recall}} & {\textbf{F1-score}} & {\textbf{Support}} \\
+      \midrule
+      Angry & 0.92 & 1.00 & 0.96 & 12 \\
+      Happy & 1.00 & 0.92 & 0.96 & 12 \\
+      Sad & 1.00 & 1.00 & 1.00 & 12 \\
+      Neutral & 1.00 & 1.00 & 1.00 & 12 \\
+      \midrule
+      Accuracy & & & 0.98 & 48 \\
+      Macro avg & 0.98 & 0.98 & 0.98 & 48 \\
+      Weighted avg & 0.98 & 0.98 & 0.98 & 48 \\
+      \bottomrule
+    \end{tabular*}
+    \caption{Transferred Learning Model Classification Report}
+    \label{tab:tf-class-report}
+\end{table}
+\indent The updated model attained an impressive accuracy of 0.98, showing its ability to apply the learnt properties to a different demographic.
+Additionally, every emotion category had almost perfect precision; the lowest was 0.92 for the `Angry' category and the highest was 1.00 for the `Neutral', `Happy' and `Sad' categories.
+This improvement demonstrates how well transfer learning works to include a wider variety of data. 
+\\
+\begin{figure}[H]
+    \centering
+    \subfloat[\centering Transferred Learning Model Accuracy Variation \label{fig:tf-acc-var}]{{\includegraphics[width=7cm]{Images/tf-graph.png}}}%
+    \qquad
+    \subfloat[\centering Transferred Learning Model Confusion Matrix \label{fig:tf-cm}]{{\includegraphics[width=6.7cm]{Images/tf-conf-mat.png}}}%
+    \vspace{0.5cm}
+    \\
+    \scriptsize{Figure Collection: Transferred Learning Model Graphs}
+\end{figure}
+\indent The model accuracy graph (Figure~\ref{fig:tf-acc-var}), which peaks at 0.99 for the training set, shows a steady training process with high accuracy levels.
+The test set accuracy varies notably, but the model still perform well, indicating strong learning without over-fitting.
+This prove that the model generalizes the characteristics it has learnt from the original dataset, demonstrating its consistency in performance over varied inputs.
+\\
+\indent High true positive rates and a clear differentiation between different emotions is showed in the confusion matrix. (Figure~\ref{fig:tf-cm})
+Specifically, the model obtained excellent label alignments between the true label and predicted label for the `Angry', `Sad', and `Neutral' categories, resulting in an identification rate of 1.00.
+Although there is a small bit of uncertainty with the `Happy' category, which indicates that there is still opportunity for improvement, achieving 0.92 in identifying `Happy' category is still an outstanding result.
+
 \section{Web Application}
 \begin{figure}[h!]
     \centering
@@ -191,7 +381,7 @@ PostgreSQL is the chosen database system as it is well-known for its advanced fe
 Users first provide their personal information, which consists of their date of birth, fist and last names, preferred username, and email address, to begin the registration process. (Figure \ref{fig:register-page-ui}) 
 The entered data is then validated by cross-referencing it with existing entries in the `sentirhy.user' table within the PostgreSQL database.
 If there is duplicated username or email, the user will be notified that the credentials have already been taken and the process will stopped.
-When there is no duplicate entry, the user's password is securely hashed with `bcrypt', and the crypto module sends an unique activation token to the user's email for account verification.
+When there is no duplicate entry, the user's password is securely hashed with `bcrypt' (Figure~\ref{fig:registering-user} Line 9), and the `crypto' module creates an unique activation token which will then send to the user's email for account verification.
 The generated token with an expiration date is also stored in the database with the user credentials for security purposes. 
 \\
 \begin{figure}[h!]
@@ -221,7 +411,7 @@ Then, access to the application is granted with a successful match and an activa
 \end{figure}
 As users log into the application, they are greeted with a dashboard.
 There will be a modal component (Figure~\ref{fig:music-service}) showing on the dashboard, allowing users to connect to different music services, which is required to the app's function to play music.
-Users are redirected to Spotify's authorization interface through an OAuth 2.0 authorization flow in order to grant permissions when they choose to link their accounts.
+Users are redirected to Spotify's authorization interface through an OAuth 2.0 authorization flow in order to grant permissions when they choose to link their Spotify accounts.
 Once user's permission is acquired, an access token from Spotify's token endpoint gives the application the authority to request services from the Spotify API on the user's behalf, like playing music.
 Unfortunately, as of right now, the only integration that is operational is Spotify; Youtube connectivity is indicated as a planned addition.
 \\
@@ -237,7 +427,7 @@ With the user's permission, the application launches the Haarcascade frontal fac
 \\
 \begin{figure}[h!] 
     \centering
-\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{javascript}
     async function predictEmotion(imageFilename) {
         const imagePath = path.join(__dirname, '/user_emotion/', imageFilename);
         const model = await loadModel()
@@ -259,7 +449,7 @@ It loads the trained model, then resize the image to 48x48 pixels, converted to 
 \\
 \begin{figure}[h!] 
     \centering
-\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{javascript}
     function generateProgressivePlaylist(user_emotion_tracks, neutral_tracks, happy_tracks, playlistLength) {
 
         const allTracks = user_emotion_tracks.concat(neutral_tracks, happy_tracks);

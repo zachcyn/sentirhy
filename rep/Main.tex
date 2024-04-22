@@ -108,6 +108,10 @@
 \newacronym{fk}{FK}{Foreign Key}
 \newacronym{conv2d}{Conv2D}{Convolutional Layer}
 \newacronym{js}{JS}{JavaScript}
+\newacronym{eeg}{EEG}{Electroencephalogram}
+\newacronym{emg}{EMG}{Electromyography}
+\newacronym{eog}{EOG}{Electrooculogram}
+\newacronym{gdpr}{GDPR}{General Data Protection Regulation}
 
 %  -------------------------------------------------
 %  --------- The document starts from here --------- 
@@ -146,8 +150,7 @@
 \end{singlespace}
  UNIVERSITY OF THE WEST OF ENGLAND\\
  \begin{singlespace}
- Date of submission: \today\\
- Word count: WORD COUNT\\
+ Date of submission: 24 April 2024\\
  \end{singlespace}
 }\par
 }
@@ -173,10 +176,10 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgement}
 \input{Acknowledgements}
-\newpage
+
 % -----------------  ACRONYMS  -------------------
 \newpage
-\chapter*{Acronyms}
+% \chapter{Acronyms}
 \addcontentsline{toc}{chapter}{Acronyms}
 \printglossary[type=\acronymtype,nonumberlist,nopostdot]
 \newpage
@@ -233,6 +236,11 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \chapter{Project Evaluation}
 \input{Project Evaluation} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents
+
+% -------------------  CONCLUSION  ---------------------
+\chapter{Conclusion and Future Work}
+\input{Conclusion} % Section/Chapter entries can be done in the Main.tex file or in a  
+                       % separate tex file for longer and more complex documents
                                            
 % -------------------  BIBLIOGRAPHY ---------------------
 \newpage
@@ -242,9 +250,16 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 \addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
 % -------------------  Appendix  ---------------------
 \appendix
-\renewcommand{\thesection}{Appendix \Alph{section}}
+\renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}
+\renewcommand{\thetable}{\Alph{section}.\arabic{table}}
 \chapter*{Appendices}
 \addcontentsline{toc}{chapter}{Appendices}
+\newcommand{\customappendix}[1]{
+    \section*{#1}
+    \addcontentsline{toc}{section}{#1}
+    \refstepcounter{section}
+    \label{#1}
+}
 \input{Appendix} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents                       
 

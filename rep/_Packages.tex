@@ -5,8 +5,6 @@
 % LaTeX's float package
 \usepackage{float}
 
-\usepackage{longtable}
-
 \usepackage{multirow}
 
 \usepackage{array}
@@ -115,3 +113,13 @@
 \usemintedstyle{friendly}
 
 \usepackage{pdflscape}
+
+\usepackage{siunitx} 
+\sisetup{
+  round-mode=places,    % Rounds numbers
+  round-precision=2,    % to 2 places
+  table-format=1.2,     % Assumes a number format of 1.22
+  table-number-alignment=center, % Align numbers in table at center
+  table-space-text-pre = (,      % Corrects spacing when numbers have parentheses
+  table-space-text-post = ),
+}

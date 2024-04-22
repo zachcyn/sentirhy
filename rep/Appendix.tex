@@ -1,71 +1,89 @@
-% Appendix A
+% \customappendix{Appendix A}
+% \setcounter{figure}{0}
+% \setcounter{table}{0}   
 
-% \addcontentsline{toc}{section}{Appendix A}
-\section{}
-\label{app:appendix-a}
+% \section{}
+% \label{app:appendix-a}
 
-
-\newpage
-\section{}
-\label{app:appendix-b}
-
+% \newpage
+% \newpage
+% \section{}
+% \label{app:appendix-b}
+\customappendix{Appendix A}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
+\begin{figure}[H]
 \begin{minted}[frame=single, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, breaklines,linenos, numbersep=5pt]{text}
 2023-12-27 23:22:26.546868:
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.0, 512, 'adam', 32, 10) CHECKED
-Best Score: 0.5725693106651306
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'optimizer': 'adam'}
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.0, 768, 'adam', 32, 10) CHECKED
-Best Score: 0.5725693106651306
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'optimizer': 'adam'}
+Score: 0.5725693106651306
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.01}
 2023-12-27 23:24:26.831029:
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.0, 1024, 'adam', 32, 10) CHECKED
-Best Score: 0.5765619874000549
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 1024, 'optimizer': 'adam'}
-2023-12-27 23:25:37.281540:
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.2, 512, 'adam', 32, 10) CHECKED
-Best Score: 0.5906981825828552
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
-2023-12-27 23:26:47.249360: 
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.2, 768, 'adam', 32, 10) CHECKED
-Best Score: 0.5906981825828552
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
-2023-12-27 23:27:57.635618: 
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.2, 1024, 'adam', 32, 10) CHECKED
-Best Score: 0.5906981825828552
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
-2023-12-27 23:29:09.047680:
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.3, 512, 'adam', 32, 10) CHECKED
-Best Score: 0.5906981825828552
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
+Score: 0.5765619874000549
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 1024, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.01}
 2023-12-27 23:30:18.471026:
-(32, 64, 128, 128, 3, 3, 3, 3, 0.1, 0.0, 0.3, 768, 'adam', 32, 10) CHECKED
-Best Score: 0.5906981825828552
-Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'optimizer': 'adam'}
+Score: 0.5906981825828552
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.2, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.01}
+2023-12-27 23:45:27.23346:
+Score: 0.3413424789905548
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.1}
 \end{minted}
+\caption{Model 1: Subset of Grid Search Results}
+\label{fig:model-1-grid-result}
+\end{figure}
 
 \newpage
 
-\section{}
-\label{app:appendix-c}
-\begin{figure}[h!]
+\customappendix{Appendix B}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
+\begin{figure}[H]
+\begin{minted}[frame=single, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, breaklines,linenos, numbersep=5pt]{text}
+2023-12-29 10:18:11.871023:
+Score: 0.3413424789905548
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.01}
+2024-01-01 03:45:22.236121:
+Score: 0.6384439468383789
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.001}
+2024-01-01 19:23:17.180239:
+Score: 0.6926010847091675
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.001}
+2024-01-05 23:07:41.103846:
+Score: 0.6933638453483582
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.01, 'optimizer': 'adam', 'learning_rate': 0.0001}
+2024-01-11 11:14:23.678129:
+Score: 0.7284515500068665
+Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'conv_4_filters': 128, 'conv_1_kernel': 3, 'conv_2_kernel': 3, 'conv_3_kernel': 3, 'conv_4_kernel': 3, 'dropout_1': 0.1, 'dropout_2': 0.0, 'dropout_3': 0.0, 'dense_units': 512, 'l1_reg': 0.001, 'optimizer': 'adam', 'learning_rate': 0.001}
+\end{minted}
+\caption{Model 2: Subset of Grid Search Results}
+\label{fig:model-2-grid-result}
+\end{figure}
+
+\newpage
+
+% \section{}
+% \label{app:appendix-c}
+\customappendix{Appendix C}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/acc-activated.png}
     \caption{Account Activated - UI}
     \label{fig:acc-activated}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/dashboard.png}
     \caption{Dashboard - UI}
     \label{fig:dashboard-ui}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/register-successfull-ui.png}
     \caption{Register Successful - UI}
     \label{fig:register-succesfull}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/reset-password-ui.png}
     \caption{Reset Password - UI}
@@ -77,7 +95,7 @@ Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128,
     \caption{Terms and Conditions - UI}
     \label{fig:terms}
   \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{Images/user-settings-ui.png}
     \caption{User Settings - UI}
@@ -85,9 +103,67 @@ Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128,
 \end{figure}
 
 \newpage
+
+\customappendix{Appendix D}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\begin{figure}[ht!]
+\begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{javascript}
+router.post('/register', async(req, res) => {
+    try {
+        const { fname, lname, dob, username, email, password, country } = req.body;
+        const userCheckQuery = 'SELECT * FROM sentirhy.user WHERE email = $1 OR username = $2';
+        const { rows: existingUsers } = await pool.query(userCheckQuery, [email, username]);
+        if (existingUsers.length > 0) {
+            return res.status(400).json({message:"Username or Email already in use."});
+        }
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const activationToken = crypto.randomBytes(20).toString('hex');
+        const activationTokenExpires = new Date(Date.now() + 3600000).toISOString();
+        const insertUserQuery = 'INSERT INTO sentirhy.user (fname, lname, dob, username, email, password, activationToken, activationTokenExpires) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)';
+        await pool.query(insertUserQuery, [fname, lname, dob, username, email, hashedPassword  , activationToken, activationTokenExpires]);
+        const activationLink = `http://localhost:3030/activate?token=${activationToken}`;
+        await sendEmail(email, "Account Activation", activateTemplate(username, fname, email, activationLink))
+            .then(info => {
+                console.log('Email sent successfully');
+            })
+            .catch(error => {
+                console.log("Failed to send email:", error)
+            })
+
+        res.status(201).json({ message: "Registration successful. Please check your email to activate your account." });
+    } catch (err) {
+        console.error("Error in /register route: ", err);
+        res.status(500).send("Error registering new user");
+    }
+});
+\end{minted}
+\caption{User Registration Process}
+\label{fig:registering-user}
+\end{figure}
+
+\newpage
+
 \begin{landscape}
-\section{}
-\label{app:appendix-d}
+\customappendix{Appendix E}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=23cm]{Images/gantt.png}
+        \caption{Gantt Chart}
+        \label{fig:gantt-chart}
+    \end{figure}
+\end{landscape}
+
+\newpage
+
+\begin{landscape}
+% \section{}
+% \label{app:appendix-d}
+\customappendix{Appendix F}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
 \begin{longtable}{ |m{1cm}|m{1.5cm}|m{5cm}|m{6cm}|m{6cm}|m{2cm}| }
     \hline
     \rowcolor{lightgray}
@@ -138,22 +214,32 @@ Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128,
     \hline
     19 & \gls{ui} & Capture user's frame when face detected & Frame captured & Frame Captured with face showed clearly & Pass \\
     \hline
-    20 & \gls{ml} & Emotion Detection & Emotion detected on the captured frame & Emotion detected & Pass \\
+    20 & \gls{ml} & Detect `Happy'  & `Happy' detected on the captured frame & `Happy' detected & Pass \\
     \hline
-    21 & \gls{ui} & Display recognized emotion on \gls{ui} & Detected emotion is showed on user's screen & Detected emotion showing on user's screen & Pass \\
+    21 & \gls{ml} & Detect `Sad'  & `Sad' detected on the captured frame & `Sad' detected & Pass \\
     \hline
-    22 & Server & Generate playlist & Generate playlist based on user's current emotion & Playlist generated based on user's current emotion & Pass \\
+    22 & \gls{ml} & Detect `Angry'  & `Angry' detected on the captured frame & `Angry' detected & Pass \\
     \hline
-    23 & \gls{ui} & Logout & User logged out, authentication token removed & Token removed and user logged out & Pass \\
+    23 & \gls{ml} & Detect `Neutral'  & `Neutral' detected on the captured frame & `Neutral' detected & Pass \\
+    \hline
+    24 & \gls{ui} & Display recognized emotion on \gls{ui} & Detected emotion is showed on user's screen & Detected emotion showing on user's screen & Pass \\
+    \hline
+    25 & Server & Generate playlist & Generate playlist based on user's current emotion & Playlist generated based on user's current emotion & Pass \\
+    \hline
+    26 & \gls{ui} & Logout & User logged out, authentication token removed & Token removed and user logged out & Pass \\
     \hline
     \caption{Test Table}
+    \label{tab:test-case}
 \end{longtable}
 \end{landscape}
 
 \newpage
 \begin{landscape}
-\section{}
-\label{app:appendix-e}
+% \section{}
+% \label{app:appendix-e}
+\customappendix{Appendix G}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
 \begin{longtable}{ |m{2.5cm}|m{2.5cm}|m{2cm}|m{6.5cm}|m{8cm}| }
     \hline
     \rowcolor{lightgray}
@@ -189,5 +275,6 @@ Best Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128,
     05-03-2024 & 1200-1215 & 2Q17 & Progress Follow Up (Dev) & Yie Nian Chu, Craig Duffy \\
     \hline
     \caption{Meeting Log}
+    \label{tab:meeting-log}
 \end{longtable}
 \end{landscape}

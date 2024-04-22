@@ -1,0 +1,49 @@
+\section{Introduction}
+Project evaluation allows to reflect on the project's successes and limitations.
+The end product was a responsive web application combined with advanced machine learning algorithms to create an emotion-based music recommendation system.
+\gls{cnns} model at the core of the system was trained on robust datasets and refined through transfer learning to improve recognition accuracy, especially for underrepresented demographics.
+This section is an opportunity to consider the feedback loop form supervisor, integrating their thoughts into the project's development.
+
+\subsection{Reflection on Project Phases}
+To improve the project's foundation, the research phase needs to include a deeper look into several key areas.
+First, integrating empirical research and well-established psychological theories will enrich the scientific basis of the emotion-music interaction, supporting the algorithmic approach for music recommendation.
+Additionally, adaptive algorithms that can customize recommendations based on user feedback should also be considered to improve user engagement and satisfaction.
+\\
+\indent To ensure the system's global applicability and adherence to ethical standards, especially privacy and cultural sensitivity, it is also essential to address ethical and cultural issues.
+Last but not least, by recognizing and addressing the limitations of current music therapy practices, the project may be positioned as a technical advancement that provides accessible and personalized therapeutic solutions.
+\\
+\indent The project was originally designed with a defined set of features that were essential for a music therapy application, such as user registration, emotion detection, music recommendations, along with an integration with Spotify's Web Playback API.
+However, as the project developed, emerging challenges and deeper insights made it necessary to reevaluate and modify these requirements.
+As the appendix's Gantt chart (Figure~\ref{fig:gantt-chart}) shows, the development of \gls{ml} models and the integration with Spotify's API took longer than expected. 
+The main cause of these delays was the unfamiliar with integrating API into web application and discovering the way to enhance the model's performance but still considering the amount of computational resources required.
+\\
+\indent Due to the delay which cause time constraints, the YouTube API integration was deprioritized and eventually not deployed.
+This decision is made to ensure the project could proceed gradually and the robustness and functionality of the core features, which were critical to the project's success, are developed on time.
+\\
+\indent During the implementation phase, a well-chosen technology stack and adaptable development techniques helped the project to be completed.
+The PERN stack was chosen for its reliability and scalability. 
+The agile methodologies was chosen as it allows iterative improvements and flexibility in response to changing project requirements.
+\\
+\indent Using opencv.js for real-time face identification in the web application was one of the biggest obstacles, which required significant technical adjustments to ensure compatibility and efficiency.
+Another considerable challenge was the intensive hyperparameter tuning required for the models, especially the second one, for which it took approximately seven days to go through the parameter grid (Figure~\ref{fig:param_grid}). 
+Then, the project timeline was impacted by this procedure, which was important but time-consuming.
+
+\subsection{Limitations and Test Results}
+In project evaluation, it is critical to address the limitations.
+One significant limitation in the emotion recognition system was its varying accuracy when exposed to different lighting conditions or when faced with unusual facial expressions, which may affect the accuracy of the results.
+\\
+\indent Additionally, even though the models work excellent on the dataset used, there were limits to the datasets themselves.
+For example, there were diversity issues with the datasets, FER2013 (Figure~\ref{fig:fer2013}) and CK+ (Figure~\ref{fig:ckextended}), especially with regard to ethnic representation.
+Also, the model may become biased towards to those more commonly represented categories, such as `Neutral' faces in FER2013.
+This could limits the system applicability in real-world and diverse settings.
+\\
+\indent As Table \ref{tab:test-case} showed, the project went through a set of testing that covered a wide range of functionality from backend operations to user interface interactions.
+The test showed the application's capability to handle user interactions and to interface with other services in an effective way. 
+Tests for \gls{fer} validated the face recognition algorithms' reliability, which is crucial for the project's core functionality.
+But, scalability testing, which is essential for evaluating the application's performance under various load conditions, is not part of the testing. 
+
+\subsection{Supervisor's Feedback Utilization}
+The scope of the project was refined due to the frequent communication with the supervisor (Table~\ref{tab:meeting-log}). 
+The project was previously intended to identify seven different emotions: angry, sad, neutral, happy, disgust, fear, and surprise.
+However, based on observations highlighting the importance of these fundamental emotions in music therapy, the scope was reduced to just focus on the first four.
+This modification ensured that the system was built with a clear focus on usability and efficacy for real-world applications, which also reduced the complexity and brought the project more directly in line with its therapeutic aims.
