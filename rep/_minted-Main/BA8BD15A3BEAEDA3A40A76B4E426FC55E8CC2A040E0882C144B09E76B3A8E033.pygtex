@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{k}{async}\PYG{+w}{ }\PYG{k+kd}{function}\PYG{+w}{ }\PYG{n+nx}{predictEmotion}\PYG{p}{(}\PYG{n+nx}{imageFilename}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{imagePath}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{path}\PYG{p}{.}\PYG{n+nx}{join}\PYG{p}{(}\PYG{n+nx}{\PYGZus{}\PYGZus{}dirname}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s+s1}{\PYGZsq{}/user\PYGZus{}emotion/\PYGZsq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{imageFilename}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{model}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{loadModel}\PYG{p}{()}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{imageBuffer}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k}{await}\PYG{+w}{ }\PYG{n+nx}{fs}\PYG{p}{.}\PYG{n+nx}{promises}\PYG{p}{.}\PYG{n+nx}{readFile}\PYG{p}{(}\PYG{n+nx}{imagePath}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{tensor}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{tf}\PYG{p}{.}\PYG{n+nx}{node}\PYG{p}{.}\PYG{n+nx}{decodeImage}\PYG{p}{(}\PYG{n+nx}{imageBuffer}\PYG{p}{).}\PYG{n+nx}{resizeBilinear}\PYG{p}{([}\PYG{l+m+mf}{48}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{48}\PYG{p}{]).}\PYG{n+nx}{mean}\PYG{p}{(}\PYG{l+m+mf}{2}\PYG{p}{).}\PYG{n+nx}{expandDims}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1}\PYG{p}{).}\PYG{n+nx}{expandDims}\PYG{p}{(}\PYG{l+m+mf}{0}\PYG{p}{).}\PYG{n+nx}{toFloat}\PYG{p}{().}\PYG{n+nx}{div}\PYG{p}{(}\PYG{n+nx}{tf}\PYG{p}{.}\PYG{n+nx}{scalar}\PYG{p}{(}\PYG{l+m+mf}{255}\PYG{p}{));}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{prediction}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{model}\PYG{p}{.}\PYG{n+nx}{predict}\PYG{p}{(}\PYG{n+nx}{tensor}\PYG{p}{);}
+\PYG{+w}{        }\PYG{k+kd}{const}\PYG{+w}{ }\PYG{n+nx}{emotionIndex}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n+nx}{prediction}\PYG{p}{.}\PYG{n+nx}{argMax}\PYG{p}{(}\PYG{l+m+mf}{1}\PYG{p}{).}\PYG{n+nx}{dataSync}\PYG{p}{()[}\PYG{l+m+mf}{0}\PYG{p}{];}
+
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n+nx}{emotions}\PYG{p}{[}\PYG{n+nx}{emotionIndex}\PYG{p}{];}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

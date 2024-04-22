@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+    \PYG{k}{for} \PYG{n}{layer} \PYG{o+ow}{in} \PYG{n}{base\PYGZus{}model}\PYG{o}{.}\PYG{n}{layers}\PYG{p}{:}
+        \PYG{n}{layer}\PYG{o}{.}\PYG{n}{trainable} \PYG{o}{=} \PYG{k+kc}{True}
+\end{Verbatim}
