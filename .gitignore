@@ -5,4 +5,5 @@
 **codes/Dataset.zip
 **codes/BACKEND/node_modules
 codes/ML/Recognition/MODEL1.keras
-*.env
+codes/BACKEND/.env
+codes/UI/.env
