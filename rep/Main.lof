@@ -1,64 +1,68 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Linear Regression}}{18}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Gradient Descent}}{19}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Support Vector Machine}}{20}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Random Forest}}{21}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces K-Nearest Neighbors}}{22}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Multi-Layer Perceptron}}{23}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Neural Networks}}{24}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Facial Landmarks}}{25}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces Linear Regression Classification Accuracies Table}}{28}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.13}{\ignorespaces Random Forest Classification Accuracy}}{29}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.14}{\ignorespaces Support Vector Machine Accuracy}}{29}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Linear Regression}}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Gradient Descent}}{9}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Support Vector Machine}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Random Forest}}{11}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces K-Nearest Neighbors}}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Multi-Layer Perceptron}}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Convolutional Neural Networks}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Facial Landmarks}}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Linear Regression Classification Accuracies Table}}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Random Forest Classification Accuracy}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Support Vector Machine Accuracy}}{19}{figure.caption.20}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Waterfall Methodology \citep {communitcationteam_2022_waterfall}}}{39}{figure.caption.21}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Spiral Methodology \citep {kumarpal_2018_software}}}{39}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Agile Methodology \citep {laoyan_2022_what}}}{40}{figure.caption.23}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Kanban from Notion}}{42}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Waterfall Methodology \citep {communitcationteam_2022_waterfall}}}{29}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Spiral Methodology \citep {kumarpal_2018_software}}}{29}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Agile Methodology \citep {laoyan_2022_what}}}{30}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Kanban from Notion}}{32}{figure.caption.25}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram}}{45}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Use Case Diagram}}{46}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Login Sequence Diagram}}{48}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Emotion Recognition Sequence Diagram}}{48}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Playlist Generation Sequence Diagram}}{49}{figure.caption.30}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Flowchart For Emotion Recognition and Playlist Generation}}{49}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Entity-relationship Diagram}}{50}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Light Theme Logo}}{51}{figure.caption.33}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Dark Theme Logo}}{51}{figure.caption.34}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Login Page}}{52}{figure.caption.35}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Sign Up Page}}{52}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Dashboard Page}}{53}{figure.caption.37}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Emotion Music Page}}{53}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces Emotion Recognition Page}}{53}{figure.caption.39}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces User Settings Page}}{54}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Block Diagram}}{34}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Use Case Diagram}}{36}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Login Sequence Diagram}}{37}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Playlist Generation Sequence Diagram}}{37}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Emotion Recognition Sequence Diagram}}{38}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Flowchart For Emotion Recognition and Playlist Generation}}{39}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Entity-relationship Diagram}}{40}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Light Theme Logo}}{41}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Dark Theme Logo}}{41}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Emotion Recognition Page}}{41}{figure.caption.35}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces FER-2013 Dataset}}{58}{figure.caption.43}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces CK+ Dataset}}{59}{figure.caption.44}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces SZU-EmoDage Dataset}}{59}{figure.caption.45}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Parameter Grid}}{62}{figure.caption.46}%
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Early Stopping}}{62}{figure.caption.47}%
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Steps per epoch}}{63}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Layer Trainable}}{68}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.11}{\ignorespaces PERN Stack \citep {alves_2023_get}}}{70}{figure.caption.57}%
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Register Page - UI}}{71}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Account Activation Email - UI}}{72}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Login Page - UI}}{72}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.15}{\ignorespaces Music Services Connection - UI}}{73}{figure.caption.61}%
-\contentsline {figure}{\numberline {6.16}{\ignorespaces Emotion Detector - UI}}{73}{figure.caption.62}%
-\contentsline {figure}{\numberline {6.17}{\ignorespaces Load Model and Preprocess data}}{74}{figure.caption.63}%
-\contentsline {figure}{\numberline {6.18}{\ignorespaces Generate Playlist}}{74}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces FER-2013 Dataset}}{46}{figure.caption.38}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces CK+ Dataset}}{47}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SZU-EmoDage Dataset}}{47}{figure.caption.40}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Parameter Grid}}{50}{figure.caption.41}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Early Stopping}}{50}{figure.caption.42}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Steps per epoch}}{51}{figure.caption.43}%
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Layer Trainable}}{56}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.11}{\ignorespaces PERN Stack \citep {alves_2023_get}}}{58}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Register Page - UI}}{59}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Account Activation Email - UI}}{59}{figure.caption.54}%
+\contentsline {figure}{\numberline {6.14}{\ignorespaces Login Page - UI}}{60}{figure.caption.55}%
+\contentsline {figure}{\numberline {6.15}{\ignorespaces Music Services Connection - UI}}{60}{figure.caption.56}%
+\contentsline {figure}{\numberline {6.16}{\ignorespaces Emotion Detector - UI}}{61}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.17}{\ignorespaces Load Model and Preprocess data}}{61}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.18}{\ignorespaces Generate Playlist}}{62}{figure.caption.59}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Model 1: Subset of Grid Search Results}}{88}{figure.caption.67}%
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Model 2: Subset of Grid Search Results}}{89}{figure.caption.68}%
-\contentsline {figure}{\numberline {C.1}{\ignorespaces Account Activated - UI}}{90}{figure.caption.69}%
-\contentsline {figure}{\numberline {C.2}{\ignorespaces Dashboard - UI}}{90}{figure.caption.70}%
-\contentsline {figure}{\numberline {C.3}{\ignorespaces Register Successful - UI}}{91}{figure.caption.71}%
-\contentsline {figure}{\numberline {C.4}{\ignorespaces Reset Password - UI}}{91}{figure.caption.72}%
-\contentsline {figure}{\numberline {C.6}{\ignorespaces User Settings - UI}}{91}{figure.caption.74}%
-\contentsline {figure}{\numberline {C.5}{\ignorespaces Terms and Conditions - UI}}{92}{figure.caption.73}%
-\contentsline {figure}{\numberline {D.1}{\ignorespaces User Registration Process}}{93}{figure.caption.75}%
-\contentsline {figure}{\numberline {E.1}{\ignorespaces Gantt Chart}}{94}{figure.caption.76}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Label Encoder}}{76}{figure.caption.62}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Label Encoder}}{76}{figure.caption.63}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Identify outliers with Box Plot}}{76}{figure.caption.64}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Emotion Distribution Graph}}{77}{figure.caption.65}%
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Model 1: Subset of Grid Search Results}}{79}{figure.caption.68}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces Model 2: Subset of Grid Search Results}}{80}{figure.caption.69}%
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Account Activated - UI}}{81}{figure.caption.70}%
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Dashboard - UI}}{81}{figure.caption.71}%
+\contentsline {figure}{\numberline {D.3}{\ignorespaces Register Successful - UI}}{82}{figure.caption.72}%
+\contentsline {figure}{\numberline {D.4}{\ignorespaces Reset Password - UI}}{82}{figure.caption.73}%
+\contentsline {figure}{\numberline {D.6}{\ignorespaces User Settings - UI}}{82}{figure.caption.75}%
+\contentsline {figure}{\numberline {D.5}{\ignorespaces Terms and Conditions - UI}}{83}{figure.caption.74}%
+\contentsline {figure}{\numberline {E.1}{\ignorespaces Login Page}}{84}{figure.caption.76}%
+\contentsline {figure}{\numberline {E.2}{\ignorespaces Sign Up Page}}{84}{figure.caption.77}%
+\contentsline {figure}{\numberline {E.3}{\ignorespaces Dashboard Page}}{85}{figure.caption.78}%
+\contentsline {figure}{\numberline {E.4}{\ignorespaces Emotion Music Page}}{85}{figure.caption.79}%
+\contentsline {figure}{\numberline {E.5}{\ignorespaces User Settings Page}}{85}{figure.caption.80}%
+\contentsline {figure}{\numberline {F.1}{\ignorespaces User Registration Process}}{86}{figure.caption.81}%
+\contentsline {figure}{\numberline {G.1}{\ignorespaces Gantt Chart}}{87}{figure.caption.82}%
 \contentsfinish 

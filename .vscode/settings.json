@@ -21,6 +21,23 @@
                 "pdflatex",
                 "pdflatex"
             ]
+        },
+        {
+            "name": "xelatexmk -> bibtex -> makeglossaries ➜ xelatexmk * 2",
+            "tools": [
+                "xelatexmk",
+                "bibtex",
+                "makeglossaries",
+                "xelatexmk",
+                "xelatexmk"
+            ]
+        },
+         {
+            "name": "xelatexmk * 2",
+            "tools": [
+                "xelatexmk",
+                "xelatexmk"
+            ]
         }
     ],
     "latex-workshop.latex.tools": [
@@ -34,6 +51,20 @@
                 "-shell-escape",
                 "%DOC%"
             ]
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
         },
         {
             "name": "makeglossaries",

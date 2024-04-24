@@ -3,44 +3,47 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: Main.aux
 The style file: agsm.bst
 Database file #1: References.bib
-You've used 79 entries,
+Warning--I'm ignoring gron_2019_handson's extra "month" field
+--line 441 of file References.bib
+You've used 69 entries,
             2909 wiz_defined-function locations,
-            1034 strings with 18191 characters,
-and the built_in function-call counts, 226955 in all, are:
-= -- 36000
-> -- 3188
+            1008 strings with 18168 characters,
+and the built_in function-call counts, 205354 in all, are:
+= -- 32605
+> -- 2879
 < -- 0
-+ -- 16700
-- -- 959
-* -- 18606
-:= -- 47624
-add.period$ -- 80
-call.type$ -- 79
-change.case$ -- 1105
-chr.to.int$ -- 77
-cite$ -- 79
-duplicate$ -- 995
-empty$ -- 2200
-format.name$ -- 1160
-if$ -- 40333
-int.to.chr$ -- 7
++ -- 15143
+- -- 868
+* -- 16991
+:= -- 42797
+add.period$ -- 69
+call.type$ -- 69
+change.case$ -- 966
+chr.to.int$ -- 66
+cite$ -- 69
+duplicate$ -- 920
+empty$ -- 1988
+format.name$ -- 1044
+if$ -- 36517
+int.to.chr$ -- 8
 int.to.str$ -- 0
-missing$ -- 24
-newline$ -- 272
-num.names$ -- 805
-pop$ -- 562
+missing$ -- 25
+newline$ -- 277
+num.names$ -- 704
+pop$ -- 483
 preamble$ -- 1
-purify$ -- 1185
+purify$ -- 1035
 quote$ -- 0
-skip$ -- 928
+skip$ -- 829
 stack$ -- 0
-substring$ -- 49772
-swap$ -- 136
-text.length$ -- 1106
+substring$ -- 45232
+swap$ -- 158
+text.length$ -- 966
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 312
+type$ -- 274
 warning$ -- 0
-while$ -- 1677
+while$ -- 1490
 width$ -- 0
-write$ -- 983
+write$ -- 881
+(There was 1 warning)

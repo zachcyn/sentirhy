@@ -15,21 +15,25 @@ This discussion covers the model's validation, training, and integration into th
 \indent All of these components provide a thorough explanation of the system's design, addressing structural, behavioral, and aesthetic factors from the abstract to the concrete.
 
 \section{Web Application}
+This section explores the design decisions made for the web application's architecture and aesthetics.
+It describes how the architecture of the system was designed to optimize usability and functionality, ensuring seamless integration of the \gls{fer} technology with the music recommendation system.
+\\
 \subsection{UML Diagrams}
 \subsubsection{Block Diagram}
-Block diagram present a high-level overview of the system's architecture, highlighting the major components and their interactions. \citep{freeman_block}
+Block diagram present a high-level overview of the system's architecture, highlighting the major components and their interactions \citep{freeman_block}.
 This offers insights into the overall system design and its flow.
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=12cm]{Images/block.png}
+    \includegraphics[width=15cm]{Images/block.png}
     \caption{Block Diagram}
     \label{fig:block}
 \end{figure}
-\\
-\indent From Figure \ref{fig:block}, there are different components and each component has its own responsibilities to enable \gls{fer} and playlist generation for music therapy.
+\indent As shown in Figure \ref{fig:block}, there are different components and each component has its own responsibilities to enable \gls{fer} and playlist generation for music therapy.
 \gls{ui} is the gateway through which users interact with the application.
 It captures user inputs such as credentials for the authentication process, frames for emotion recognition, and user actions for music playback controls.
-\\
+
+\newpage
+
 \indent Authentication System manages user identity verification and access control.
 When user provides credentials, either username or email, and password to this component, it will validates them against stored data in the database. 
 Upon successful validation, users can access the full functionality of the services.
@@ -50,15 +54,14 @@ This component is responsible for fetching the actual music tracks from Spotify 
 It also outlines how user actions translate into system responses and result in a music therapy experience.
 \\
 \subsubsection{Use Case Diagram}
-Use Case diagram is a visual representation of the system's functionalities and the interactions that different types of users have with these functionalities. \citep{ibm_2021_usecase}
-\begin{figure}[!ht]
+Use Case diagram is a visual representation of the system's functionalities and the interactions that different types of users have with these functionalities \citep{ibm_2021_usecase}.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Images/usecase.png}
+    \includegraphics[width=16cm]{Images/usecase.png}
     \caption{Use Case Diagram}
     \label{fig:usecase}
 \end{figure}
-\\
-\indent In Figure \ref{fig:usecase}, there are two actors, `User' and the `Spotify API'.
+\indent As shown in Figure \ref{fig:usecase}, there are two actors, `User' and the `Spotify API'.
 The `User' represents any individual who interacts with the application for its services.
 The `Spotify API' acts as an external system that the application communicates with to stream music.
 \\
@@ -69,27 +72,26 @@ For example, several use cases in the application such as `Recognize Emotion', `
 This precondition is captured in the `Validate User' use case, which is included in these use cases to ensure that the `User' is logged in before granting access to the services.
 \\
 \subsubsection{Sequence Diagrams}
-Sequence diagrams provide an illustrative view of how various components of a system work together ot accomplish a process, acting as blueprints of interaction across time.\citep{bell_2004_explore}
+Sequence diagrams provide an illustrative view of how various components of a system work together ot accomplish a process, acting as blueprints of interaction across time \citep{bell_2004_explore}.
 They are especially helpful in understanding the flow of messages and actions between objects in response to software system events.
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Images/login-sequence.png}
+    \includegraphics[width=16cm]{Images/login-sequence.png}
     \caption{Login Sequence Diagram}
     \label{fig:login-sequence}
 \end{figure}
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Images/fer-sequence.png}
-    \caption{Emotion Recognition Sequence Diagram}
-    \label{fig:fer-sequence}
-\end{figure}
-\begin{figure}[!ht]
-    \centering
-    \includegraphics[width=14cm]{Images/playlist-sequence.png}
+    \includegraphics[width=16cm]{Images/playlist-sequence.png}
     \caption{Playlist Generation Sequence Diagram}
     \label{fig:playlist-sequence}
 \end{figure}
-\\
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm]{Images/fer-sequence.png}
+    \caption{Emotion Recognition Sequence Diagram}
+    \label{fig:fer-sequence}
+\end{figure}
 \indent Figure \ref{fig:fer-sequence} presents the series of interactions that commence with capturing a user's facial expression and terminates when the system identifies the user's emotional state.
 The sequence is outlined from the user interface to the backend services, where the input is processed by the `Emotion Recognition Engine' to identify emotion. 
 The detected emotion will then influence the music playlist generation. 
@@ -99,38 +101,37 @@ From retrieving suitable songs based on the emotional analysis to returning the 
 \\
 \subsubsection{Flowchart}
 Flowchart represent the process of a system, the decisions that need to be made, and the flow of control from one step to the next.
-Troubleshooting and system design are made considerably easier with the aid of flowchart as they make the sequential phase and logic paths in complicated processes visible. \citep{lucidchart_2019_what}
-\begin{figure}[!ht]
+Troubleshooting and system design are made considerably easier with the aid of flowchart as they make the sequential phase and logic paths in complicated processes visible \citep{lucidchart_2019_what}.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Images/flowchart.png}
+    \includegraphics[width=16cm]{Images/flowchart.png}
     \caption{Flowchart For Emotion Recognition and Playlist Generation}
     \label{fig:flowchart-fer-pg}
 \end{figure}
-\\
 \indent Figure \ref{fig:flowchart-fer-pg} shows the steps taken from the moment a user engages with the feature to capture their emotional state to the point where the system recognizes and outputs the detected emotion.
 Following the \gls{fer} phase, the identified emotion is then used to select suitable music, creating playlist and presenting it to the user. 
 \\
 \subsubsection{Entity-relationship Diagram}
 \gls{erd} is a structured representation of the data entities within the web application and the interconnections between them. 
 This illustration outlines the database schema, which is foundational for storing, retrieving, and managing data that the application operates upon.
-\begin{figure}[!ht]
+\\
+\indent Figure \ref{fig:erd} presents the \gls{erd} for the application.
+`User' representing the application's users, containing `UserID', `Username' and other personal details which could be modified in `User Settings Page' (See Figure \ref{fig:usr-settings}).
+`Albums', `Tracks', `Audio Features', `Track Popularity', and `Artists' are entities that stored music data from song title to information such as its tempo, its loudness and other audio features.
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{Images/erd.png}
+    \includegraphics[width=16cm]{Images/erd.png}
     \caption{Entity-relationship Diagram}
     \label{fig:erd}
 \end{figure}
-\\
-\indent Figure \ref{fig:erd} presents the \gls{erd} for the application.
-`User' representing the application's users, containing `UserID', `Username' and other personal details which could be modified in `User Settings Page' (Figure \ref{fig:usr-settings}).
-`Albums', `Tracks', `Audio Features', `Track Popularity', and `Artists' are entities that stored music data from song title to information such as its tempo, its loudness and other audio features.
-\\
 \indent The relationship between entities are defined by \gls{pk} and \gls{fk}, enforcing referential integrity within the database.
 For example, a one-to-many relationship from `Artists' to `Tracks' indicates that one artist can have multiple tracks, whereas a one-to-one relationship between `Tracks' and `Audio Features' indicates that each track has its own unique features.
-\\
 \subsection{Logo Design}
 Figure \ref{subfig:light-logo} and Figure \ref{subfig:dark-logo} is made up of stylized waves that reference the soothing rhythms of ocean waves while also visualizing the representation of an audio signal.
 This duality shows the fundamental purpose of the application, using the ability of music to evoke and influence emotions, providing a calming and therapeutic user experience.
-\begin{figure}[h!]
+\indent Accompanying the logo, Figure \ref{subfig:light-banner} and Figure \ref{subfig:dark-banner} incorporates the application's name, `Sentirhy', which itself is a portmanteau derived from `Sentiment' and `Rhythm'.
+This naming convention shows the application's focus on sentiment analysis and rhythm.
+\begin{figure}[H]
     \centering
     \subfloat[\centering Logo \label{subfig:light-logo}]{{\includegraphics[width=3cm]{Images/dark.png}}}%
     \qquad
@@ -139,7 +140,7 @@ This duality shows the fundamental purpose of the application, using the ability
     \\
     \caption{Light Theme Logo}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \makebox[\textwidth]{
         \begin{minipage}{14cm} 
@@ -153,48 +154,14 @@ This duality shows the fundamental purpose of the application, using the ability
     }
     \caption{Dark Theme Logo}
 \end{figure}
-\\
-\indent Accompanying the logo, Figure \ref{subfig:light-banner} and Figure \ref{subfig:dark-banner} incorporates the application's name, `Sentirhy', which itself is a portmanteau derived from `Sentiment' and `Rhythm'.
-This naming convention shows the application's focus on sentiment analysis and rhythm.
-\\
 \subsection{Interface Design}
 \gls{ui}s are created through the process of interface design.
-The arrangement of panels, as well as the style of components the user will interact with such as buttons, text fields and others are all included.
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/login.png}
-    \caption{Login Page}
-    \label{fig:login}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/signup.png}
-    \caption{Sign Up Page}
-    \label{fig:signup}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/overview.png}
-    \caption{Dashboard Page}
-    \label{fig:dashboard}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/emotion.png}
-    \caption{Emotion Music Page}
-    \label{fig:emotion}
-\end{figure}
+The arrangement of panels, as well as the style of components the user will interact with such as buttons, text fields and others are all included (See Appendix D).
 \begin{figure}[H]
     \centering
     \includegraphics[width=12cm]{Images/detection.png}
     \caption{Emotion Recognition Page}
     \label{fig:emotion-recog}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=12cm]{Images/user-settings.png}
-    \caption{User Settings Page}
-    \label{fig:usr-settings}
 \end{figure}
 
 \section{Artificial Intelligence and Machine Learning}
@@ -203,7 +170,7 @@ In computer vision, a model's architecture is the basis that backs up its capaci
 The design decisions made when structuring a model determine not only its performance, but also its efficiency in extracting and understanding the complex patterns found in the data. 
 A \gls{fer} model must be able to manage the complexity of human facial emotions with ease. 
 Therefore, the architectures explored and selected are designed with the goal of capturing a complex hierarchy of features.
-\begin{table}[h!]
+\begin{table}[H]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
@@ -229,15 +196,20 @@ Therefore, the architectures explored and selected are designed with the goal of
     \caption{Detailed Architecture of the CNNs Model 1}
     \label{tab:cnn-model-1}
 \end{table}
-\\
-\indent Model 1 (Table \ref{tab:cnn-model-1}) is the first attempt at tackling the challenging issue of \gls{fer}, based on the well-proven architectures similar to VGG-16 \citep{simonyan2015deep}, which are intended to identify nad leverage the strengths of facial feature differentiation.
+\newpage
+\indent Model 1 (See Table \ref{tab:cnn-model-1}) is the first attempt at tackling the challenging issue of \gls{fer}, based on the well-proven architectures similar to VGG-16 \citep{simonyan2015deep}, which are intended to identify nad leverage the strengths of facial feature differentiation.
 The model started with a conservative number of filters in the \gls{conv2d}, from 32 and incrementally increasing to 64, 128, and 256, to ensure the model is able to capture a spectrum of features from basic to complex. 
 Those interspersed `Dropout' layers are used to prevent over-fitting, which then giving the model greater generalization capabilities.
 \\
 \indent In order to reduce dimensionality, pooling layers are implemented throughout the architecture.
 This will compress the spatial volume of features before they are flattened into a format suitable for dense network processing.
 The learning process ends in the `Dense' layers that, through a `Softmax' activation, control the emotional categorization, converting the complex network of extracted features into perceptible emotional states.
-\begin{table}[h!]
+\\
+\indent Model 2 (See Table \ref{tab:cnn-model-2}) is a refined version of the \gls{fer} model.
+With the addition of L2 regularization and a varied number of filter sizes, this model differs from the first model.
+This version provides theoretical performance improvements, such as higher generalization in unseen data.
+Additionally, this model version is more similar to the VGG-16 model; but, because of resource constraints, the original VGG-16 model, which in theory should yield better results, is not implemented in order to use fewer computer resources.
+\begin{table}[H]
     \centering
     \begin{tabular}{>{\ttfamily}l>{\ttfamily}l>{\ttfamily}r}
         \toprule 
@@ -281,11 +253,6 @@ The learning process ends in the `Dense' layers that, through a `Softmax' activa
     \caption{Detailed Architecture of the CNNs Model 2}
     \label{tab:cnn-model-2}
 \end{table}
-\\
-\indent Model 2 (Table \ref{tab:cnn-model-2}) is a refined version of the \gls{fer} model.
-With the addition of L2 regularization and a varied number of filter sizes, this model differs from the first model.
-This version provides theoretical performance improvements, such as higher generalization in unseen data.
-Additionally, this model version is more similar to the VGG-16 model; but, because of resource constraints, the original VGG-16 model, which in theory should yield better results, is not implemented in order to use fewer computer resources.
    
     
     
