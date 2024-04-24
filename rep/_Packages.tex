@@ -9,6 +9,12 @@
 
 \usepackage{array}
 
+% Manages hyperlinks 
+\usepackage{url}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black,breaklinks=true]{hyperref}
+\usepackage[hyphens]{xurl} 
+\urlstyle{same}
+
 \usepackage{natbib}
 \setcitestyle{aysep={,}}
 
@@ -68,9 +74,6 @@
 %of interword spacing and additional kerning
 \usepackage{microtype}
 
-% Manages hyperlinks 
-\usepackage[colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
-
 % Generates PDF bookmarks
 \usepackage{bookmark}
 
@@ -123,3 +126,5 @@
   table-space-text-pre = (,      % Corrects spacing when numbers have parentheses
   table-space-text-post = ),
 }
+
+\usepackage{enumitem}

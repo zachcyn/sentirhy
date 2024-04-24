@@ -28,10 +28,11 @@
 
 
 % Line Break Properties
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
+\tolerance=2000
+\emergencystretch=1em
+\hyphenpenalty=50
+\hbadness=1000
+
 
 % Formatting Table of Contents/Lists titles
 \renewcommand{\contentsname}{\bfseries\LARGE{CONTENTS}}
@@ -112,6 +113,8 @@
 \newacronym{emg}{EMG}{Electromyography}
 \newacronym{eog}{EOG}{Electrooculogram}
 \newacronym{gdpr}{GDPR}{General Data Protection Regulation}
+\newacronym{pern}{PERN}{PostgreSQL, Express, React, and Node.js}
+\newacronym{wcag}{WCAG}{Web Content Accessibility Guidelines}
 
 %  -------------------------------------------------
 %  --------- The document starts from here --------- 
@@ -158,6 +161,7 @@
 
 % ----------------------  DECLARATION -----------------------
 \newpage
+\pagenumbering{roman}
 \chapter*{Declaration} % the Asterix (*) indicates that this section will be added to the table of contents but no number will be present beside it.
 \addcontentsline{toc}{chapter}{Declaration}
 I, Yie Nian Chu confirm that the work presented in this report is my own. Where information has been derived from other sources, I confirm that this has been indicated in the report.
@@ -203,6 +207,9 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 
 
 % -------------------  INTRODUCTION  ---------------------
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \chapter{Introduction}
 \input{Introduction} % Section/Chapter entries can be done in the Main.tex file or in a  
                        % separate tex file for longer and more complex documents
@@ -245,9 +252,14 @@ I, Yie Nian Chu confirm that the work presented in this report is my own. Where 
 % -------------------  BIBLIOGRAPHY ---------------------
 \newpage
 % \bibliographystyle{abbrvnat}
+\begingroup
+\raggedright
+\setlength{\emergencystretch}{1em}
+\hyphenpenalty=50
 \bibliographystyle{agsm}
 \bibliography{References}
-\addcontentsline{toc}{chapter}{References} % Adds References Section to Table of Contents
+\addcontentsline{toc}{chapter}{References / Bibliography} % Adds References Section to Table of Contents
+\endgroup
 % -------------------  Appendix  ---------------------
 \appendix
 \renewcommand{\thefigure}{\Alph{section}.\arabic{figure}}

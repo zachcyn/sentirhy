@@ -1,17 +1,12 @@
 \begin{thebibliography}{xx}
 
-\harvarditem{~}{2019}{_2019_descending}
-~, G.  \harvardyearleft 2019\harvardyearright , `Descending into ml: Training and loss | machine learning crash course', \url{https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-and-loss}.
-
-\harvarditem{~}{n.d.}{_14}
-~, s.-l.  \harvardyearleft n.d.\harvardyearright , `1.4. support vector machines', \url{https://scikit-learn.org/stable/modules/svm.html#:~:text=Support%20vector%20machines%20(SVMs)%20are}.
-
 \harvarditem{Ackerman}{2018}{ackerman_2018_what}
 Ackerman, C.~E.  \harvardyearleft 2018\harvardyearright , `What is attachment theory? bowlby's 4 stages explained.'.
-\newline\harvardurl{https://positivepsychology.com/attachment\-theory/}
+\newline\harvardurl{https://positivepsychology.com/attachment-theory/}
 
 \harvarditem{Agrawal \harvardand\ Mittal}{2019}{agrawal_2019_using}
 Agrawal, A. \harvardand\ Mittal, N.  \harvardyearleft 2019\harvardyearright , `Using cnn for facial expression recognition: a study of the effects of kernel size and number of filters on accuracy', {\em The Visual Computer} {\bf 36},~405--412.
+\newline\harvardurl{https://link.springer.com/article/10.1007/s00371-019-01630-9}
 
 \harvarditem{Alves}{2023}{alves_2023_get}
 Alves, R.  \harvardyearleft 2023\harvardyearright , `Get started with the pern stack: an introduction and implementation guide'.
@@ -23,62 +18,66 @@ Association, A. M.~T.  \harvardyearleft 2005\harvardyearright , `What is music t
 
 \harvarditem{Athavle}{2021}{athavle_2021_music}
 Athavle, M.  \harvardyearleft 2021\harvardyearright , `Music recommendation based on face emotion recognition', {\em Journal of Informatics Electrical and Electronics Engineering (JIEEE)} {\bf 2},~1--11.
+\newline\harvardurl{https://jieee.a2zjournals.com/index.php/ieee/article/view/45}
 
-\harvarditem[Babu et~al.]{Babu, Nair \harvardand\ A}{2023}{babu2023emotionaware}
-Babu, T., Nair, R.~R. \harvardand\ A, G.  \harvardyearleft 2023\harvardyearright , `Emotion\-aware music recommendation system: Enhancing user experience through real\-time emotional context'.
+\harvarditem[Babu et~al.]{Babu, Nair \harvardand\ Geetha}{2023}{babu2023emotionaware}
+Babu, T., Nair, R.~R. \harvardand\ Geetha, A.  \harvardyearleft 2023\harvardyearright , `Emotion aware music recommendation system: Enhancing user experience through real-time emotional context', {\em ArXiv (Cornell University)} {\bf 6}.
+\newline\harvardurl{https://arxiv.org/abs/2311.10796}
+
+\harvarditem{Barbara}{2014}{else_2014_music}
+Barbara, E.  \harvardyearleft 2014\harvardyearright , `Music therapy and military populations a status report and recommendations on music therapy treatment, programs, research, and practice policy'.
+\newline\harvardurl{https://www.musictherapy.org/assets/1/7/MusicTherapyMilitaryPops\_2014.pdf}
 
 \harvarditem{Bell}{2004}{bell_2004_explore}
 Bell, D.  \harvardyearleft 2004\harvardyearright , `Explore the uml sequence diagram'.
 \newline\harvardurl{https://developer.ibm.com/articles/the-sequence-diagram/}
 
 \harvarditem{Berwick}{n.d.}{berwick_an}
-Berwick, R.  \harvardyearleft n.d.\harvardyearright , `An idiot's guide to support vector machines (svms) r. berwick, village idiot svms: A new generation of learning algorithms', \url{https://web.mit.edu/6.034/wwwbob/svm-notes-long-08.pdf}.
+Berwick, R.  \harvardyearleft n.d.\harvardyearright , `An idiot's guide to support vector machines (svms) r. berwick, village idiot svms: a new generation of learning algorithms'.
+\newline\harvardurl{https://web.mit.edu/6.034/wwwbob/svm.pdf}
 
 \harvarditem{Boehm}{1986}{boehm_1986_a}
 Boehm, B.  \harvardyearleft 1986\harvardyearright , `A spiral model of software development and enhancement', {\em ACM SIGSOFT Software Engineering Notes} {\bf 11},~22--42.
+\newline\harvardurl{https://dl.acm.org/doi/10.1145/12944.12948}
 
-\harvarditem{Bruscia \harvardand\ Archive}{1987}{bruscia_1987_improvisational}
-Bruscia, K.~E. \harvardand\ Archive, I.  \harvardyearleft 1987\harvardyearright , {\em Improvisational Models of Music Therapy}, Springfield, Ill. \: C.C. Thomas.
-\newline\harvardurl{https://archive.org/details/improvisationalm0000brus}
+\harvarditem{Bonthu}{2021}{bonthu_2021_detecting}
+Bonthu, H.  \harvardyearleft 2021\harvardyearright , `Detecting and treating outliers | how to handle outliers'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2021/05/detecting-and-treating-outliers-treating-the-odd-one-out/}
+
+\harvarditem{Bruscia}{1988}{bruscia_1987_improvisational}
+Bruscia, K.~E.  \harvardyearleft 1988\harvardyearright , `A survey of treatment procedures in improvisational music therapy', {\em Psychology of Music} {\bf 16},~10--24.
 
 \harvarditem{Clinic}{2020}{clevelandclinic_2020_music}
 Clinic, C.  \harvardyearleft 2020\harvardyearright , `Music therapy: What is it, types \& treatment'.
 \newline\harvardurl{https://my.clevelandclinic.org/health/treatments/8817-music-therapy}
 
-\harvarditem{Communitcation~Team}{2022}{communitcationteam_2022_waterfall}
-Communitcation~Team, A.  \harvardyearleft 2022\harvardyearright , `Waterfall methodology\: a complete guide', \url{https://business.adobe.com/blog/basics/waterfall}.
+\harvarditem{Cloud}{2023}{google_2023_what}
+Cloud, G.  \harvardyearleft 2023\harvardyearright , `What is artificial intelligence (ai)?'.
+\newline\harvardurl{https://cloud.google.com/learn/what-is-artificial-intelligence}
 
 \harvarditem{Craig}{2019}{craig_2019_what}
 Craig, H.  \harvardyearleft 2019\harvardyearright , `What are the benefits of music therapy?'.
 \newline\harvardurl{https://positivepsychology.com/music-therapy-benefits/}
 
-\harvarditem{Crespo-Santiago \harvardand\ D{\'a}vila-Cosme}{2022}{cresposantiago_2022_waterfall}
-Crespo-Santiago, C.~A. \harvardand\ D{\'a}vila-Cosme, S. d. l.~C.  \harvardyearleft 2022\harvardyearright , `Waterfall method: A necessary tool for implementing library projects', {\em HETS Online Journal} {\bf 1}(2),~81--92.
+\harvarditem{Crespo-Santiago \harvardand\ Dávila-Cosme}{2022}{cresposantiago_2022_waterfall}
+Crespo-Santiago, C.~A. \harvardand\ Dávila-Cosme, S. d. l.~C.  \harvardyearleft 2022\harvardyearright , `Waterfall method: a necessary tool for implementing library projects', {\em HETS Online Journal} {\bf 1},~81--92.
+\newline\harvardurl{https://hets.org/ojournal/index.php/hoj/article/view/91}
 
-\harvarditem[Dumitru et~al.]{Dumitru, Goodfellow, Cukierski \harvardand\ Bengio}{2013}{challenges_in_representation_learning_facial_expression_recognition_challenge}
-Dumitru, Goodfellow, I., Cukierski, W. \harvardand\ Bengio, Y.  \harvardyearleft 2013\harvardyearright , `Challenges in representation learning: Facial expression recognition challenge'.
-\newline\harvardurl{https://kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge}
+\harvarditem[Dumitru et~al.]{Dumitru, Goodfellow, Cukierski \harvardand\ Bengio}{2023}{challenges_in_representation_learning_facial_expression_recognition_challenge}
+Dumitru, Goodfellow, I., Cukierski, W. \harvardand\ Bengio, Y.  \harvardyearleft 2023\harvardyearright , `Challenges in representation learning: Facial expression recognition challenge'.
+\newline\harvardurl{https://www.kaggle.com/competitions/challenges-in-representation-learning-facial-expression-recognition-challenge}
 
-\harvarditem{E~R}{2021}{er_2021_random}
-E~R, S.  \harvardyearleft 2021\harvardyearright , `Random forest | introduction to random forest algorithm', \url{https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/}.
-
-\harvarditem{Else}{2014}{else_2014_music}
-Else, B.  \harvardyearleft 2014\harvardyearright , `Music therapy and military populations a status report and recommendations on music therapy treatment, programs, research, and practice policy'.
-\newline\harvardurl{https://www.musictherapy.org/assets/1/7/MusicTherapyMilitaryPops\_2014.pdf}
-
-\harvarditem[Farley et~al.]{Farley, Urban \harvardand\ Mehrotra}{2023}{patrickfarley_2023_face}
-Farley, P., Urban, E. \harvardand\ Mehrotra, N.  \harvardyearleft 2023\harvardyearright , `Face detection, attributes, and input data - face - azure ai services', \url{https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-detection}.
-
-\harvarditem{Foundation}{2017}{openjsfoundation_2017_express}
-Foundation, O.  \harvardyearleft 2017\harvardyearright , `Express - node.js web application framework'.
-\newline\harvardurl{https://expressjs.com/}
+\harvarditem{Farley}{2023}{patrickfarley_2023_face}
+Farley, P.  \harvardyearleft 2023\harvardyearright , `Face detection, attributes, and input data - face - azure ai services'.
+\newline\harvardurl{https://learn.microsoft.com/en-us/azure/ai-services/computer-vision/concept-face-detection}
 
 \harvarditem{Freeman}{n.d.}{freeman_block}
 Freeman, J.  \harvardyearleft n.d.\harvardyearright , `Block diagram | complete guide with examples'.
 \newline\harvardurl{https://www.edrawsoft.com/block-diagram.html}
 
 \harvarditem{Gandhi}{2018}{rohithgandhi_2018_introduction}
-Gandhi, R.  \harvardyearleft 2018\harvardyearright , `Introduction to machine learning algorithms: Linear regression', \url{https://towardsdatascience.com/introduction-to-machine-learning-algorithms-linear-regression-14c4e325882a}.
+Gandhi, R.  \harvardyearleft 2018\harvardyearright , `Introduction to machine learning algorithms: Linear regression'.
+\newline\harvardurl{https://towardsdatascience.com/introduction-to-machine-learning-algorithms-linear-regression-14c4e325882a}
 
 \harvarditem{Garrison}{2021}{garrison_2021_music}
 Garrison, J.  \harvardyearleft 2021\harvardyearright , `Music \& traumatic stress: Music therapy research and treatment with military populations'.
@@ -89,23 +88,31 @@ GDPR  \harvardyearleft 2018\harvardyearright , `General data protection regulati
 \newline\harvardurl{https://gdpr-info.eu/}
 
 \harvarditem{GeeksforGeeks}{2018}{geeksforgeeks_2018_knearest}
-GeeksforGeeks  \harvardyearleft 2018\harvardyearright , `K-nearest neighbours - geeksforgeeks', \url{https://www.geeksforgeeks.org/k-nearest-neighbours/}.
+GeeksforGeeks  \harvardyearleft 2018\harvardyearright , `K-nearest neighbours - geeksforgeeks'.
+\newline\harvardurl{https://www.geeksforgeeks.org/k-nearest-neighbours/}
 
 \harvarditem{Gooding \harvardand\ Langston}{2019}{gooding_2019_music}
 Gooding, L.~F. \harvardand\ Langston, D.~G.  \harvardyearleft 2019\harvardyearright , `Music therapy with military populations: a scoping review', {\em Journal of Music Therapy} {\bf 56},~315--347.
+\newline\harvardurl{https://pubmed.ncbi.nlm.nih.gov/31696919/}
 
-\harvarditem{Group}{2019}{thepostgresqlglobaldevelopmentgroup_2019_postgresql}
-Group, T. P. G.~D.  \harvardyearleft 2019\harvardyearright , `Postgresql: The world's most advanced open source database'.
-\newline\harvardurl{https://www.postgresql.org/}
+\harvarditem{Google}{2021}{google_2021_what}
+Google  \harvardyearleft 2021\harvardyearright , `What is machine learning?  |  google cloud'.
+\newline\harvardurl{https://cloud.google.com/learn/what-is-machine-learning}
 
-\harvarditem{Géron}{2019}{gron_2019_handson}
-Géron, A.  \harvardyearleft 2019\harvardyearright , {\em Hands-on machine learning with Scikit-Learn and TensorFlow concepts, tools, and techniques to build intelligent systems}, 2 edn, O'Reilly Media, Inc.
+\harvarditem{Google}{2022}{_2019_descending}
+Google  \harvardyearleft 2022\harvardyearright , `Descending into ml: Training and loss  |  machine learning crash course'.
+\newline\harvardurl{https://developers.google.com/machine-learning/crash-course/descending-into-ml/training-and-loss}
+
+\harvarditem{Géron}{2017}{gron_2019_handson}
+Géron, A.  \harvardyearleft 2017\harvardyearright , {\em Hands-On Machine Learning with Scikit-Learn and TensorFlow}, 2nd edn, "O'Reilly Media, Inc.".
 
 \harvarditem{Harrison}{2018}{harrison_2018_machine}
-Harrison, O.  \harvardyearleft 2018\harvardyearright , `Machine learning basics with the k-nearest neighbors algorithm', \url{https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761}.
+Harrison, O.  \harvardyearleft 2018\harvardyearright , `Machine learning basics with the k-nearest neighbors algorithm'.
+\newline\harvardurl{https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761}
 
 \harvarditem[Haykin et~al.]{Haykin, York, San, London, Sydney, Singapore, Mexico \harvardand\ Munich}{2014}{haykin_2014_neural}
-Haykin, S., York, N., San, B., London, F., Sydney, T., Singapore, T., Mexico, M. \harvardand\ Munich, C.  \harvardyearleft 2014\harvardyearright , `Neural networks and learning machines third edition', \url{https://cours.etsmtl.ca/sys843/REFS/Books/ebook_Haykin09.pdf}.
+Haykin, S., York, N., San, B., London, F., Sydney, T., Singapore, T., Mexico, M. \harvardand\ Munich, C.  \harvardyearleft 2014\harvardyearright , `Neural networks and learning machines third edition'.
+\newline\harvardurl{https://cours.etsmtl.ca/sys843/REFS/Books/ebook\_Haykin09.pdf}
 
 \harvarditem{Hillecke}{2005}{hillecke_2005_scientific}
 Hillecke, T.  \harvardyearleft 2005\harvardyearright , `Scientific perspectives on music therapy', {\em Annals of the New York Academy of Sciences} {\bf 1060},~271--282.
@@ -113,157 +120,155 @@ Hillecke, T.  \harvardyearleft 2005\harvardyearright , `Scientific perspectives 
 
 \harvarditem[Huang et~al.]{Huang, Chiang, Chen, Chen, Chung, Cai \harvardand\ Hsu}{2023}{huang_2023_a}
 Huang, Z.-Y., Chiang, C.-C., Chen, J.-H., Chen, Y.-C., Chung, H.-L., Cai, Y.-P. \harvardand\ Hsu, H.-C.  \harvardyearleft 2023\harvardyearright , `A study on computer vision for facial emotion recognition', {\em Scientific Report} {\bf 13}.
+\newline\harvardurl{https://pubmed.ncbi.nlm.nih.gov/37225755/}
 
 \harvarditem{IBM}{2021}{ibm_2021_usecase}
 IBM  \harvardyearleft 2021\harvardyearright , `Use-case diagrams'.
 \newline\harvardurl{https://www.ibm.com/docs/en/rational-soft-arch/9.6.1?topic=diagrams-use-case}
 
-\harvarditem{IBM}{2022}{ibm_2022_about}
-IBM  \harvardyearleft 2022\harvardyearright , `About linear regression | ibm', \url{https://www.ibm.com/topics/linear-regression#:~:text=Resources-}.
+\harvarditem{IBM}{2022{\em a}}{ibm_2022_about}
+IBM  \harvardyearleft 2022{\em a}\harvardyearright , `About linear regression | ibm'.
+\newline\harvardurl{https://www.ibm.com/topics/linear-regression\#:~:text=Resources-}
+
+\harvarditem{IBM}{2022{\em b}}{ibm_what}
+IBM  \harvardyearleft 2022{\em b}\harvardyearright , `What is gradient descent? | ibm'.
+\newline\harvardurl{https://www.ibm.com/topics/gradient-descent}
 
 \harvarditem{IBM}{2023{\em a}}{ibm_2023_what_cnn}
-IBM  \harvardyearleft 2023{\em a}\harvardyearright , `What are convolutional neural networks? | ibm', \url{https://www.ibm.com/topics/convolutional-neural-networks}.
+IBM  \harvardyearleft 2023{\em a}\harvardyearright , `What are convolutional neural networks? | ibm'.
+\newline\harvardurl{https://www.ibm.com/topics/convolutional-neural-networks}
 
 \harvarditem{IBM}{2023{\em b}}{ibm_2023_what}
-IBM  \harvardyearleft 2023{\em b}\harvardyearright , `What is random forest? | ibm', \url{https://www.ibm.com/topics/random-forest#:~:text=Random%20forest%20is%20a%20commonly}.
+IBM  \harvardyearleft 2023{\em b}\harvardyearright , `What is random forest? | ibm'.
+\newline\harvardurl{https://www.ibm.com/topics/random-forest\#:~:text=Random\%20forest\%20is\%20a\%20commonly}
 
-\harvarditem{IBM}{n.d.{\em a}}{ibm_what}
-IBM  \harvardyearleft n.d.{\em a}\harvardyearright , `What is gradient descent? | ibm', \url{https://www.ibm.com/topics/gradient-descent}.
-
-\harvarditem{IBM}{n.d.{\em b}}{ibm_what_knn}
-IBM  \harvardyearleft n.d.{\em b}\harvardyearright , `What is the k-nearest neighbors algorithm? | ibm', \url{https://www.ibm.com/topics/knn#:~:text=Next%20steps-}.
-
-\harvarditem{Jupyter}{2019}{jupyter_2019_project}
-Jupyter  \harvardyearleft 2019\harvardyearright , `Project jupyter'.
-\newline\harvardurl{https://jupyter.org/}
+\harvarditem{IBM}{2023{\em c}}{ibm_what_knn}
+IBM  \harvardyearleft 2023{\em c}\harvardyearright , `What is the k-nearest neighbors algorithm? | ibm'.
+\newline\harvardurl{https://www.ibm.com/topics/knn\#:~:text=Next\%20steps-}
 
 \harvarditem{Juslin \harvardand\ Sloboda}{2013}{juslin_2013_music}
 Juslin, P.~N. \harvardand\ Sloboda, J.~A.  \harvardyearleft 2013\harvardyearright , `Music and emotion', {\em The Psychology of Music} pp.~583--645.
+\newline\harvardurl{https://psycnet.apa.org/record/2012-14631-015}
+
+\harvarditem[Konstantina et~al.]{Konstantina, Anna \harvardand\ Thomas}{2021}{vemou_2021_facial}
+Konstantina, V., Anna, H. \harvardand\ Thomas, Z.  \harvardyearleft 2021\harvardyearright , `Facial emotion recognition'.
+\newline\harvardurl{https://edps.europa.eu/system/files/2021-05/21-05-26\_techdispatch-facial-emotion-recognition\_ref\_en.pdf}
 
 \harvarditem{Kumar~Pal}{2018}{kumarpal_2018_software}
-Kumar~Pal, S.  \harvardyearleft 2018\harvardyearright , `Software engineering | spiral model', \url{https://www.geeksforgeeks.org/software-engineering-spiral-model/}.
+Kumar~Pal, S.  \harvardyearleft 2018\harvardyearright , `Software engineering | spiral model'.
+\newline\harvardurl{https://www.geeksforgeeks.org/software-engineering-spiral-model/}
 
 \harvarditem{Kwiatkowski}{2021}{kwiatkowski_2021_gradient}
-Kwiatkowski, R.  \harvardyearleft 2021\harvardyearright , `Gradient descent algorithm — a deep dive', \url{https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21}.
+Kwiatkowski, R.  \harvardyearleft 2021\harvardyearright , `Gradient descent algorithm: a deep dive'.
+\newline\harvardurl{https://towardsdatascience.com/gradient-descent-algorithm-a-deep-dive-cf04e8115f21}
 
-\harvarditem{Laoyan}{2022}{laoyan_2022_what}
-Laoyan, S.  \harvardyearleft 2022\harvardyearright , `What is agile methodology? (a beginner's guide)', \url{https://asana.com/resources/agile-methodology}.
-\newblock Accessed: 2023-04-09.
+\harvarditem{Laoyan}{2024}{laoyan_2022_what}
+Laoyan, S.  \harvardyearleft 2024\harvardyearright , `What is agile methodology? (a beginner’s guide)'.
+\newline\harvardurl{https://asana.com/resources/agile-methodology}
+
+\harvarditem{learn}{2018}{_14}
+learn, S.  \harvardyearleft 2018\harvardyearright , `1.4. support vector machines'.
+\newline\harvardurl{https://scikit-learn.org/stable/modules/svm.html\#:~:text=Support\%20vector\%20machines\%20\\(SVMs)\%20are}
 
 \harvarditem[Lucey et~al.]{Lucey, Cohn, Kanade, Saragih, Ambadar \harvardand\ Matthews}{2010}{5543262}
-Lucey, P., Cohn, J.~F., Kanade, T., Saragih, J., Ambadar, Z. \harvardand\ Matthews, I.  \harvardyearleft 2010\harvardyearright , `The extended cohn-kanade dataset (ck+): A complete dataset for action unit and emotion-specified expression',  pp.~94--101.
+Lucey, P., Cohn, J.~F., Kanade, T., Saragih, J., Ambadar, Z. \harvardand\ Matthews, I.  \harvardyearleft 2010\harvardyearright , `The extended cohn-kanade dataset (ck+): a complete dataset for action unit and emotion-specified expression', {\em 2010 IEEE Computer Society Conference on Computer Vision and Pattern Recognition - Workshops} pp.~94--101.
+\newline\harvardurl{https://ieeexplore.ieee.org/document/5543262}
 
 \harvarditem{Lucidchart}{2019}{lucidchart_2019_what}
 Lucidchart  \harvardyearleft 2019\harvardyearright , `What is a flowchart'.
 \newline\harvardurl{https://www.lucidchart.com/pages/what-is-a-flowchart-tutorial}
 
 \harvarditem{Mali}{2021}{mali_2021_linear}
-Mali, K.  \harvardyearleft 2021\harvardyearright , `Linear regression | everything you need to know about linear regression', \url{https://www.analyticsvidhya.com/blog/2021/10/everything-you-need-to-know-about-linear-regression/}.
+Mali, K.  \harvardyearleft 2021\harvardyearright , `Linear regression | everything you need to know about linear regression'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2021/10/everything-you-need-to-know-about-linear-regression/}
 
 \harvarditem{Mandal}{2021}{mandal_2021_cnn}
-Mandal, M.  \harvardyearleft 2021\harvardyearright , `Cnn for deep learning | convolutional neural networks (cnn)', \url{https://www.analyticsvidhya.com/blog/2021/05/convolutional-neural-networks-cnn/}.
-
-\harvarditem{Matplotlib}{2012}{matplotlib_2012_matplotlib}
-Matplotlib  \harvardyearleft 2012\harvardyearright , `Matplotlib: Python plotting - matplotlib 3.1.1 documentation'.
-\newline\harvardurl{https://matplotlib.org/}
+Mandal, M.  \harvardyearleft 2021\harvardyearright , `Cnn for deep learning | convolutional neural networks (cnn)'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2021/05/convolutional-neural-networks-cnn/}
 
 \harvarditem{Mellouk \harvardand\ Handouzi}{2020}{mellouk_2020_facial}
-Mellouk, W. \harvardand\ Handouzi, W.  \harvardyearleft 2020\harvardyearright , `Facial emotion recognition using deep learning: review and insights', {\em Procedia Computer Science} {\bf 175},~689--694.
+Mellouk, W. \harvardand\ Handouzi, W.  \harvardyearleft 2020\harvardyearright , `Facial emotion recognition using deep learning: Review and insights', {\em Procedia Computer Science} {\bf 175},~689--694.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1877050920318019}
 
 \harvarditem{Mishra}{2020}{mishra_2020_convolutional}
-Mishra, M.  \harvardyearleft 2020\harvardyearright , `Convolutional neural networks, explained', \url{https://towardsdatascience.com/convolutional-neural-networks-explained-9cc5188c4939}.
+Mishra, M.  \harvardyearleft 2020\harvardyearright , `Convolutional neural networks, explained'.
+\newline\harvardurl{https://towardsdatascience.com/convolutional-neural-networks-explained-9cc5188c4939}
 
 \harvarditem{Munasinghe}{2018}{munasinghe_2018_facial}
-Munasinghe, M. I. N.~P.  \harvardyearleft 2018\harvardyearright , `Facial expression recognition using facial landmarks and random forest classifier', {\em 2018 IEEE/ACIS 17th International Conference on Computer and Information Science (ICIS)} .
+Munasinghe, M. I. N.~P.  \harvardyearleft 2018\harvardyearright , `Facial expression recognition using facial landmarks and random forest classifier', {\em 2018 IEEE/ACIS 17th International Conference on Computer and Information Science (ICIS)} pp.~423--427.
+\newline\harvardurl{https://ieeexplore.ieee.org/document/8466510}
 
 \harvarditem[Naseem et~al.]{Naseem, Togneri \harvardand\ Bennamoun}{2010}{naseem_2010_linear}
 Naseem, I., Togneri, R. \harvardand\ Bennamoun, M.  \harvardyearleft 2010\harvardyearright , `Linear regression for face recognition', {\em IEEE Transactions on Pattern Analysis and Machine Intelligence} {\bf 32},~2106--2112.
-
-\harvarditem{Node.js}{2023}{nodejs_2023_nodejs}
-Node.js  \harvardyearleft 2023\harvardyearright , `Node.js'.
-\newline\harvardurl{https://nodejs.org/en}
-
-\harvarditem{Numpy}{2009}{numpy_2009_numpy}
-Numpy  \harvardyearleft 2009\harvardyearright , `Numpy'.
-\newline\harvardurl{https://numpy.org/}
-
-\harvarditem{OpenCV}{2019}{opencv_2019_opencv}
-OpenCV  \harvardyearleft 2019\harvardyearright , `Opencv library'.
-\newline\harvardurl{https://opencv.org/}
-
-\harvarditem{Pandas}{2018}{pandas_2018_python}
-Pandas  \harvardyearleft 2018\harvardyearright , `Python data analysis library'.
-\newline\harvardurl{https://pandas.pydata.org/}
+\newline\harvardurl{https://ieeexplore.ieee.org/abstract/document/5506092?casa\_token=Yu36FOKbkNo\\AAAAA:Ef2sB0dSZsqUG6bWOHcrtk-t9POgl6c169s0Jd9fIh4dTQIwgHJSCl1Gu2c67tZj4tfi47ImXg}
 
 \harvarditem[Pereira et~al.]{Pereira, Teixeira, Figueiredo, Xavier, Castro \harvardand\ Brattico}{2011}{pereira_2011_music}
 Pereira, C.~S., Teixeira, J., Figueiredo, P., Xavier, J., Castro, S.~L. \harvardand\ Brattico, E.  \harvardyearleft 2011\harvardyearright , `Music and emotions in the brain: Familiarity matters', {\em PLoS ONE} {\bf 6},~e27241.
-
-\harvarditem{Python}{2019}{python_2019_python}
-Python  \harvardyearleft 2019\harvardyearright , `Python'.
-\newline\harvardurl{https://www.python.org/}
+\newline\harvardurl{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027241}
 
 \harvarditem[S et~al.]{S, Iram, Bhat, Supritha \harvardand\ Leelavathi}{2023}{mrchakrapanids_2023_music}
-S, M. C.~D., Iram, S., Bhat, R., Supritha, L. \harvardand\ Leelavathi, S.  \harvardyearleft 2023\harvardyearright , `Music recommendation based on facial emotion recognition', {\em nternational journal of advanced research in computer and communication engineering} {\bf 12}.
+S, M. C.~D., Iram, S., Bhat, R., Supritha, L. \harvardand\ Leelavathi, S.  \harvardyearleft 2023\harvardyearright , `Music recommendation based on facial emotion recognition', {\em Nternational Journal of Advanced Research in Computer and Communication Engineering} {\bf 12}.
+\newline\harvardurl{https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0027241}
 
 \harvarditem{Saha}{2018}{saha_2018_a}
-Saha, S.  \harvardyearleft 2018\harvardyearright , `A comprehensive guide to convolutional neural networks - the eli5 way', \url{https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53}.
+Saha, S.  \harvardyearleft 2018\harvardyearright , `A comprehensive guide to convolutional neural networks: the eli5 way'.
+\newline\harvardurl{https://towardsdatascience.com/a-comprehensive-guide-to-convolutional-neural-networks-the-eli5-way-3bd2b1164a53}
 
 \harvarditem{Saini}{2021}{saini_2021_support}
-Saini, A.  \harvardyearleft 2021\harvardyearright , `Support vector machine(svm): A complete guide for beginners', \url{https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/}.
+Saini, A.  \harvardyearleft 2021\harvardyearright , `Support vector machine(svm): a complete guide for beginners'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2021/10/support-vector-machinessvm-a-complete-guide-for-beginners/}
 
 \harvarditem[Schedl et~al.]{Schedl, Knees, McFee \harvardand\ Bogdanov}{2021}{schedl_2021_music}
 Schedl, M., Knees, P., McFee, B. \harvardand\ Bogdanov, D.  \harvardyearleft 2021\harvardyearright , `Music recommendation systems: Techniques, use cases, and challenges', {\em Springer eBooks} pp.~927--971.
+\newline\harvardurl{https://link.springer.com/chapter/10.1007/978-1-0716-2197-4\_24}
 
 \harvarditem{Scikit-learn}{2018}{scikitlearn_2018_sklearnensemblerandomforestclassifier}
-Scikit-learn  \harvardyearleft 2018\harvardyearright , `sklearn.ensemble.randomforestclassifier — scikit-learn 0.20.3 documentation', \url{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}.
-
-\harvarditem{Scikit-learn}{2019}{scikitlearn_2019_scikitlearn}
-Scikit-learn  \harvardyearleft 2019\harvardyearright , `scikit-learn: machine learning in python'.
-\newline\harvardurl{https://scikit-learn.org/stable/}
-
-\harvarditem{seaborn}{2012}{seaborn_2012_seaborn}
-seaborn  \harvardyearleft 2012\harvardyearright , `seaborn: Statistical data visualization - seaborn 0.9.0 documentation'.
-\newline\harvardurl{https://seaborn.pydata.org/}
+Scikit-learn  \harvardyearleft 2018\harvardyearright , `sklearn.ensemble.randomforestclassifier : scikit-learn 0.20.3 documentation'.
+\newline\harvardurl{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}
 
 \harvarditem[Shin et~al.]{Shin, Maeng \harvardand\ Kim}{2018}{shin_2018_inner}
-Shin, J., Maeng, J. \harvardand\ Kim, D.-H.  \harvardyearleft 2018\harvardyearright , `Inner emotion recognition using multi bio-signals'.
+Shin, J., Maeng, J. \harvardand\ Kim, D.-H.  \harvardyearleft 2018\harvardyearright , `Inner emotion recognition using multi bio-signals', {\em 2018 IEEE International Conference on Consumer Electronics - Asia (ICCE-Asia)} pp.~206--212.
+\newline\harvardurl{https://ieeexplore.ieee.org/document/8552152}
 
-\harvarditem{Simonyan \harvardand\ Zisserman}{2015}{simonyan2015deep}
-Simonyan, K. \harvardand\ Zisserman, A.  \harvardyearleft 2015\harvardyearright , `Very deep convolutional networks for large-scale image recognition'.
+\harvarditem{Simonyan \harvardand\ Zisserman}{2014}{simonyan2015deep}
+Simonyan, K. \harvardand\ Zisserman, A.  \harvardyearleft 2014\harvardyearright , `Very deep convolutional networks for large-scale image recognition', {\em Computer Science} .
+\newline\harvardurl{https://xueshu.baidu.com/usercenter/paper/show?paperid=2801f41808e377a1897\\a3887b6758c59\&site=xueshu\_se}
 
 \harvarditem[Song et~al.]{Song, Dixon \harvardand\ Pearce}{2012}{song_2012_a}
 Song, Y., Dixon, S. \harvardand\ Pearce, M.  \harvardyearleft 2012\harvardyearright , `A survey of music recommendation systems and future perspectives'.
-\newline\harvardurl{https://citeseerx.ist.psu.edu/document?repid=rep1\&type=pdf\&doi=e0080299afae01ad796060abcf602abff6024754}
-
-\harvarditem{Source}{2024}{metaopensource_2024_react}
-Source, M.~O.  \harvardyearleft 2024\harvardyearright , `React'.
-\newline\harvardurl{https://react.dev/}
+\newline\harvardurl{https://www.semanticscholar.org/paper/A-Survey-of-Music-Recommendation-Systems-and-Future-Song-Dixon/e0080299afae01ad796060abcf602abff6024754}
 
 \harvarditem{Srivastava}{2019}{srivastava_2019_introduction}
-Srivastava, T.  \harvardyearleft 2019\harvardyearright , `Introduction to knn, k-nearest neighbors : Simplified', \url{https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/}.
+Srivastava, T.  \harvardyearleft 2019\harvardyearright , `Introduction to knn, k-nearest neighbors : Simplified'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2018/03/introduction-k-neighbours-algorithm-clustering/}
+
+\harvarditem{Sruthi}{2021}{er_2021_random}
+Sruthi, E.~R.  \harvardyearleft 2021\harvardyearright , `Random forest | introduction to random forest algorithm'.
+\newline\harvardurl{https://www.analyticsvidhya.com/blog/2021/06/understanding-random-forest/}
 
 \harvarditem[Tarnowski et~al.]{Tarnowski, Kołodziej, Majkowski \harvardand\ Rak}{2017}{tarnowski_2017_emotion}
 Tarnowski, P., Kołodziej, M., Majkowski, A. \harvardand\ Rak, R.~J.  \harvardyearleft 2017\harvardyearright , `Emotion recognition using facial expressions', {\em Procedia Computer Science} {\bf 108},~1175--1184.
+\newline\harvardurl{https://www.sciencedirect.com/science/article/pii/S1877050917305264?via\%3Dihub}
 
-\harvarditem{Team}{n.d.}{team_keras}
-Team, K.  \harvardyearleft n.d.\harvardyearright , `Keras documentation: Keras api reference'.
-\newline\harvardurl{https://keras.io/api/}
-
-\harvarditem[Vemou et~al.]{Vemou, Horvath \harvardand\ Zerdick}{2021}{vemou_2021_facial}
-Vemou, K., Horvath, A. \harvardand\ Zerdick, T.  \harvardyearleft 2021\harvardyearright , `Facial emotion recognition', \url{https://edps.europa.eu/system/files/2021-05/21-05-26_techdispatch-facial-emotion-recognition_ref_en.pdf}.
+\harvarditem{Team}{2022}{communitcationteam_2022_waterfall}
+Team, A.~C.  \harvardyearleft 2022\harvardyearright , `Waterfall methodology: a complete guide'.
+\newline\harvardurl{https://business.adobe.com/blog/basics/waterfall}
 
 \harvarditem{Who}{2022}{who_2022_a}
 Who  \harvardyearleft 2022\harvardyearright , `A chinese face dataset with dynamic expressions and diverse ages synthesized by deep learning', {\em osf.io} .
 \newline\harvardurl{https://osf.io/7a5fs/}
 
 \harvarditem{Xia}{2014}{xia_2014_facial}
-Xia, L.  \harvardyearleft 2014\harvardyearright , `Facial expression recognition based on svm', {\em 2014 7th International Conference on Intelligent Computation Technology and Automation} .
+Xia, L.  \harvardyearleft 2014\harvardyearright , `Facial expression recognition based on svm', {\em Proceedings of the 2014 7th International Conference on Intelligent Computation Technology and Automation} pp.~256--259.
+\newline\harvardurl{https://dl.acm.org/doi/abs/10.1109/ICICTA.2014.69}
 
 \harvarditem[Yamashita et~al.]{Yamashita, Nishio, Do \harvardand\ Togashi}{2018}{yamashita_2018_convolutional}
 Yamashita, R., Nishio, M., Do, R. K.~G. \harvardand\ Togashi, K.  \harvardyearleft 2018\harvardyearright , `Convolutional neural networks: an overview and application in radiology', {\em Insights into Imaging} {\bf 9},~611--629.
+\newline\harvardurl{https://insightsimaging.springeropen.com/articles/10.1007/s13244-018-0639-9}
 
 \harvarditem{Yiu}{2019}{yiu_2019_understanding}
-Yiu, T.  \harvardyearleft 2019\harvardyearright , `Understanding random forest', \url{https://towardsdatascience.com/understanding-random-forest-58381e0602d2}.
+Yiu, T.  \harvardyearleft 2019\harvardyearright , `Understanding random forest'.
+\newline\harvardurl{https://towardsdatascience.com/understanding-random-forest-58381e0602d2}
 
 \harvarditem{Zharovskikh}{2020}{zharovskikh_2020_how}
 Zharovskikh, A.  \harvardyearleft 2020\harvardyearright , `How face recognition and ai are used in healthcare'.

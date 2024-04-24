@@ -1,7 +1,7 @@
 \section{Introduction}
 To ensure that the project is built effectively, a comprehensive framework of functional and non-functional requirements that are carefully crafted to meet the objectives and user expectations should be created.
 Functional requirements provide the application's foundational architecture, dictating essential tasks such as playlist generation and user registration to ensure the application performs reliably and intuitively.
-Non-functional requirements, on the other hand, are focused on performance quality and include things like system scalability, security, and efficiency.
+Non-functional requirements, on the other hand, focused on performance quality and include things like system scalability, security, and efficiency.
 \section{Functional Requirements and Non-functional Requirements}
 \subsection{Functional Requirements}
 \begin{longtable}{ |m{1cm}|m{3.5cm}|m{7cm}|m{1.5cm}| }
@@ -16,11 +16,11 @@ Non-functional requirements, on the other hand, are focused on performance quali
     \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
     \hline
     \endhead
-    FR1 & \multirow{5}{=}{User Registration and Account Management} & The system must allow user to register by providing a unique username, user's actual name, date of birth, email, and password. & High \\
+    FR1 & \multirow{2}{=}{User Registration and Account Management} & The system must allow user to register by providing a unique username, user's actual name, date of birth, email, and password. & High \\
     \cline{1-1} \cline{3-4}
     FR2 &  & The system must verify user accounts through an email verification process. & High \\
-    \cline{1-1} \cline{3-4}
-    FR3 &  & Users must be able to login with their email or username and password. A "Remember Me" option should allow users to stay logged in for 7 days. & High \\
+    \hline
+    FR3 & \multirow{3}{=}{User Registration and Account Management} & Users must be able to login with their email or username and password. A "Remember Me" option should allow users to stay logged in for 7 days. & High \\
     \cline{1-1} \cline{3-4}
     FR4 &  & Users can access a settings page to update their name, date of birth, email, password, and profile picture. Usernames cannot be changed. & Medium \\
     \cline{1-1} \cline{3-4}
@@ -32,9 +32,9 @@ Non-functional requirements, on the other hand, are focused on performance quali
     \cline{1-1} \cline{3-4}
     FR8 &  & The application must allow users to connect their Spotify account before accessing music playback services. This integration should facilitate authentication and authorization seamlessly within the web application. & High \\
     \hline
-    FR9 & \multirow{2}{=}{Youtube API Integration} & The system integrates with Youtube API to play music within the web application. & Medium \\
-    \cline{1-1} \cline{3-4}
-    FR10 &  & The application must allow users to connect their Google account before accessing music playback services. This integration should facilitate authentication and authorization seamlessly within the web application. & High \\
+    FR9 & Youtube API Integration & The system integrates with Youtube API to play music within the web application. & Medium \\
+    \hline
+    FR10 & Youtube API Integration & The application must allow users to connect their Google account before accessing music playback services. This integration should facilitate authentication and authorization seamlessly within the web application. & High \\
     \hline
     FR11 & Music Recommendation System & The application must generate playlists based on the user's recognized emotion using an algorithm. & High \\
     \hline
@@ -58,21 +58,21 @@ Non-functional requirements, on the other hand, are focused on performance quali
     \textbf{Req. No.} & \textbf{Categories} & \textbf{Requirements} & \textbf{Priority} \\
     \hline
     \endhead
-    NFR1 & \multirow{2}{=}{Performance and Scalability} & The application shall load within 3 seconds for 95\% of its users under standard network conditions. & High \\
+    NFR1 & \multirow{5}{=}{Compliance and Security} & All user data, including passwords and personal information, must be encrypted. & High \\
     \cline{1-1} \cline{3-4}
-    NFR2 &  & The system must be scalable to support up to 100 concurrent users without significant degradation in performance. & High \\
+    NFR2 &  & The application must implement secure authentication mechanisms to prevent unauthorized access. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR3 &  & User data must be stored in a secure database with access strictly limited to the backend server. The database shall not be directly accessible from any public network (0.0.0.0/0). & High \\
+    \cline{1-1} \cline{3-4}
+    NFR4 &  & User passwords must be encrypted using a secure hashing algorithm (e.g., bcrypt) to ensure their safety even in the event of a data breach. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR5 &  & All forms of data transmission involved in user authentication and registration must be over HTTPS, and sensitive information shall not appear in URLs or any part of the HTTP request visible to the client side. & High \\
+    \cline{1-1} \cline{3-4}
+    NFR6 &  & The application must comply with relevant data protection and privacy regulations, including \gls{gdpr} where applicable, ensuring user's rights to privacy and data security are upheld. & High \\
     \hline
-    NFR3 & \multirow{5}{=}{Compliance and Security} & All user data, including passwords and personal information, must be encrypted. & High \\
+    NFR7 & \multirow{2}{=}{Performance and Scalability} & The application shall load within 3 seconds for 95\% of its users under standard network conditions. & High \\
     \cline{1-1} \cline{3-4}
-    NFR4 &  & The application must implement secure authentication mechanisms to prevent unauthorized access. & High \\
-    \cline{1-1} \cline{3-4}
-    NFR5 &  & User data must be stored in a secure database with access strictly limited ot the backend server. The database shall not be directly accessible from any public network (0.0.0.0/0). & High \\
-    \cline{1-1} \cline{3-4}
-    NFR6 &  & User passwords must be encrypted using a secure hashing algorithm (e.g., bcrypt) to ensure their safety even in the event of a data breach. & High \\
-    \cline{1-1} \cline{3-4}
-    NFR7 &  & All forms of data transmission involved in user authentication and registration must be over HTTPS, and sensitive information shall not appear in URLs or any part of the HTTP request visible to the client side. & High \\
-    \cline{1-1} \cline{3-4}
-    NFR8 &  & The application must comply with relevant data protection and privacy regulations, including GDPR where applicable, ensuring user's rights to privacy and data security are upheld. & High \\
+    NFR8 &  & The system must be scalable to support up to 100 concurrent users without significant degradation in performance. & High \\
     \hline
     NFR9 & \multirow{2}{=}{Usability} & The application shall be designed with a user-friendly interface, ensuring ease of navigation and accessibility. & Medium \\
     \cline{1-1} \cline{3-4}
@@ -84,11 +84,11 @@ Non-functional requirements, on the other hand, are focused on performance quali
     \hline
     NFR13 & \multirow{2}{=}{Localization and Internationalization} & The application must support multi-language interfaces, allowing users to switch languages easily. & Medium \\
     \cline{1-1} \cline{3-4}
-    NFR14 &  & Date and time formats should adapt to the user's selected language and region preferences. & Low \\
+    NFR14 & Localization and Internationalization & Date and time formats should adapt to the user's selected language and region preferences. & Low \\
     \hline
-    NFR15 & \multirow{2}{=}{Maintenance and Support} & The system should be designed to allow easy updates and maintenance without significant downtime. & Medium \\
-    \cline{1-1} \cline{3-4}
-    NFR16 &  & Documentation must be provided for end-users and developers, detailing usage, integration features, and troubleshooting steps. & Medium \\
+    NFR15 & Maintenance and Support & The system should be designed to allow easy updates and maintenance without significant downtime. & Medium \\
+    \hline
+    NFR16 & Maintenance and Support & Documentation must be provided for end-users and developers, detailing usage, integration features, and troubleshooting steps. & Medium \\
     \hline
     NFR17 & \multirow{3}{=}{Application Performance} & The facial emotion recognition feature must provide a response within 5 seconds from the time of user's request under standard network conditions. & High \\
     \cline{1-1} \cline{3-4}
@@ -96,7 +96,7 @@ Non-functional requirements, on the other hand, are focused on performance quali
     \cline{1-1} \cline{3-4}
     NFR19 &  & The web application's overall time to interactive (TTI) should not exceed 5 seconds for 90\% of its users under standard network conditions. & High \\
     \hline
-    NFR20 & \multirow{2}{=}{User Interface Design} & The application must adhere to WCAG 2.1 AA standards for color contrast, navigability, and text size to ensure accessibility for users with disabilities. & High \\
+    NFR20 & \multirow{2}{=}{User Interface Design} & The application must adhere to \gls{wcag} 2.1 AA standards for color contrast, navigability, and text size to ensure accessibility for users with disabilities. & High \\
     \cline{1-1} \cline{3-4}
     NFR21 &  & All user interface components (buttons, links, form elements) must be navigable using a keyboard in a logical order to support users with mobility or visual impairments. & High \\
     \hline

@@ -10,6 +10,104 @@
 % \section{}
 % \label{app:appendix-b}
 \customappendix{Appendix A}
+\label{app:appendix-a}
+\setcounter{figure}{0}
+\setcounter{table}{0} 
+To categorize music based on emotions, a detailed preprocessing and classification workflow was implemented.
+To convert the emotional labels into a numerical representation that could be used with \gls{ml} algorithms, label encoder is implemented.
+\begin{figure}[H]
+    \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+    label_encoder = LabelEncoder()
+    df['combinedemotion'] = label_encoder.fit_transform(df['combinedemotion'])
+    \end{minted}
+    \caption{Label Encoder}
+    \label{fig:label-encoder}
+\end{figure}
+\begin{figure}[H]
+    \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{python}
+    classes = np.unique(df['combinedemotion'])
+    weights = compute_class_weight(class_weight='balanced', classes=classes, y=df['combinedemotion'])
+    \end{minted}
+    \caption{Label Encoder}
+    \label{fig:label-encoder}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=14cm]{Images/music-class-box.png}
+    \caption{Identify outliers with Box Plot}
+    \label{fig:box-plot}
+\end{figure}
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=14cm]{Images/emotion-distribution.png}
+    \caption{Emotion Distribution Graph}
+    \label{fig:box-plot}
+\end{figure}
+Then, to address data imbalances and ensure that each class had an equal impact on the model during training, compute class weight is used.
+By utilizing the inter-quartile range of tempo and loudness to identify and exclude the outliers\footnote{Data points that significantly differ from other observations in a dataset \citep{bonthu_2021_detecting}.}, the dataset is refined which then helps the model to concentrate on more typical data points.
+
+Then, we normalized selected features and employed one-hot encoding to transform categorical variables into binary matrices, which is important for classification algorithms.
+In order to improve the dataset and discover those hidden patterns, polynomial features were added to capture interactions between features.
+Tempo and loudness features are then scaled and grouped into quantile-based bins to prevent the model from being influenced by those extreme values.
+\\
+\indent Different \gls{ml} algorithms such as \gls{rf}, \gls{svm}, and Logistic Regression with a tailored approach to handle the class imbalance, were then employed to find out which would be the best algorithms for music classification.
+\begin{table}[htbp]
+    \centering
+    \caption{Accuracy comparison of machine learning models}
+    \label{tab:model_accuracy}
+    \begin{tabular}{
+      l
+      S[table-format=1.2]
+      S[table-format=1.2]
+      S[table-format=1.2]
+    }
+    \toprule % Top horizontal line
+    {\textbf{Model}} & {\textbf{Random Forest}} & {\textbf{Support Vector Machine}} & {\textbf{Logistic Regression}} \\
+    \midrule % Middle horizontal line
+    {Accuracy} & 0.82 & 0.71 & 0.75 \\
+    \bottomrule % Bottom horizontal line
+    \end{tabular}
+\end{table}
+After evaluating different models, \gls{svm} showed that it has the best performance compared to the others (See Table~\ref{tab:comparison-models}).
+Therefore, \gls{svm} model is further refined with grid search to optimize its parameters, which resulted in a significant improvement in the F1-score.
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular*}{\textwidth}{
+        @{\extracolsep{\fill}}
+        l
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=1.2]
+        S[table-format=4.0]
+    }
+      \toprule
+      \textbf{Category} & {\textbf{Precision}} & {\textbf{Recall}} & {\textbf{F1-score}} & {\textbf{Support}} \\
+      \midrule
+      0 & 0.67 & 0.33 & 0.44 & 12 \\
+      1 & 0.93 & 0.75 & 0.83 & 157\\
+      2 & 0.82 & 0.94 & 0.88 & 121 \\
+      3 & 0.57 & 0.50 & 0.53 & 8 \\
+      \midrule
+      Accuracy & & & 0.83 & 198 \\
+      Macro avg & 0.75 & 0.63 & 0.67 & 198 \\
+      Weighted avg & 0.83 & 0.83 & 0.82 & 198 \\
+      \bottomrule
+    \end{tabular*}
+    \caption{Music Classification Model Classification Report}
+    \label{tab:mc-class-report}
+\end{table}
+In the classification report (See Table~\ref{tab:mc-class-report}), it shows an excellent result of 0.83 accuracy.
+However, classes 0 and 3 showed less-than-ideal performance metrics in the report.
+This could be due to the classes contain fewer data points which leads to data imbalanced, despite the fact that we applied class weights to account for imbalances.
+Therefore, in comparison to the more populated classes, these classes' insufficient data could not fully represent the complexity of their properties, leading to poorer accuracy and recall rates.
+\\
+\indent Moving forward, it will be essential to improve the dataset for these underrepresented classes.
+A more varied and collection of tracks for these emotions would likely to enhance the dataset and provide a model that is more sensitive and capable of generalization.
+
+\newpage
+
+\customappendix{Appendix B}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
 \begin{figure}[H]
@@ -33,7 +131,7 @@ Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'con
 
 \newpage
 
-\customappendix{Appendix B}
+\customappendix{Appendix C}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
 \begin{figure}[H]
@@ -62,7 +160,7 @@ Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'con
 
 % \section{}
 % \label{app:appendix-c}
-\customappendix{Appendix C}
+\customappendix{Appendix D}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
 \begin{figure}[H]
@@ -104,10 +202,46 @@ Params: {'conv_1_filters': 32, 'conv_2_filters': 64, 'conv_3_filters': 128, 'con
 
 \newpage
 
-\customappendix{Appendix D}
+\customappendix{Appendix E}
 \setcounter{figure}{0}
 \setcounter{table}{0}
-\begin{figure}[ht!]
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{Images/login.png}
+    \caption{Login Page}
+    \label{fig:login}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{Images/signup.png}
+    \caption{Sign Up Page}
+    \label{fig:signup}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{Images/overview.png}
+    \caption{Dashboard Page}
+    \label{fig:dashboard}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{Images/emotion.png}
+    \caption{Emotion Music Page}
+    \label{fig:emotion}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{Images/user-settings.png}
+    \caption{User Settings Page}
+    \label{fig:usr-settings}
+\end{figure}
+
+\newpage
+
+\customappendix{Appendix F}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\begin{figure}[H]
 \begin{minted}[frame=lines, framesep=2mm, baselinestretch=1.2, fontsize=\footnotesize, linenos, breaklines]{javascript}
 router.post('/register', async(req, res) => {
     try {
@@ -145,7 +279,8 @@ router.post('/register', async(req, res) => {
 \newpage
 
 \begin{landscape}
-\customappendix{Appendix E}
+\customappendix{Appendix G}
+\label{app:appendix-f}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
     \begin{figure}[H]
@@ -161,7 +296,7 @@ router.post('/register', async(req, res) => {
 \begin{landscape}
 % \section{}
 % \label{app:appendix-d}
-\customappendix{Appendix F}
+\customappendix{Appendix H}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
 \begin{longtable}{ |m{1cm}|m{1.5cm}|m{5cm}|m{6cm}|m{6cm}|m{2cm}| }
@@ -237,7 +372,7 @@ router.post('/register', async(req, res) => {
 \begin{landscape}
 % \section{}
 % \label{app:appendix-e}
-\customappendix{Appendix G}
+\customappendix{Appendix I}
 \setcounter{figure}{0}
 \setcounter{table}{0} 
 \begin{longtable}{ |m{2.5cm}|m{2.5cm}|m{2cm}|m{6.5cm}|m{8cm}| }
@@ -278,3 +413,20 @@ router.post('/register', async(req, res) => {
     \label{tab:meeting-log}
 \end{longtable}
 \end{landscape}
+
+\newpage
+
+\customappendix{Appendix J}
+\vspace*{\fill}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\begin{center}
+    The source code and additional resources are hosted on GitHub \\and can be accessed at: \\\textbf{\href{https://github.com/zachycn/sentirhy}{https://github.com/zachycn/sentirhy}}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=3cm]{Images/qr-code.png}
+        \label{fig:qr-code}
+    \end{figure}
+\end{center}
+
+\vspace*{\fill}
