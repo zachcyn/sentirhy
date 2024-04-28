@@ -10,3 +10,6 @@ codes/UI/.env
 **rep
 TTD.txt
 server_user_id.txt
+codes/Music-Recommendation/config.py
+codes/Music-Recommendation/Model
+codes/Music-Recommendation/user-feedback.py
