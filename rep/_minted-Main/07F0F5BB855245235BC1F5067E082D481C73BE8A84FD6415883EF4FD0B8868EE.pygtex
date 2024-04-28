@@ -1,4 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-    \PYG{n}{label\PYGZus{}encoder} \PYG{o}{=} \PYG{n}{LabelEncoder}\PYG{p}{()}
-    \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}combinedemotion\PYGZsq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{label\PYGZus{}encoder}\PYG{o}{.}\PYG{n}{fit\PYGZus{}transform}\PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}combinedemotion\PYGZsq{}}\PYG{p}{])}
-\end{Verbatim}
