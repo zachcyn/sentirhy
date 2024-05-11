@@ -1,5 +1,4 @@
 import SvgColor from 'src/components/svg-color';
-
 // ----------------------------------------------------------------------
 
 const icon = (name) => (
@@ -28,7 +27,7 @@ const navConfig = [
   //   icon: icon('ic_blog'),
   // },
   {
-    title: 'Emotion',
+    title: 'emotion',
     path: '/emotion',
     icon: icon('ic_faceid'),
   },

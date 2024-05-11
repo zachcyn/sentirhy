@@ -51,7 +51,6 @@ async function loadModel() {
     try {
         const modelPath = path.resolve(__dirname, '../models/fer/model.json');
         const model = await tf.loadLayersModel(`file://${modelPath}`);
-        console.log('Model loaded successfully');
         return model;
       } catch (error) {
         console.error('Error loading model:', error);
@@ -64,6 +63,7 @@ async function predictEmotion(imageFilename) {
     const imageBuffer = await fs.promises.readFile(imagePath);
     const tensor = tf.node.decodeImage(imageBuffer).resizeBilinear([48, 48]).mean(2).expandDims(-1).expandDims(0).toFloat().div(tf.scalar(255));
     const prediction = model.predict(tensor);
+    console.log(prediction);
     const emotionIndex = prediction.argMax(1).dataSync()[0];
 
     return emotions[emotionIndex];

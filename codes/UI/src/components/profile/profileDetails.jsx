@@ -209,7 +209,7 @@ export const AccountProfileDetails = () => {
                         <Box>
                             <Grid xs={12} sx={{ pl: 1, mb:3 }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
-                                    Username
+                                    {t('Username')}
                                 </Typography>
                                 <Typography variant="body1">{values.user}</Typography>
                             </Grid>
@@ -217,7 +217,7 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12} md={6}>
                                     <TextField
                                         fullWidth
-                                        label="First Name"
+                                        label={t('First Name')}
                                         name="firstName"
                                         onChange={handleChange}
                                         required
@@ -227,7 +227,7 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12} md={6}>
                                     <TextField
                                         fullWidth
-                                        label="Last Name"
+                                        label={t('Last Name')}
                                         name="lastName"
                                         onChange={handleChange}
                                         required
@@ -237,7 +237,7 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12}>
                                     <TextField
                                         fullWidth
-                                        label="Email Address"
+                                        label={t('Email')}
                                         name="email"
                                         onChange={handleEmailChange}
                                         error={emailError}
@@ -306,7 +306,7 @@ export const AccountProfileDetails = () => {
                             mb: 2
                             }}  
                         >
-                            Reset Password
+                            {t("Reset Password")}
                         </Button>
                         <Box sx={{ flexGrow: 1 }} />
                         <LoadingButton 
@@ -326,7 +326,7 @@ export const AccountProfileDetails = () => {
                             disabled={!pwdEntered}
                             loading={loading}
                         >
-                            Save Details
+                            {t("Save Details")}
                         </LoadingButton>
                     </CardActions>
                 </Card>

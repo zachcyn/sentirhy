@@ -256,7 +256,7 @@ export const AccountProfile = () => {
                             padding: { xs: '8px 0', sm: '16px 0' }, // Increase padding for a larger touch target on xs screens
                         }}
                     >
-                        Upload picture
+                        {t('Upload picture')}
                     </Button>
                 </CardActions>
             </Card>
