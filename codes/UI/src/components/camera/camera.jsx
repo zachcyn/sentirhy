@@ -52,7 +52,6 @@ const Camera = forwardRef((props, ref) => {
         src.copyTo(dst);
         window.cv.cvtColor(src, gray, window.cv.COLOR_RGBA2GRAY, 0);
         classifier.detectMultiScale(gray, faces, 1.1, 3, 0);
-<<<<<<< HEAD
 
         if (faces.size() > 0 && detecting) {
           const face = faces.get(0);
@@ -60,11 +59,6 @@ const Camera = forwardRef((props, ref) => {
           src.roi(rect).copyTo(dst);
           window.cv.imshow(canvas, dst);
 
-=======
-        console.log(faces.size())
-        if (faces.size() > 0 && detecting) {
-          console.log('face detected')
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
           setDetecting(false);
           detectingRef.current = false;
           const imageData = canvas.toDataURL('image/png');

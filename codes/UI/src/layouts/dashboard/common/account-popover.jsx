@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
 import { useTranslation } from 'react-i18next';
-=======
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
 
 import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
@@ -20,28 +17,11 @@ import ThemeToggleButton from 'src/components/mode-button';
 
 import { useAuth } from 'src/sections/login/authContext';
 
-<<<<<<< HEAD
-=======
-
-// ----------------------------------------------------------------------
-
-const MENU_OPTIONS = [
-  {
-    label: 'Profile Settings',
-    icon: 'eva:home-fill',
-    path: '/profile-settings' ,
-  },
-];
-
-// ----------------------------------------------------------------------
-
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
 export default function AccountPopover() {
   const router = useRouter();
   const [open, setOpen] = useState(null);
   const [avatar, setAvatar] = useState(false);
   const { logout, user } = useAuth();
-<<<<<<< HEAD
   const { t } = useTranslation();
 
   const MENU_OPTIONS = [
@@ -51,8 +31,6 @@ export default function AccountPopover() {
       path: '/profile-settings' ,
     },
   ];
-=======
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
 
   const getUserData = () => {
     if (user) {
@@ -156,11 +134,7 @@ export default function AccountPopover() {
           onClick={logoutAccount}
           sx={{ typography: 'body2', color: 'error.main', py: 1.5 }}
         >
-<<<<<<< HEAD
           {t('Logout')}
-=======
-          Logout
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
         </MenuItem>
       </Popover>
     </>

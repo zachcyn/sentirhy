@@ -1,8 +1,4 @@
 import SvgColor from 'src/components/svg-color';
-<<<<<<< HEAD
-=======
-
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
 // ----------------------------------------------------------------------
 
 const icon = (name) => (
@@ -31,11 +27,7 @@ const navConfig = [
   //   icon: icon('ic_blog'),
   // },
   {
-<<<<<<< HEAD
     title: 'emotion',
-=======
-    title: 'Emotion',
->>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
     path: '/emotion',
     icon: icon('ic_faceid'),
   },
