@@ -209,7 +209,11 @@ export const AccountProfileDetails = () => {
                         <Box>
                             <Grid xs={12} sx={{ pl: 1, mb:3 }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: 'bold' }}>
+<<<<<<< HEAD
                                     {t('Username')}
+=======
+                                    Username
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                                 </Typography>
                                 <Typography variant="body1">{values.user}</Typography>
                             </Grid>
@@ -217,7 +221,11 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12} md={6}>
                                     <TextField
                                         fullWidth
+<<<<<<< HEAD
                                         label={t('First Name')}
+=======
+                                        label="First Name"
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                                         name="firstName"
                                         onChange={handleChange}
                                         required
@@ -227,7 +235,11 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12} md={6}>
                                     <TextField
                                         fullWidth
+<<<<<<< HEAD
                                         label={t('Last Name')}
+=======
+                                        label="Last Name"
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                                         name="lastName"
                                         onChange={handleChange}
                                         required
@@ -237,7 +249,11 @@ export const AccountProfileDetails = () => {
                                 <Grid xs={12}>
                                     <TextField
                                         fullWidth
+<<<<<<< HEAD
                                         label={t('Email')}
+=======
+                                        label="Email Address"
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                                         name="email"
                                         onChange={handleEmailChange}
                                         error={emailError}
@@ -306,7 +322,11 @@ export const AccountProfileDetails = () => {
                             mb: 2
                             }}  
                         >
+<<<<<<< HEAD
                             {t("Reset Password")}
+=======
+                            Reset Password
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                         </Button>
                         <Box sx={{ flexGrow: 1 }} />
                         <LoadingButton 
@@ -326,7 +346,11 @@ export const AccountProfileDetails = () => {
                             disabled={!pwdEntered}
                             loading={loading}
                         >
+<<<<<<< HEAD
                             {t("Save Details")}
+=======
+                            Save Details
+>>>>>>> 29ec6ef19632cb6ca37b352c02ef5f9ed59a920c
                         </LoadingButton>
                     </CardActions>
                 </Card>
